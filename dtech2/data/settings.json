@@ -1,0 +1,273 @@
+{
+  "app": {
+    "name": "BTECH-TV WORLD ULTRA MAX X",
+    "version": "1.0.0",
+    "build": "2026.07.18",
+    "theme": "dark",
+    "language": "en",
+    "timezone": "UTC",
+    "autoUpdate": true,
+    "offlineMode": false
+  },
+
+  "player": {
+    "autoplay": true,
+    "muted": false,
+    "volume": 80,
+    "defaultQuality": "Auto",
+    "pip": true,
+    "fullscreen": false,
+    "bufferSize": 30,
+    "retryCount": 5,
+    "retryDelay": 3000,
+    "showControls": true,
+    "rememberVolume": true,
+    "hardwareAcceleration": true
+  },
+
+  "dashboard": {
+    "layout": "grid",
+    "cardsPerRow": 6,
+    "showLogos": true,
+    "showEPG": true,
+    "showCountries": true,
+    "showCategories": true,
+    "showLanguages": true,
+    "showChannelNumbers": true,
+    "showQualityBadge": true,
+    "showOnlineStatus": true,
+    "showFavorites": true
+  },
+
+  "search": {
+    "instantSearch": true,
+    "minCharacters": 2,
+    "maxResults": 100,
+    "highlightMatches": true
+  },
+
+  "favorites": {
+    "enabled": true,
+    "maxFavorites": 1000,
+    "sync": false
+  },
+
+  "history": {
+    "enabled": true,
+    "maxRecentChannels": 100,
+    "rememberLastChannel": true
+  },
+
+  "subscription": {
+    "trialEnabled": true,
+    "trialDurationMinutes": 2,
+    "premiumEnabled": true,
+    "lockPremiumChannels": true
+  },
+
+  "security": {
+    "parentalControl": false,
+    "parentalPin": "1234",
+    "hideAdultChannels": true,
+    "sessionTimeout": 3600
+  },
+
+  "performance": {
+    "lazyLoading": true,
+    "cacheChannels": true,
+    "cacheLogos": true,
+    "cacheEPG": true,
+    "maxCacheSizeMB": 250,
+    "virtualScrolling": true
+  },
+
+  "notifications": {
+    "enabled": true,
+    "newChannels": true,
+    "systemUpdates": true,
+    "maintenance": true
+  },
+
+  "network": {
+    "apiTimeout": 15000,
+    "streamTimeout": 10000,
+    "reconnect": true,
+    "maxReconnectAttempts": 5
+  },
+
+  "admin": {
+    "enabled": true,
+    "dashboard": true,
+    "userManager": true,
+    "channelManager": true,
+    "analytics": true,
+    "reports": true,
+    "backup": true
+  },
+
+  "features": {
+    "favorites": true,
+    "recentChannels": true,
+    "search": true,
+    "categories": true,
+    "countries": true,
+    "languages": true,
+    "epg": true,
+    "miniPlayer": true,
+    "pictureInPicture": true,
+    "sleepTimer": true,
+    "recording": false,
+    "multiScreen": false,
+    "cast": false
+  },
+
+  "api": {
+    "channels": "data/channels.json",
+    "categories": "data/categories.json",
+    "countries": "data/countries.json",
+    "languages": "data/languages.json",
+    "logos": "data/logos.json",
+    "epg": "data/epg.json"
+  }
+}
+{
+  "application": {
+    "name": "BTECH-TV WORLD ULTRA MAX X",
+    "version": "1.0.0",
+    "environment": "production",
+    "theme": "dark",
+    "language": "en",
+    "timezone": "UTC",
+    "currency": "USD",
+    "offlineMode": false,
+    "debug": false
+  },
+
+  "player": {
+    "engine": "hls.js",
+    "autoplay": true,
+    "muted": false,
+    "volume": 80,
+    "defaultQuality": "Auto",
+    "pictureInPicture": true,
+    "fullscreen": true,
+    "bufferLength": 30,
+    "retryAttempts": 5,
+    "retryDelay": 3000,
+    "hardwareAcceleration": true,
+    "lowLatency": true
+  },
+
+  "dashboard": {
+    "layout": "grid",
+    "theme": "dark",
+    "cardsPerRow": 6,
+    "sidebarCollapsed": false,
+    "showClock": true,
+    "showStatistics": true,
+    "showWeather": false,
+    "showLiveBadge": true,
+    "showQualityBadge": true,
+    "showCountryFlag": true,
+    "showChannelNumber": true
+  },
+
+  "features": {
+    "favorites": true,
+    "recentChannels": true,
+    "history": true,
+    "search": true,
+    "categories": true,
+    "countries": true,
+    "languages": true,
+    "epg": true,
+    "logos": true,
+    "miniPlayer": true,
+    "pictureInPicture": true,
+    "sleepTimer": true,
+    "multiView": true,
+    "keyboardShortcuts": true,
+    "voiceSearch": false,
+    "recording": false,
+    "casting": false
+  },
+
+  "subscription": {
+    "trialEnabled": true,
+    "trialMinutes": 2,
+    "premiumEnabled": true,
+    "trialChannels": 500,
+    "premiumChannels": 13186,
+    "lockPremiumChannels": true
+  },
+
+  "security": {
+    "parentalControl": false,
+    "parentalPIN": "1234",
+    "hideAdultChannels": true,
+    "sessionTimeout": 3600,
+    "rememberLogin": true
+  },
+
+  "performance": {
+    "lazyLoading": true,
+    "virtualScrolling": true,
+    "cacheChannels": true,
+    "cacheLogos": true,
+    "cacheEPG": true,
+    "cacheImages": true,
+    "maxCacheSizeMB": 512,
+    "preloadVisibleChannels": true
+  },
+
+  "notifications": {
+    "enabled": true,
+    "streamOffline": true,
+    "newChannels": true,
+    "systemUpdates": true,
+    "subscriptionExpiry": true
+  },
+
+  "network": {
+    "streamTimeout": 15000,
+    "apiTimeout": 10000,
+    "reconnect": true,
+    "maxReconnectAttempts": 5,
+    "pingInterval": 30000
+  },
+
+  "admin": {
+    "enabled": true,
+    "channelManager": true,
+    "userManager": true,
+    "analytics": true,
+    "reports": true,
+    "backup": true,
+    "maintenance": true
+  },
+
+  "statistics": {
+    "totalChannels": 13186,
+    "freeChannels": 500,
+    "premiumChannels": 12686,
+    "categories": 20,
+    "countries": 20,
+    "languages": 20
+  },
+
+  "storage": {
+    "favoritesKey": "iptv_favorites",
+    "historyKey": "iptv_history",
+    "settingsKey": "iptv_settings",
+    "themeKey": "iptv_theme"
+  },
+
+  "api": {
+    "channels": "data/channels.json",
+    "categories": "data/categories.json",
+    "countries": "data/countries.json",
+    "languages": "data/languages.json",
+    "logos": "data/logos.json",
+    "epg": "data/epg.json"
+  }
+}

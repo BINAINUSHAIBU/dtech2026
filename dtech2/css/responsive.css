@@ -1,0 +1,286 @@
+/* ===================================
+   BTECH-TV WORLD PRO MAX
+   css/responsive.css
+=================================== */
+
+/* ===================================
+   LARGE DESKTOP
+=================================== */
+
+@media screen and (min-width: 1600px) {
+  .sidebar {
+    width: 320px;
+  }
+
+  .channels {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+
+  .player-container {
+    height: 500px;
+  }
+
+  .hero h2 {
+    font-size: 34px;
+  }
+}
+
+/* ===================================
+   DESKTOP
+=================================== */
+
+@media screen and (max-width: 1400px) {
+  .channels {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}
+
+/* ===================================
+   LAPTOP
+=================================== */
+
+@media screen and (max-width: 1200px) {
+  .sidebar {
+    width: 240px;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .channels {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+/* ===================================
+   TABLET
+=================================== */
+
+@media screen and (max-width: 992px) {
+  body {
+    flex-direction: column;
+    overflow: auto;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #20365d;
+  }
+
+  .main {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .top-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .hero {
+    padding: 15px;
+  }
+
+  .player-container {
+    height: 350px;
+  }
+
+  .channels {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+/* ===================================
+   MOBILE
+=================================== */
+
+@media screen and (max-width: 768px) {
+  .logo {
+    font-size: 22px;
+  }
+
+  .sub {
+    font-size: 12px;
+  }
+
+  .menu-title {
+    font-size: 12px;
+  }
+
+  .nav-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .hero h2 {
+    font-size: 22px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .stat {
+    padding: 15px;
+  }
+
+  .player-container {
+    height: 250px;
+  }
+
+  .controls {
+    justify-content: center;
+  }
+
+  .controls button {
+    flex: 1 1 45%;
+    min-width: 120px;
+  }
+
+  .channels {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .footer {
+    font-size: 12px;
+  }
+}
+
+/* ===================================
+   SMALL MOBILE
+=================================== */
+
+@media screen and (max-width: 576px) {
+  .main {
+    padding: 10px;
+  }
+
+  .player-container {
+    height: 220px;
+  }
+
+  .topbar {
+    gap: 10px;
+  }
+
+  .top-right {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  #floatingTimer {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .live {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .controls {
+    gap: 8px;
+  }
+
+  .controls button {
+    width: 100%;
+    font-size: 13px;
+  }
+
+  .search-box input {
+    font-size: 14px;
+  }
+}
+
+/* ===================================
+   EXTRA SMALL DEVICES
+=================================== */
+
+@media screen and (max-width: 400px) {
+  .logo {
+    font-size: 18px;
+  }
+
+  .hero h2 {
+    font-size: 18px;
+  }
+
+  .hero {
+    padding: 12px;
+  }
+
+  .player-container {
+    height: 180px;
+  }
+
+  .stat h3 {
+    font-size: 24px;
+  }
+
+  .card-title {
+    font-size: 15px;
+  }
+}
+
+/* ===================================
+   LANDSCAPE PHONES
+=================================== */
+
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .sidebar {
+    overflow-y: auto;
+  }
+
+  .player-container {
+    height: 220px;
+  }
+
+  .channels {
+    max-height: 250px;
+  }
+}
+
+/* ===================================
+   PRINT
+=================================== */
+
+@media print {
+  body {
+    background: #fff;
+    color: #000;
+  }
+
+  .sidebar,
+  .controls,
+  .live,
+  #floatingTimer,
+  #trialOverlay {
+    display: none !important;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  .player-container {
+    display: none;
+  }
+}

@@ -1,0 +1,538 @@
+/* ===================================
+   BTECH-TV WORLD PRO MAX
+   css/style.css
+=================================== */
+
+/* RESET */
+@font-face {
+    font-family: "Poppins";
+    src: url("../assets/fonts/Poppins-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+body{
+    font-family: "Poppins", Arial, sans-serif;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url("../assets/fonts/Poppins-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+.navbar,
+.sidebar,
+.menu-title,
+button {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url("../assets/fonts/Poppins-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+:root{
+    --primary:#00c6ff;
+    --secondary:#0072ff;
+    --bg:#0b0f17;
+    --panel:#141b26;
+    --card:#1d2735;
+    --text:#ffffff;
+    --muted:#a0a7b4;
+    --radius:16px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,Arial,sans-serif;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    overflow:hidden;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button{
+    cursor:pointer;
+    border:none;
+}
+body {
+    font-family: "Poppins", sans-serif;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url("../assets/fonts/Poppins-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+.navbar,
+.sidebar,
+.menu-item,
+.card-title,
+.player-title,
+.channel-name {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url("../assets/fonts/Poppins-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+.logo,
+.logo-text,
+.page-title,
+.card-title,
+.channel-title,
+.player-title,
+.btn-primary,
+.btn-premium,
+.nav-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("../assets/fonts/Roboto-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+body {
+    font-family: "Roboto", Arial, sans-serif;
+    font-weight: 400;
+}
+
+p,
+.description,
+.channel-description,
+.epg-text,
+.footer-text {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("../assets/fonts/Roboto-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+.page-title,
+.section-title,
+.channel-title,
+.card-title,
+.dialog-title,
+.stats-value,
+.notification-title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: #050816;
+  color: #ffffff;
+  display: flex;
+  overflow: hidden;
+}
+
+/* ===========================
+   SIDEBAR
+=========================== */
+
+.sidebar {
+  width: 280px;
+
+  background: #0d1324;
+
+  border-right: 1px solid #1d2b4f;
+
+  padding: 15px;
+
+  overflow-y: auto;
+}
+
+.logo {
+  font-size: 24px;
+
+  font-weight: bold;
+
+  color: #00d4ff;
+
+  margin-bottom: 5px;
+}
+
+.sub {
+  color: #8ea2d9;
+
+  font-size: 13px;
+
+  margin-bottom: 20px;
+}
+
+.menu-title {
+  color: #00d4ff;
+
+  margin-top: 18px;
+
+  margin-bottom: 10px;
+
+  font-size: 13px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+}
+
+.nav-btn {
+  width: 100%;
+
+  padding: 10px;
+
+  margin-bottom: 8px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #121c33;
+
+  color: white;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  text-align: left;
+}
+
+.nav-btn:hover {
+  background: #00d4ff;
+
+  color: #000;
+}
+
+/* ===========================
+   MAIN
+=========================== */
+
+.main {
+  flex: 1;
+
+  display: flex;
+
+  flex-direction: column;
+
+  overflow: hidden;
+
+  padding: 12px;
+}
+
+/* ===========================
+   TOP BAR
+=========================== */
+
+.topbar {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 12px;
+}
+
+.search-box {
+  width: 320px;
+}
+
+.search-box input {
+  width: 100%;
+
+  padding: 12px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #101a31;
+
+  color: white;
+
+  outline: none;
+}
+
+.top-right {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+.live {
+  background: red;
+
+  color: white;
+
+  padding: 8px 14px;
+
+  border-radius: 20px;
+
+  font-weight: bold;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero {
+  background: linear-gradient(135deg, #07132f, #102454);
+
+  border-radius: 12px;
+
+  padding: 20px;
+
+  margin-bottom: 15px;
+}
+
+.hero h2 {
+  margin-bottom: 15px;
+
+  color: #00d4ff;
+}
+
+.stats {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 10px;
+}
+
+.stat {
+  background: #111f3d;
+
+  border-radius: 10px;
+
+  text-align: center;
+
+  padding: 15px;
+
+  font-size: 20px;
+}
+
+.stat div {
+  margin-top: 8px;
+
+  font-size: 22px;
+
+  font-weight: bold;
+}
+
+/* ===========================
+   PLAYER
+=========================== */
+
+.player-container {
+  background: #000;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  height: 330px;
+
+  margin-bottom: 12px;
+}
+
+.player-container video {
+  width: 100%;
+
+  height: 100%;
+}
+
+/* ===========================
+   CONTROLS
+=========================== */
+
+.controls {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-bottom: 15px;
+}
+
+.controls button {
+  padding: 10px 18px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #152445;
+
+  color: white;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.controls button:hover {
+  background: #00d4ff;
+
+  color: black;
+}
+
+/* ===========================
+   CHANNELS
+=========================== */
+
+.channel-wrapper {
+  flex: 1;
+
+  overflow: hidden;
+}
+
+.channels {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+
+  gap: 12px;
+
+  overflow-y: auto;
+
+  height: 100%;
+
+  padding-right: 5px;
+}
+
+.card {
+  background: #111a31;
+
+  border: 1px solid #1f355d;
+
+  border-radius: 12px;
+
+  padding: 12px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+
+  border-color: #00d4ff;
+}
+
+.badge {
+  float: right;
+
+  background: red;
+
+  color: white;
+
+  padding: 4px 8px;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+
+  font-weight: bold;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.footer {
+  margin-top: 15px;
+
+  text-align: center;
+
+  color: #9db6e5;
+
+  font-size: 13px;
+
+  padding: 10px;
+}
+
+.footer strong {
+  color: #00d4ff;
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #091221;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00d4ff;
+
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00ffff;
+}
+#loadingAnimation{
+    width:120px;
+    height:120px;
+    margin:auto;
+}
+#loadingAnimation{
+    width:120px;
+    height:120px;
+    margin:auto;
+}
+const loadingAnimation = lottie.loadAnimation({
+    container: document.getElementById("loadingAnimation"),
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    path: "assets/animations/loading.json"
+});

@@ -1,0 +1,151 @@
+[
+  {
+    "channelId": 1,
+    "epgId": "a2cnn.al",
+    "channelName": "A2 CNN Albania",
+    "timezone": "Europe/Tirane",
+    "source": "https://example.com/epg/albania.xml.gz",
+    "programs": [
+      {
+        "title": "Morning News",
+        "description": "Latest local and international news.",
+        "start": "2026-07-18T06:00:00Z",
+        "end": "2026-07-18T07:00:00Z",
+        "category": "News"
+      },
+      {
+        "title": "Business Today",
+        "description": "Financial and market updates.",
+        "start": "2026-07-18T07:00:00Z",
+        "end": "2026-07-18T08:00:00Z",
+        "category": "Business"
+      }
+    ]
+  },
+  {
+    "channelId": 2,
+    "epgId": "bbcnews.uk",
+    "channelName": "BBC News",
+    "timezone": "Europe/London",
+    "source": "https://example.com/epg/uk.xml.gz",
+    "programs": [
+      {
+        "title": "BBC News",
+        "description": "Breaking news from around the world.",
+        "start": "2026-07-18T06:00:00Z",
+        "end": "2026-07-18T07:00:00Z",
+        "category": "News"
+      }
+    ]
+  }
+][
+  {
+    "channelId": 1,
+    "channelName": "BBC News",
+    "xmltvId": "bbcnews.uk",
+    "country": "United Kingdom",
+    "timezone": "Europe/London",
+    "logo": "logos/bbcnews.png",
+    "enabled": true,
+    "schedule": [
+      {
+        "id": 1001,
+        "title": "BBC News",
+        "description": "Latest breaking news from around the world.",
+        "category": "News",
+        "start": "2026-07-18T06:00:00Z",
+        "end": "2026-07-18T07:00:00Z",
+        "live": true
+      },
+      {
+        "id": 1002,
+        "title": "Business Today",
+        "description": "Business and financial updates.",
+        "category": "Business",
+        "start": "2026-07-18T07:00:00Z",
+        "end": "2026-07-18T08:00:00Z",
+        "live": false
+      }
+    ]
+  },
+  {
+    "channelId": 2,
+    "channelName": "CNN International",
+    "xmltvId": "cnn.us",
+    "country": "United States",
+    "timezone": "America/New_York",
+    "logo": "logos/cnn.png",
+    "enabled": true,
+    "schedule": [
+      {
+        "id": 2001,
+        "title": "CNN Live",
+        "description": "Live international news coverage.",
+        "category": "News",
+        "start": "2026-07-18T06:00:00Z",
+        "end": "2026-07-18T07:00:00Z",
+        "live": true
+      }
+    ]
+  },
+  {
+    "channelId": 3,
+    "channelName": "ESPN",
+    "xmltvId": "espn.us",
+    "country": "United States",
+    "timezone": "America/New_York",
+    "logo": "logos/espn.png",
+    "enabled": true,
+    "schedule": [
+      {
+        "id": 3001,
+        "title": "Live Football",
+        "description": "International football coverage.",
+        "category": "Sports",
+        "start": "2026-07-18T06:30:00Z",
+        "end": "2026-07-18T08:30:00Z",
+        "live": true
+      }
+    ]
+  },
+  {
+    "channelId": 4,
+    "channelName": "National Geographic",
+    "xmltvId": "natgeo.us",
+    "country": "United States",
+    "timezone": "America/New_York",
+    "logo": "logos/natgeo.png",
+    "enabled": true,
+    "schedule": [
+      {
+        "id": 4001,
+        "title": "Wild Africa",
+        "description": "Wildlife documentary.",
+        "category": "Documentary",
+        "start": "2026-07-18T06:00:00Z",
+        "end": "2026-07-18T07:00:00Z",
+        "live": false
+      }
+    ]
+  },
+  {
+    "channelId": 5,
+    "channelName": "Cartoon Network",
+    "xmltvId": "cartoon.us",
+    "country": "United States",
+    "timezone": "America/New_York",
+    "logo": "logos/cartoonnetwork.png",
+    "enabled": true,
+    "schedule": [
+      {
+        "id": 5001,
+        "title": "Adventure Time",
+        "description": "Animated series.",
+        "category": "Kids",
+        "start": "2026-07-18T06:00:00Z",
+        "end": "2026-07-18T06:30:00Z",
+        "live": false
+      }
+    ]
+  }
+]

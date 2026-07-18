@@ -1,0 +1,72 @@
+[
+  {
+    "channelId": 1,
+    "name": "A2 CNN Albania",
+    "logo": "logos/a2cnn.png",
+    "thumbnail": "logos/thumbs/a2cnn.webp",
+    "themeColor": "#E53935"
+  },
+  {
+    "channelId": 2,
+    "name": "News 24",
+    "logo": "logos/news24.png",
+    "thumbnail": "logos/thumbs/news24.webp",
+    "themeColor": "#1976D2"
+  },
+  {
+    "channelId": 3,
+    "name": "BBC News",
+    "logo": "logos/bbcnews.png",
+    "thumbnail": "logos/thumbs/bbcnews.webp",
+    "themeColor": "#C62828"
+  },
+  {
+    "channelId": 4,
+    "name": "CNN International",
+    "logo": "logos/cnn.png",
+    "thumbnail": "logos/thumbs/cnn.webp",
+    "themeColor": "#B71C1C"
+  },
+  {
+    "channelId": 5,
+    "name": "Sky News",
+    "logo": "logos/skynews.png",
+    "thumbnail": "logos/thumbs/skynews.webp",
+    "themeColor": "#1565C0"
+  },
+  {
+    "channelId": 6,
+    "name": "Al Jazeera",
+    "logo": "logos/aljazeera.png",
+    "thumbnail": "logos/thumbs/aljazeera.webp",
+    "themeColor": "#F9A825"
+  },
+  {
+    "channelId": 7,
+    "name": "ESPN",
+    "logo": "logos/espn.png",
+    "thumbnail": "logos/thumbs/espn.webp",
+    "themeColor": "#D32F2F"
+  },
+  {
+    "channelId": 8,
+    "name": "Discovery Channel",
+    "logo": "logos/discovery.png",
+    "thumbnail": "logos/thumbs/discovery.webp",
+    "themeColor": "#EF6C00"
+  },
+  {
+    "channelId": 9,
+    "name": "National Geographic",
+    "logo": "logos/natgeo.png",
+    "thumbnail": "logos/thumbs/natgeo.webp",
+    "themeColor": "#FBC02D"
+  },
+  {
+    "channelId": 10,
+    "name": "Cartoon Network",
+    "logo": "logos/cartoonnetwork.png",
+    "thumbnail": "logos/thumbs/cartoonnetwork.webp",
+    "themeColor": "#212121"
+  }
+]

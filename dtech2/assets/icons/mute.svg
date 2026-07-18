@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none">
+
+    <!-- Speaker -->
+    <path d="M4 9H8L13 5V19L8 15H4Z" fill="#00D4FF"></path>
+
+    <!-- Mute Cross -->
+    <path d="M17 9L21 13" stroke="#FF4D4F" stroke-width="2" stroke-linecap="round"></path>
+
+    <path d="M21 9L17 13" stroke="#FF4D4F" stroke-width="2" stroke-linecap="round"></path>
+
+    <!-- Highlight -->
+    <circle cx="6" cy="10" r="0.8" fill="#B8F3FF"></circle>
+
+</svg>
