@@ -41,3 +41,79 @@ async function loadChannels() {
 
 // Start loading when the page is ready
 document.addEventListener("DOMContentLoaded", loadChannels);
+
+/* ... all channels from IDs 3 through 13185 ... */
+[
+  {
+    "id": 1,
+    "name": "A2 CNN Albania",
+    "country": "Albania",
+    "countryCode": "AL",
+    "category": "News",
+    "language": "Albanian",
+    "logo": "logos/a2cnn.png",
+    "stream": "https://your-stream-server.example/live/a2cnn.m3u8",
+    "epg": "A2CNN.al",
+    "quality": "HD",
+    "type": "Free",
+    "status": "Online",
+    "favorite": false,
+    "locked": false,
+    "views": 0
+  },
+  {
+    "id": 2,
+    "name": "News 24",
+    "country": "Albania",
+    "countryCode": "AL",
+    "category": "News",
+    "language": "Albanian",
+    "logo": "logos/news24.png",
+    "stream": "https://your-stream-server.example/live/news24.m3u8",
+    "epg": "News24.al",
+    "quality": "HD",
+    "type": "Free",
+    "status": "Online",
+    "favorite": false,
+    "locked": false,
+    "views": 0
+  },
+
+  {
+    "id": 3,
+    "name": "Channel 3",
+    "country": "Albania",
+    "countryCode": "AL",
+    "category": "General",
+    "language": "Albanian",
+    "logo": "logos/channel3.png",
+    "stream": "https://your-stream-server.example/live/channel3.m3u8",
+    "epg": "Channel3.al",
+    "quality": "HD",
+    "type": "Free",
+    "status": "Online",
+    "favorite": false,
+    "locked": false,
+    "views": 0
+  }
+
+  // Continue every channel sequentially...
+,
+{
+  "id": 13186,
+  "name": "BTECH World Ultra",
+  "country": "Global",
+  "countryCode": "GL",
+  "category": "Entertainment",
+  "language": "English",
+  "logo": "logos/btechworld.png",
+  "stream": "https://your-stream-server.example/live/btechworld.m3u8",
+  "epg": "BTECHWorld.gl",
+  "quality": "4K",
+  "type": "Premium",
+  "status": "Online",
+  "favorite": false,
+  "locked": true,
+  "views": 0
+}
+]
