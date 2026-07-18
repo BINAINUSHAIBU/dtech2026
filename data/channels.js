@@ -36,6 +36,16 @@
   // channels_part5.json (8001–10000)
 
   // ...
+  [{
+  "id": 1,
+  "name": "CNN International HD",
+  "country": "United States",
+  "category": "News",
+  "quality": "HD",
+  "type": "Free",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/b/b1/CNN.svg",
+  "stream": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"
+}]
 
   // channels_part6.json (10001–12000)
 
