@@ -1,0 +1,13 @@
+.epg {
+  background: #161d28;
+  border-radius: 15px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.epg-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #2c3440;
+}

@@ -1,0 +1,43 @@
+// Global channel array
+let all = [];
+
+// Load channels
+async function loadChannels() {
+    try {
+        const response = await fetch("data/channels.json");
+
+        if (!response.ok) {
+            throw new Error("Unable to load channels.json");
+        }
+
+        all = await response.json();
+
+        // Build category menu
+        renderCats();
+
+        // Display channels
+        doFilter();
+
+        // Update dashboard statistics
+        document.getElementById("status").textContent =
+            `${all.length.toLocaleString()} Channels Loaded`;
+
+        console.log(`Loaded ${all.length} channels successfully.`);
+
+    } catch (error) {
+        console.error(error);
+
+        document.getElementById("status").textContent =
+            "Failed to load channels.";
+
+        document.getElementById("channels").innerHTML = `
+            <div class="error-message">
+                <h2>⚠ Unable to load channels</h2>
+                <p>Please verify that <b>data/channels.json</b> exists.</p>
+            </div>
+        `;
+    }
+}
+
+// Start loading when the page is ready
+document.addEventListener("DOMContentLoaded", loadChannels);
