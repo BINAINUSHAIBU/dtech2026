@@ -771,3 +771,150 @@ Promise.all([
     renderChannels(channels);
 
 });
+
+
+/* ==========================================================
+   BTECH-TV WORLD ULTRA MAX X
+   Channel Loader
+========================================================== */
+
+let allChannels = [];
+
+// Load every channel database
+async function loadAllChannels() {
+
+    const files = [
+        "data/channels_part1.json",
+        "data/channels_part2.json",
+        "data/channels_part3.json",
+        "data/channels_part4.json",
+        "data/channels_part5.json",
+        "data/channels_part6.json",
+        "data/channels_part7.json"
+    ];
+
+    const status = document.getElementById("status");
+
+    try {
+
+        if (status) {
+            status.textContent = "Loading IPTV channels...";
+        }
+
+        const responses = await Promise.all(
+
+            files.map(async file => {
+
+                const response = await fetch(file);
+
+                if (!response.ok) {
+                    throw new Error(`Unable to load ${file}`);
+                }
+
+                return response.json();
+
+            })
+
+        );
+
+        // Merge all files
+        allChannels = responses.flat();
+
+        // Sort by ID
+        allChannels.sort((a, b) => a.id - b.id);
+
+        console.log(
+            `Loaded ${allChannels.length.toLocaleString()} channels`
+        );
+
+        // Render categories
+        if (typeof renderCats === "function") {
+            renderCats();
+        }
+
+        // Render countries
+        if (typeof renderCountries === "function") {
+            renderCountries();
+        }
+
+        // Render languages
+        if (typeof renderLanguages === "function") {
+            renderLanguages();
+        }
+
+        // Apply filters
+        if (typeof doFilter === "function") {
+            doFilter();
+        }
+
+        // Dashboard statistics
+        if (status) {
+            status.textContent =
+                `${allChannels.length.toLocaleString()} Channels Loaded`;
+        }
+
+        const total = document.getElementById("totalChannels");
+
+        if (total) {
+            total.textContent =
+                allChannels.length.toLocaleString();
+        }
+
+        return allChannels;
+
+    }
+    catch (error) {
+
+        console.error(error);
+
+        if (status) {
+            status.textContent =
+                "❌ Failed to load IPTV channels";
+        }
+
+        return [];
+
+    }
+
+}
+
+/* ==========================================================
+   Helpers
+========================================================== */
+
+function getChannelById(id) {
+    return allChannels.find(channel => channel.id === id);
+}
+
+function getFavorites() {
+    return allChannels.filter(channel => channel.favorite);
+}
+
+function getPremiumChannels() {
+    return allChannels.filter(channel => channel.type === "Premium");
+}
+
+function getFreeChannels() {
+    return allChannels.filter(channel => channel.type === "Free");
+}
+
+function getLockedChannels() {
+    return allChannels.filter(channel => channel.locked);
+}
+
+function getOnlineChannels() {
+    return allChannels.filter(channel => channel.status === "Online");
+}
+
+/* ==========================================================
+   Auto Start
+========================================================== */
+
+window.addEventListener("DOMContentLoaded", async () => {
+
+    await loadAllChannels();
+
+    console.log("BTECH-TV Channel Database Ready");
+
+});
+
