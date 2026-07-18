@@ -1,236 +1,354 @@
+
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BTECH-TV WORLD ULTRA MAX X</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;}
-    body{background:#080808;color:#fff;overflow:hidden;}
+    <title>BTECH-TV WORLD ULTRA MAX X</title>
 
-    header{
-      height:70px;background:#111;display:flex;align-items:center;
-      justify-content:space-between;padding:0 25px;border-bottom:1px solid #222;
-    }
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
 
-    .logo{font-size:24px;font-weight:bold;color:#00d2ff;}
+      body {
+        background: #080808;
+        color: #fff;
+        overflow: hidden;
+      }
 
-    .search{
-      width:350px;padding:10px;border-radius:25px;
-      border:none;outline:none;
-    }
+      header {
+        height: 70px;
+        background: #111;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 25px;
+        border-bottom: 1px solid #222;
+      }
 
-    .container{display:flex;height:calc(100vh - 70px);}
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #00d2ff;
+      }
 
-    .sidebar{
-      width:250px;background:#151515;overflow:auto;padding:20px;
-    }
+      .search {
+        width: 350px;
+        padding: 10px;
+        border-radius: 25px;
+        border: none;
+        outline: none;
+      }
 
-    .sidebar h3{margin-bottom:10px;color:#00d2ff;}
+      .container {
+        display: flex;
+        height: calc(100vh - 70px);
+      }
 
-    .sidebar button{
-      width:100%;padding:12px;margin-bottom:8px;
-      background:#222;color:#fff;border:none;border-radius:8px;cursor:pointer;
-    }
+      .sidebar {
+        width: 250px;
+        background: #151515;
+        overflow: auto;
+        padding: 20px;
+      }
 
-    .sidebar button:hover{background:#00d2ff;color:#000;}
+      .sidebar h3 {
+        margin-bottom: 10px;
+        color: #00d2ff;
+      }
 
-    .main{flex:1;overflow:auto;padding:20px;}
+      .sidebar button {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 8px;
+        background: #222;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
 
-    .hero{
-      height:250px;border-radius:20px;
-      background:linear-gradient(135deg,#004cff,#00d2ff);
-      display:flex;align-items:center;justify-content:center;
-      font-size:40px;font-weight:bold;margin-bottom:25px;
-    }
+      .sidebar button:hover {
+        background: #00d2ff;
+      }
 
-    .player{
-      height:420px;background:#000;border-radius:15px;
-      overflow:hidden;margin-bottom:30px;
-    }
+      .main {
+        flex: 1;
+        overflow: auto;
+        padding: 20px;
+      }
 
-    video{width:100%;height:100%;background:#000;}
+      .hero {
+        height: 250px;
+        border-radius: 20px;
+        background: linear-gradient(135deg, #004cff, #00d2ff);
 
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
-      gap:20px;
-    }
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-    .card{
-      background:#1a1a1a;border-radius:12px;padding:15px;
-      transition:.3s;cursor:pointer;
-    }
+        font-size: 40px;
+        font-weight: bold;
 
-    .card:hover{transform:scale(1.04);background:#222;}
+        margin-bottom: 25px;
+      }
 
-    .card img{
-      width:100%;height:120px;object-fit:contain;
-      background:#fff;border-radius:8px;
-    }
+      .player {
+        height: 420px;
+        background: black;
+        border-radius: 15px;
+        overflow: hidden;
+        margin-bottom: 30px;
+      }
 
-    .name{margin-top:10px;font-size:18px;font-weight:bold;}
-    .info{color:#999;margin-top:6px;font-size:14px;}
+      video {
+        width: 100%;
+        height: 100%;
+        background: black;
+      }
 
-    .live{
-      margin-top:10px;display:inline-block;padding:5px 10px;
-      background:red;border-radius:20px;font-size:12px;
-    }
+      .grid {
+        display: grid;
 
-    footer{
-      position:fixed;bottom:0;left:250px;right:0;height:45px;
-      background:#111;display:flex;align-items:center;justify-content:center;
-      font-size:13px;border-top:1px solid #222;
-    }
-  </style>
-</head>
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
 
-<body>
+        gap: 20px;
+      }
 
-  <header>
-    <div class="logo">BTECH-TV WORLD ULTRA MAX X</div>
-    <input class="search" placeholder="Search Channel..." onkeyup="searchChannel(this.value)">
-  </header>
+      .card {
+        background: #1a1a1a;
 
-  <div class="container">
+        border-radius: 12px;
 
-    <div class="sidebar">
-      <h3>Countries</h3>
-      <div id="countries"></div>
+        padding: 15px;
 
-      <h3>Categories</h3>
-      <div id="categories"></div>
+        transition: 0.3s;
 
-      <h3>Languages</h3>
-      <div id="languages"></div>
-    </div>
+        cursor: pointer;
+      }
 
-    <div class="main">
-      <div class="hero">SMART IPTV DASHBOARD</div>
+      .card:hover {
+        transform: scale(1.04);
 
-      <div class="player">
-        <video id="video" controls autoplay></video>
+        background: #222;
+      }
+
+      .card img {
+        width: 100%;
+
+        height: 120px;
+
+        object-fit: contain;
+
+        background: white;
+
+        border-radius: 8px;
+      }
+
+      .name {
+        margin-top: 10px;
+
+        font-size: 18px;
+      }
+
+      .info {
+        color: #999;
+
+        margin-top: 6px;
+
+        font-size: 14px;
+      }
+
+      .live {
+        margin-top: 10px;
+
+        display: inline-block;
+
+        padding: 5px 10px;
+
+        background: red;
+
+        border-radius: 20px;
+
+        font-size: 12px;
+      }
+
+      footer {
+        position: fixed;
+
+        bottom: 0;
+
+        left: 250px;
+
+        right: 0;
+
+        height: 45px;
+
+        background: #111;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        font-size: 13px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">BTECH-TV WORLD ULTRA MAX X</div>
+
+      <input
+        class="search"
+        placeholder="Search Channel..."
+        onkeyup="searchChannel(this.value)"
+      />
+    </header>
+
+    <div class="container">
+      <div class="sidebar">
+        <h3>Countries</h3>
+
+        <div id="countries"></div>
+
+        <h3>Categories</h3>
+
+        <div id="categories"></div>
+
+        <h3>Languages</h3>
+
+        <div id="languages"></div>
       </div>
 
-      <div id="channels" class="grid"></div>
+      <div class="main">
+        <div class="hero">SMART IPTV DASHBOARD</div>
+
+        <div class="player">
+          <video id="video" controls autoplay></video>
+        </div>
+
+        <div id="channels" class="grid"></div>
+      </div>
     </div>
 
-  </div>
+    <footer>Modern IPTV Dashboard</footer>
 
-  <footer>Modern IPTV Dashboard</footer>
+    <script>
+      let CHANNELS = [];
 
-  <script>
-    let CHANNELS = [];
+      async function loadData() {
+        try {
+          CHANNELS = await fetch("data/channels.json").then((r) => r.json());
 
-    async function loadData(){
-      try{
-        const response = await fetch("data/channels.json");
-
-        if(!response.ok){
-          throw new Error("Unable to load channels.json");
+          renderChannels(CHANNELS);
+        } catch (e) {
+          console.log(e);
         }
 
-        CHANNELS = await response.json();
-
-        console.log(`Loaded ${CHANNELS.length} channels`);
-
-        renderChannels(CHANNELS);
         loadCountries();
+
         loadCategories();
+
         loadLanguages();
-
-      }catch(error){
-        console.error(error);
-
-        document.getElementById("channels").innerHTML = `
-          <div style="color:white;padding:40px;text-align:center;font-size:22px">
-            Failed to load <b>data/channels.json</b>
-          </div>`;
       }
-    }
 
-    function renderChannels(list){
-      let html = "";
-
-      list.forEach(c => {
-        html += `
-          <div class="card" onclick="play('${c.stream}')">
-            <img src="${c.logo}" onerror="this.src='https://via.placeholder.com/220x120?text=TV'">
-            <div class="name">${c.name}</div>
-            <div class="info">${c.country}</div>
-            <div class="info">${c.category}</div>
-            <div class="info">${c.quality} • ${c.type}</div>
-            <span class="live">LIVE</span>
-          </div>`;
-      });
-
-      document.getElementById("channels").innerHTML = html;
-    }
-
-    function play(url){
-      const video = document.getElementById("video");
-      video.src = url;
-      video.play();
-    }
-
-    function searchChannel(q){
-      q = q.toLowerCase();
-
-      renderChannels( CHANNELS.filter(c =>
-        c.name.toLowerCase().includes(q) ||
-        c.country.toLowerCase().includes(q) ||
-        c.category.toLowerCase().includes(q)
-      ));
-    }
-
-    async function loadCountries(){
-      try{
-        const data = await fetch("data/countries.json").then(r=>r.json());
+      function renderChannels(list) {
         let html = "";
 
-        data.forEach(x => {
-          html += `<button>${x.flag || "🌍"} ${x.name}</button>`;
+        list.forEach((c) => {
+          html += `
+
+<div
+class="card"
+onclick="play('${c.stream}')">
+
+<img src="${c.logo}">
+
+<div class="name">${c.name}</div>
+
+<div class="info">${c.country}</div>
+
+<div class="info">${c.category}</div>
+
+<span class="live">LIVE</span>
+
+</div>
+
+`;
+        });
+
+        document.getElementById("channels").innerHTML = html;
+      }
+
+      function play(url) {
+        document.getElementById("video").src = url;
+      }
+
+      function searchChannel(q) {
+        q = q.toLowerCase();
+
+        renderChannels(
+          CHANNELS.filter((c) => c.name.toLowerCase().includes(q)),
+        );
+      }
+
+      async function loadCountries() {
+        const data = await fetch("data/countries.json").then((r) => r.json());
+
+        let html = "";
+
+        data.forEach((x) => {
+          html += `<button>${x.flag} ${x.name}</button>`;
         });
 
         document.getElementById("countries").innerHTML = html;
-      }catch(e){
-        console.log("countries.json not found");
       }
-    }
 
-    async function loadCategories(){
-      try{
-        const data = await fetch("data/categories.json").then(r=>r.json());
+      async function loadCategories() {
+        const data = await fetch("data/categories.json").then((r) => r.json());
+
         let html = "";
 
-        data.forEach(x => {
-          html += `<button>${x.icon || "📺"} ${x.name}</button>`;
+        data.forEach((x) => {
+          html += `<button>${x.icon} ${x.name}</button>`;
         });
 
         document.getElementById("categories").innerHTML = html;
-      }catch(e){
-        console.log("categories.json not found");
       }
-    }
 
-    async function loadLanguages(){
-      try{
-        const data = await fetch("data/languages.json").then(r=>r.json());
+      async function loadLanguages() {
+        const data = await fetch("data/languages.json").then((r) => r.json());
+
         let html = "";
 
-        data.forEach(x => {
-          html += `<button>${x.flag || "🌐"} ${x.name}</button>`;
+        data.forEach((x) => {
+          html += `<button>${x.flag} ${x.name}</button>`;
         });
 
         document.getElementById("languages").innerHTML = html;
-      }catch(e){
-        console.log("languages.json not found");
       }
-    }
 
-    loadData();
-  </script>
-
-</body>
+      loadData();
+    </script>
+    let CHANNELS = []; async function loadData() { try { const response = await
+    fetch("data/channels.json"); if (!response.ok) { throw new Error("Unable to
+    load channels.json"); } CHANNELS = await response.json();
+    console.log(`Loaded ${CHANNELS.length} channels`); renderChannels(CHANNELS);
+    loadCountries(); loadCategories(); loadLanguages(); } catch (error) {
+    console.error(error); document.getElementById("channels").innerHTML = `
+    <div
+      style="color: white; padding: 40px; text-align: center; font-size: 22px"
+    >
+      Failed to load <b>data/channels.json</b>
+    </div>
+    `; } }
+  </body>
 </html>
