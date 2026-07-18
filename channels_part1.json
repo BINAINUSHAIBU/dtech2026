@@ -1,23 +1,127 @@
 [
   {
     "id": 1,
-    "name": "Channel Name",
-    "country": "Country",
+    "name": "CNN International HD",
+    "country": "United States",
     "countryCode": "US",
     "category": "News",
     "language": "English",
-    "logo": "logos/channel.png",
-    "stream": "https://your-authorized-stream.example/live/channel.m3u8",
-    "epg": "Channel.us",
+    "logo": "logos/cnn.png",
+    "stream": "https://your-authorized-stream.example/live/cnn.m3u8",
+    "epg": "cnn.us",
     "quality": "HD",
     "type": "Free",
     "status": "Online",
     "favorite": false,
     "locked": false,
     "views": 0
+  },
+  {
+    "id": 2,
+    "name": "BBC World News",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "category": "News",
+    "language": "English",
+    "logo": "logos/bbcworld.png",
+    "stream": "https://your-authorized-stream.example/live/bbcworld.m3u8",
+    "epg": "bbcworld.uk",
+    "quality": "HD",
+    "type": "Free",
+    "status": "Online",
+    "favorite": false,
+    "locked":false,
+    "views":0
+  },
+  {
+    "id": 3,
+    "name": "SuperSport Premier League",
+    "country": "South Africa",
+    "countryCode": "ZA",
+    "category": "Sports",
+    "language": "English",
+    "logo": "logos/supersport-pl.png",
+    "stream": "https://your-authorized-stream.example/live/sspl.m3u8",
+    "epg": "supersport.za",
+    "quality": "FHD",
+    "type": "Premium",
+    "status": "Online",
+    "favorite": false,
+    "locked": true,
+    "views": 0
+  },
+  {
+    "id": 4,
+    "name": "ESPN HD",
+    "country": "United States",
+    "countryCode": "US",
+    "category": "Sports",
+    "language": "English",
+    "logo": "logos/espn.png",
+    "stream": "https://your-authorized-stream.example/live/espn.m3u8",
+    "epg": "espn.us",
+    "quality": "HD",
+    "type": "Premium",
+    "status": "Online",
+    "favorite": false,
+    "locked": true,
+    "views": 0
+  },
+  {
+    "id": 5,
+    "name": "National Geographic",
+    "country": "United States",
+    "countryCode": "US",
+    "category": "Documentary",
+    "language": "English",
+    "logo": "logos/natgeo.png",
+    "stream": "https://your-authorized-stream.example/live/natgeo.m3u8",
+    "epg": "natgeo.us",
+    "quality": "HD",
+    "type": "Premium",
+    "status": "Online",
+    "favorite": false,
+    "locked": false,
+    "views": 0
   }
-]]{
-  "id": 2000,
-  "name": "...",
-  ...
-}
+
+  // ...
+
+  ,
+
+  {
+    "id": 1999,
+    "name": "Example Channel 1999",
+    "country": "Nigeria",
+    "countryCode": "NG",
+    "category": "Entertainment",
+    "language": "English",
+    "logo": "logos/channel1999.png",
+    "stream": "https://your-authorized-stream.example/live/channel1999.m3u8",
+    "epg": "channel1999.ng",
+    "quality": "HD",
+    "type": "Premium",
+    "status": "Online",
+    "favorite": false,
+    "locked": false,
+    "views": 0
+  },
+
+  {
+    "id": 2000,
+    "name": "Example Channel 2000",
+    "country": "France",
+    "countryCode": "FR",
+    "category": "Movies",
+    "language": "French",
+    "logo": "logos/channel2000.png",
+    "stream": "https://your-authorized-stream.example/live/channel2000.m3u8",
+    "epg": "channel2000.fr",
+    "quality": "4K",
+    "type": "Premium",
+    "status": "Online",
+    "favorite": false,
+    "locked": false,
+    "views": 0
+  }
+]
