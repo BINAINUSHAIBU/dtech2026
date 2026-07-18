@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none">
+
+    <!-- Signal Waves -->
+
+    <path d="M5 8C2.5 10.5 2.5 13.5 5 16" stroke="#00D4FF" stroke-width="2" stroke-linecap="round"></path>
+
+    <path d="M8 6C4.5 9.5 4.5 14.5 8 18" stroke="#00D4FF" stroke-width="2" stroke-linecap="round"></path>
+
+    <path d="M19 8C21.5 10.5 21.5 13.5 19 16" stroke="#00D4FF" stroke-width="2" stroke-linecap="round"></path>
+
+    <path d="M16 6C19.5 9.5 19.5 14.5 16 18" stroke="#00D4FF" stroke-width="2" stroke-linecap="round"></path>
+
+    <!-- Live Indicator -->
+
+    <circle cx="12" cy="12" r="3" fill="#FF3B30"></circle>
+
+</svg>
