@@ -1,0 +1,42 @@
+[
+  {
+    "id": 10001,
+    "name": "Channel 10001",
+    "country": "United States",
+    "countryCode": "US",
+    "category": "News",
+    "language": "English",
+    "logo": "logos/channel10001.png",
+    "stream": "https://your-authorized-stream.example/live/channel10001.m3u8",
+    "epg": "Channel10001.us",
+    "quality": "HD",
+    "type": "Free",
+    "status": "Online",
+    "favorite": false,
+    "locked": false,
+    "views": 0,
+    "lastUpdated": "2026-07-18T00:00:00Z"
+  },
+  {
+    "id": 10002,
+    "name": "Channel 10002",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "category": "Sports",
+    "language": "English",
+    "logo": "logos/channel10002.png",
+    "stream": "https://your-authorized-stream.example/live/channel10002.m3u8",
+    "epg": "Channel10002.uk",
+    "quality": "FHD",
+    "type": "Premium",
+    "status": "Online",
+    "favorite": false,
+    "locked": true,
+    "views": 0,
+    "lastUpdated": "2026-07-18T00:00:00Z"
+  }
+
+  // ...
+
+  // Continue sequentially to ID 12000
+]

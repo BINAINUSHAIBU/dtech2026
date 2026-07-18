@@ -1,0 +1,40 @@
+[
+  {
+    "id": 6001,
+    "name": "Channel 6001",
+    "country": "United States",
+    "countryCode": "US",
+    "category": "Sports",
+    "language": "English",
+    "logo": "logos/channel6001.png",
+    "stream": "https://your-authorized-stream.example/live/channel6001.m3u8",
+    "epg": "Channel6001.us",
+    "quality": "FHD",
+    "type": "Premium",
+    "status": "Online",
+    "favorite": false,
+    "locked": false,
+    "views": 0
+  },
+  {
+    "id": 6002,
+    "name": "Channel 6002",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "category": "News",
+    "language": "English",
+    "logo": "logos/channel6002.png",
+    "stream": "https://your-authorized-stream.example/live/channel6002.m3u8",
+    "epg": "Channel6002.uk",
+    "quality": "HD",
+    "type": "Free",
+    "status": "Online",
+    "favorite": false,
+    "locked": false,
+    "views": 0
+  }
+
+  // ...
+
+  // Continue sequentially to ID 8000
+]

@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "name": "News",
+    "icon": "📰",
+    "color": "#2196F3",
+    "channels": 1450,
+    "featured": true
+  },
+  {
+    "id": 2,
+    "name": "Sports",
+    "icon": "⚽",
+    "color": "#4CAF50",
+    "channels": 1680,
+    "featured": true
+  },
+  {
+    "id": 3,
+    "name": "Movies",
+    "icon": "🎬",
+    "color": "#E91E63",
+    "channels": 1825,
+    "featured": true
+  },
+  {
+    "id": 4,
+    "name": "Entertainment",
+    "icon": "📺",
+    "color": "#9C27B0",
+    "channels": 1600,
+    "featured": true
+  },
+  {
+    "id": 5,
+    "name": "Kids",
+    "icon": "🧸",
+    "color": "#FF9800",
+    "channels": 480,
+    "featured": false
+  },
+  {
+    "id": 6,
+    "name": "Music",
+    "icon": "🎵",
+    "color": "#00BCD4",
+    "channels": 520,
+    "featured": false
+  },
+  {
+    "id": 7,
+    "name": "Documentary",
+    "icon": "🎥",
+    "color": "#795548",
+    "channels": 690,
+    "featured": false
+  },
+  {
+    "id": 8,
+    "name": "Business",
+    "icon": "💼",
+    "color": "#607D8B",
+    "channels": 210,
+    "featured": false
+  },
+  {
+    "id": 9,
+    "name": "Science",
+    "icon": "🔬",
+    "color": "#3F51B5",
+    "channels": 180,
+    "featured": false
+  },
+  {
+    "id": 10,
+    "name": "Technology",
+    "icon": "💻",
+    "color": "#009688",
+    "channels": 150,
+    "featured": false
+  },
+  {
+    "id": 11,
+    "name": "Travel",
+    "icon": "✈️",
+    "color": "#8BC34A",
+    "channels": 220,
+    "featured": false
+  },
+  {
+    "id": 12,
+    "name": "Lifestyle",
+    "icon": "🏡",
+    "color": "#CDDC39",
+    "channels": 360,
+    "featured": false
+  },
+  {
+    "id": 13,
+    "name": "Food",
+    "icon": "🍽️",
+    "color": "#FF5722",
+    "channels": 175,
+    "featured": false
+  },
+  {
+    "id": 14,
+    "name": "Religion",
+    "icon": "⛪",
+    "color": "#673AB7",
+    "channels": 430,
+    "featured": false
+  },
+  {
+    "id": 15,
+    "name": "Education",
+    "icon": "📚",
+    "color": "#03A9F4",
+    "channels": 260,
+    "featured": false
+  },
+  {
+    "id": 16,
+    "name": "Comedy",
+    "icon": "😂",
+    "color": "#FFC107",
+    "channels": 195,
+    "featured": false
+  },
+  {
+    "id": 17,
+    "name": "Nature",
+    "icon": "🌿",
+    "color": "#4CAF50",
+    "channels": 145,
+    "featured": false
+  },
+  {
+    "id": 18,
+    "name": "Wildlife",
+    "icon": "🦁",
+    "color": "#8D6E63",
+    "channels": 120,
+    "featured": false
+  },
+  {
+    "id": 19,
+    "name": "Shopping",
+    "icon": "🛒",
+    "color": "#F06292",
+    "channels": 90,
+    "featured": false
+  },
+  {
+    "id": 20,
+    "name": "Live Events",
+    "icon": "🎤",
+    "color": "#F44336",
+    "channels": 106,
+    "featured": true
+  }
+]

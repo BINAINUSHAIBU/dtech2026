@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "name": "English",
+    "code": "en",
+    "nativeName": "English",
+    "flag": "🇬🇧",
+    "channels": 3850,
+    "rtl": false
+  },
+  {
+    "id": 2,
+    "name": "Spanish",
+    "code": "es",
+    "nativeName": "Español",
+    "flag": "🇪🇸",
+    "channels": 1260,
+    "rtl": false
+  },
+  {
+    "id": 3,
+    "name": "French",
+    "code": "fr",
+    "nativeName": "Français",
+    "flag": "🇫🇷",
+    "channels": 720,
+    "rtl": false
+  },
+  {
+    "id": 4,
+    "name": "German",
+    "code": "de",
+    "nativeName": "Deutsch",
+    "flag": "🇩🇪",
+    "channels": 650,
+    "rtl": false
+  },
+  {
+    "id": 5,
+    "name": "Italian",
+    "code": "it",
+    "nativeName": "Italiano",
+    "flag": "🇮🇹",
+    "channels": 430,
+    "rtl": false
+  },
+  {
+    "id": 6,
+    "name": "Portuguese",
+    "code": "pt",
+    "nativeName": "Português",
+    "flag": "🇵🇹",
+    "channels": 540,
+    "rtl": false
+  },
+  {
+    "id": 7,
+    "name": "Arabic",
+    "code": "ar",
+    "nativeName": "العربية",
+    "flag": "🇸🇦",
+    "channels": 690,
+    "rtl": true
+  },
+  {
+    "id": 8,
+    "name": "Hindi",
+    "code": "hi",
+    "nativeName": "हिन्दी",
+    "flag": "🇮🇳",
+    "channels": 810,
+    "rtl": false
+  },
+  {
+    "id": 9,
+    "name": "Chinese",
+    "code": "zh",
+    "nativeName": "中文",
+    "flag": "🇨🇳",
+    "channels": 920,
+    "rtl": false
+  },
+  {
+    "id": 10,
+    "name": "Japanese",
+    "code": "ja",
+    "nativeName": "日本語",
+    "flag": "🇯🇵",
+    "channels": 360,
+    "rtl": false
+  },
+  {
+    "id": 11,
+    "name": "Korean",
+    "code": "ko",
+    "nativeName": "한국어",
+    "flag": "🇰🇷",
+    "channels": 270,
+    "rtl": false
+  },
+  {
+    "id": 12,
+    "name": "Russian",
+    "code": "ru",
+    "nativeName": "Русский",
+    "flag": "🇷🇺",
+    "channels": 480,
+    "rtl": false
+  },
+  {
+    "id": 13,
+    "name": "Turkish",
+    "code": "tr",
+    "nativeName": "Türkçe",
+    "flag": "🇹🇷",
+    "channels": 330,
+    "rtl": false
+  },
+  {
+    "id": 14,
+    "name": "Dutch",
+    "code": "nl",
+    "nativeName": "Nederlands",
+    "flag": "🇳🇱",
+    "channels": 210,
+    "rtl": false
+  },
+  {
+    "id": 15,
+    "name": "Swedish",
+    "code": "sv",
+    "nativeName": "Svenska",
+    "flag": "🇸🇪",
+    "channels": 150,
+    "rtl": false
+  },
+  {
+    "id": 16,
+    "name": "Polish",
+    "code": "pl",
+    "nativeName": "Polski",
+    "flag": "🇵🇱",
+    "channels": 240,
+    "rtl": false
+  },
+  {
+    "id": 17,
+    "name": "Greek",
+    "code": "el",
+    "nativeName": "Ελληνικά",
+    "flag": "🇬🇷",
+    "channels": 120,
+    "rtl": false
+  },
+  {
+    "id": 18,
+    "name": "Thai",
+    "code": "th",
+    "nativeName": "ไทย",
+    "flag": "🇹🇭",
+    "channels": 160,
+    "rtl": false
+  },
+  {
+    "id": 19,
+    "name": "Indonesian",
+    "code": "id",
+    "nativeName": "Bahasa Indonesia",
+    "flag": "🇮🇩",
+    "channels": 180,
+    "rtl": false
+  },
+  {
+    "id": 20,
+    "name": "Multilingual",
+    "code": "multi",
+    "nativeName": "Multiple Languages",
+    "flag": "🌐",
+    "channels": 600,
+    "rtl": false
+  }
+]

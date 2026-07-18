@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Channel Name",
+    "country": "Country",
+    "countryCode": "US",
+    "category": "News",
+    "language": "English",
+    "logo": "logos/channel.png",
+    "stream": "https://your-authorized-stream.example/live/channel.m3u8",
+    "epg": "Channel.us",
+    "quality": "HD",
+    "type": "Free",
+    "status": "Online",
+    "favorite": false,
+    "locked": false,
+    "views": 0
+  }
+]]{
+  "id": 2000,
+  "name": "...",
+  ...
+}
