@@ -1,162 +1,242 @@
 [
   {
     "id": 1,
-    "name": "News",
-    "icon": "📰",
-    "color": "#2196F3",
-    "channels": 1450,
+    "name": "DSTV General",
+    "icon": "📺",
+    "color": "#1565C0",
+    "channels": 350,
     "featured": true
   },
   {
     "id": 2,
-    "name": "Sports",
+    "name": "DSTV Sports",
     "icon": "⚽",
-    "color": "#4CAF50",
-    "channels": 1680,
+    "color": "#43A047",
+    "channels": 420,
     "featured": true
   },
   {
     "id": 3,
-    "name": "Movies",
+    "name": "DSTV Movies",
     "icon": "🎬",
-    "color": "#E91E63",
-    "channels": 1825,
+    "color": "#E53935",
+    "channels": 310,
     "featured": true
   },
   {
     "id": 4,
-    "name": "Entertainment",
-    "icon": "📺",
-    "color": "#9C27B0",
-    "channels": 1600,
+    "name": "DSTV Entertainment",
+    "icon": "🎭",
+    "color": "#8E24AA",
+    "channels": 380,
     "featured": true
   },
   {
     "id": 5,
-    "name": "Kids",
+    "name": "DSTV Kids",
     "icon": "🧸",
-    "color": "#FF9800",
-    "channels": 480,
-    "featured": false
+    "color": "#FB8C00",
+    "channels": 90,
+    "featured": true
   },
   {
     "id": 6,
     "name": "Music",
     "icon": "🎵",
-    "color": "#00BCD4",
-    "channels": 520,
+    "color": "#00ACC1",
+    "channels": 170,
     "featured": false
   },
   {
     "id": 7,
     "name": "Documentary",
-    "icon": "🎥",
-    "color": "#795548",
-    "channels": 690,
-    "featured": false
-  },
-  {
-    "id": 8,
-    "name": "Business",
-    "icon": "💼",
-    "color": "#607D8B",
-    "channels": 210,
-    "featured": false
-  },
-  {
-    "id": 9,
-    "name": "Science",
-    "icon": "🔬",
-    "color": "#3F51B5",
-    "channels": 180,
-    "featured": false
-  },
-  {
-    "id": 10,
-    "name": "Technology",
-    "icon": "💻",
-    "color": "#009688",
-    "channels": 150,
-    "featured": false
-  },
-  {
-    "id": 11,
-    "name": "Travel",
-    "icon": "✈️",
-    "color": "#8BC34A",
-    "channels": 220,
-    "featured": false
-  },
-  {
-    "id": 12,
-    "name": "Lifestyle",
-    "icon": "🏡",
-    "color": "#CDDC39",
-    "channels": 360,
-    "featured": false
-  },
-  {
-    "id": 13,
-    "name": "Food",
-    "icon": "🍽️",
-    "color": "#FF5722",
-    "channels": 175,
-    "featured": false
-  },
-  {
-    "id": 14,
-    "name": "Religion",
-    "icon": "⛪",
-    "color": "#673AB7",
-    "channels": 430,
-    "featured": false
-  },
-  {
-    "id": 15,
-    "name": "Education",
-    "icon": "📚",
-    "color": "#03A9F4",
-    "channels": 260,
-    "featured": false
-  },
-  {
-    "id": 16,
-    "name": "Comedy",
-    "icon": "😂",
-    "color": "#FFC107",
-    "channels": 195,
-    "featured": false
-  },
-  {
-    "id": 17,
-    "name": "Nature",
-    "icon": "🌿",
-    "color": "#4CAF50",
-    "channels": 145,
-    "featured": false
-  },
-  {
-    "id": 18,
-    "name": "Wildlife",
-    "icon": "🦁",
-    "color": "#8D6E63",
+    "icon": "🌍",
+    "color": "#6D4C41",
     "channels": 120,
     "featured": false
   },
   {
-    "id": 19,
-    "name": "Shopping",
-    "icon": "🛒",
-    "color": "#F06292",
-    "channels": 90,
+    "id": 8,
+    "name": "News",
+    "icon": "📰",
+    "color": "#1E88E5",
+    "channels": 280,
+    "featured": true
+  },
+  {
+    "id": 9,
+    "name": "Religion",
+    "icon": "⛪",
+    "color": "#5E35B1",
+    "channels": 75,
     "featured": false
+  },
+  {
+    "id": 10,
+    "name": "Business",
+    "icon": "💼",
+    "color": "#546E7A",
+    "channels": 65,
+    "featured": false
+  },
+  {
+    "id": 11,
+    "name": "Lifestyle",
+    "icon": "🏡",
+    "color": "#C0CA33",
+    "channels": 110,
+    "featured": false
+  },
+  {
+    "id": 12,
+    "name": "Food",
+    "icon": "🍽️",
+    "color": "#F4511E",
+    "channels": 45,
+    "featured": false
+  },
+  {
+    "id": 13,
+    "name": "Travel",
+    "icon": "✈️",
+    "color": "#7CB342",
+    "channels": 50,
+    "featured": false
+  },
+  {
+    "id": 14,
+    "name": "Comedy",
+    "icon": "😂",
+    "color": "#FDD835",
+    "channels": 80,
+    "featured": false
+  },
+  {
+    "id": 15,
+    "name": "Africa Magic",
+    "icon": "🎞️",
+    "color": "#D81B60",
+    "channels": 35,
+    "featured": true
+  },
+  {
+    "id": 16,
+    "name": "Canal+ Africa",
+    "icon": "🌍",
+    "color": "#3949AB",
+    "channels": 650,
+    "featured": true
+  },
+  {
+    "id": 17,
+    "name": "SuperSport",
+    "icon": "🏆",
+    "color": "#00897B",
+    "channels": 95,
+    "featured": true
+  },
+  {
+    "id": 18,
+    "name": "Movies HD",
+    "icon": "🍿",
+    "color": "#C62828",
+    "channels": 260,
+    "featured": true
+  },
+  {
+    "id": 19,
+    "name": "International",
+    "icon": "🌐",
+    "color": "#5C6BC0",
+    "channels": 1400,
+    "featured": true
   },
   {
     "id": 20,
     "name": "Live Events",
     "icon": "🎤",
-    "color": "#F44336",
-    "channels": 106,
+    "color": "#E53935",
+    "channels": 150,
+    "featured": true
+  },
+  {
+    "id": 21,
+    "name": "USA",
+    "icon": "🇺🇸",
+    "color": "#1976D2",
+    "channels": 1300,
+    "featured": false
+  },
+  {
+    "id": 22,
+    "name": "United Kingdom",
+    "icon": "🇬🇧",
+    "color": "#512DA8",
+    "channels": 900,
+    "featured": false
+  },
+  {
+    "id": 23,
+    "name": "Canada",
+    "icon": "🇨🇦",
+    "color": "#D32F2F",
+    "channels": 420,
+    "featured": false
+  },
+  {
+    "id": 24,
+    "name": "France",
+    "icon": "🇫🇷",
+    "color": "#1565C0",
+    "channels": 540,
+    "featured": false
+  },
+  {
+    "id": 25,
+    "name": "Germany",
+    "icon": "🇩🇪",
+    "color": "#616161",
+    "channels": 430,
+    "featured": false
+  },
+  {
+    "id": 26,
+    "name": "Italy",
+    "icon": "🇮🇹",
+    "color": "#2E7D32",
+    "channels": 390,
+    "featured": false
+  },
+  {
+    "id": 27,
+    "name": "Spain",
+    "icon": "🇪🇸",
+    "color": "#F57C00",
+    "channels": 360,
+    "featured": false
+  },
+  {
+    "id": 28,
+    "name": "India",
+    "icon": "🇮🇳",
+    "color": "#FF6F00",
+    "channels": 820,
+    "featured": true
+  },
+  {
+    "id": 29,
+    "name": "Nigeria",
+    "icon": "🇳🇬",
+    "color": "#388E3C",
+    "channels": 250,
+    "featured": true
+  },
+  {
+    "id": 30,
+    "name": "South Africa",
+    "icon": "🇿🇦",
+    "color": "#00695C",
+    "channels": 290,
     "featured": true
   }
 ]
