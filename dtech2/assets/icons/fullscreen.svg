@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none">
+
+    <!-- Top Left -->
+    <path d="M8 3H3V8" stroke="#00D4FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+
+    <path d="M3 3L9 9" stroke="#00D4FF" stroke-width="2" stroke-linecap="round"></path>
+
+    <!-- Top Right -->
+    <path d="M16 3H21V8" stroke="#00D4FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+
+    <path d="M21 3L15 9" stroke="#00D4FF" stroke-width="2" stroke-linecap="round"></path>
+
+    <!-- Bottom Left -->
+    <path d="M3 16V21H8" stroke="#00D4FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+
+    <path d="M3 21L9 15" stroke="#00D4FF" stroke-width="2" stroke-linecap="round"></path>
+
+    <!-- Bottom Right -->
+    <path d="M21 16V21H16" stroke="#00D4FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+
+    <path d="M21 21L15 15" stroke="#00D4FF" stroke-width="2" stroke-linecap="round"></path>
+
+</svg>

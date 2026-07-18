@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none">
+
+    <!-- Balloon -->
+
+    <circle cx="12" cy="8" r="5" fill="#00D4FF"></circle>
+
+    <!-- Shine -->
+
+    <circle cx="10" cy="6" r="1" fill="#B8F3FF"></circle>
+
+    <!-- Balloon String -->
+
+    <path d="M12 13
+           C12 15,
+             10 16,
+             11 18
+           S13 20,
+             12 22" stroke="#00D4FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+
+    <!-- Bow -->
+
+    <path d="M11 13
+           L9.5 14.5
+           L12 14" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+
+    <path d="M13 13
+           L14.5 14.5
+           L12 14" stroke="#00D4FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+
+</svg>
