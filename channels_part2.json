@@ -1,14 +1,14 @@
 [
   {
     "id": 2001,
-    "name": "Channel Name",
-    "country": "Country",
+    "name": "CNN International HD",
+    "country": "United States",
     "countryCode": "US",
     "category": "News",
     "language": "English",
-    "logo": "logos/channel.png",
-    "stream": "https://your-authorized-stream.example/live/channel.m3u8",
-    "epg": "Channel.us",
+    "logo": "logos/cnn.png",
+    "stream": "https://your-authorized-stream.example/live/cnn.m3u8",
+    "epg": "cnn.us",
     "quality": "HD",
     "type": "Free",
     "status": "Online",
@@ -16,18 +16,92 @@
     "locked": false,
     "views": 0
   },
-
   {
     "id": 2002,
-    "name": "Another Channel",
-    "...": "..."
+    "name": "BBC World News HD",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "category": "News",
+    "language": "English",
+    "logo": "logos/bbcworld.png",
+    "stream": "https://your-authorized-stream.example/live/bbcworld.m3u8",
+    "epg": "bbcworld.uk",
+    "quality": "HD",
+    "type": "Free",
+    "status": "Online",
+    "favorite": false,
+    "locked": false,
+    "views": 0
+  },
+  {
+    "id": 2003,
+    "name": "SuperSport Premier League",
+    "country": "South Africa",
+    "countryCode": "ZA",
+    "category": "Sports",
+    "language": "English",
+    "logo": "logos/sspl.png",
+    "stream": "https://your-authorized-stream.example/live/sspl.m3u8",
+    "epg": "supersport.za",
+    "quality": "FHD",
+    "type": "Premium",
+    "status": "Online",
+    "favorite": false,
+    "locked": true,
+    "views": 0
   },
 
-  // ...
+  /* Continue sequentially using the same structure */
 
   {
+    "id": 3998,
+    "name": "Travel Explorer HD",
+    "country": "Canada",
+    "countryCode": "CA",
+    "category": "Travel",
+    "language": "English",
+    "logo": "logos/travel.png",
+    "stream": "https://your-authorized-stream.example/live/travel.m3u8",
+    "epg": "travel.ca",
+    "quality": "HD",
+    "type": "Premium",
+    "status": "Online",
+    "favorite": false,
+    "locked": false,
+    "views": 0
+  },
+  {
+    "id": 3999,
+    "name": "Discovery Science HD",
+    "country": "United States",
+    "countryCode": "US",
+    "category": "Science",
+    "language": "English",
+    "logo": "logos/discoveryscience.png",
+    "stream": "https://your-authorized-stream.example/live/discoveryscience.m3u8",
+    "epg": "discoveryscience.us",
+    "quality": "HD",
+    "type": "Premium",
+    "status": "Online",
+    "favorite": false,
+    "locked": false,
+    "views": 0
+  },
+  {
     "id": 4000,
-    "name": "Final Channel",
-    "...": "..."
+    "name": "National Geographic Wild",
+    "country": "United States",
+    "countryCode": "US",
+    "category": "Documentary",
+    "language": "English",
+    "logo": "logos/natgeowild.png",
+    "stream": "https://your-authorized-stream.example/live/natgeowild.m3u8",
+    "epg": "natgeowild.us",
+    "quality": "4K",
+    "type": "Premium",
+    "status": "Online",
+    "favorite": false,
+    "locked": false,
+    "views": 0
   }
 ]
