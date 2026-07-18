@@ -1,0 +1,372 @@
+/* ===================================
+   BTECH-TV WORLD PRO MAX
+   css/dashboard.css
+=================================== */
+
+/* ===========================
+   DASHBOARD LAYOUT
+=========================== */
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+/* ===========================
+   HERO SECTION
+=========================== */
+
+.hero {
+  background: linear-gradient(135deg, #07132f, #102454);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero h2 {
+  color: #00d4ff;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  color: #c7d8f6;
+  margin-top: 8px;
+}
+
+/* ===========================
+   STATISTICS
+=========================== */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.stat {
+  background: #111d39;
+  border: 1px solid #1d355f;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.stat:hover {
+  transform: translateY(-5px);
+  border-color: #00d4ff;
+}
+
+.stat h3 {
+  font-size: 32px;
+  color: #00d4ff;
+  margin-bottom: 10px;
+}
+
+.stat p {
+  color: #b9c8e8;
+  font-size: 14px;
+}
+
+/* ===========================
+   STATUS COLORS
+=========================== */
+
+.stat.live {
+  border-left: 5px solid #00d4ff;
+}
+
+.stat.favorite {
+  border-left: 5px solid gold;
+}
+
+.stat.dead {
+  border-left: 5px solid red;
+}
+
+.stat.total {
+  border-left: 5px solid limegreen;
+}
+
+/* ===========================
+   DASHBOARD CARDS
+=========================== */
+
+.dashboard-card {
+  background: #111a31;
+  border: 1px solid #20365d;
+  border-radius: 12px;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.dashboard-card:hover {
+  border-color: #00d4ff;
+}
+
+.dashboard-card h3 {
+  color: #00d4ff;
+  margin-bottom: 15px;
+}
+
+.dashboard-card p {
+  color: #d6e1fa;
+  line-height: 1.6;
+}
+
+/* ===========================
+   QUICK ACTIONS
+=========================== */
+
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.action-btn {
+  background: #152445;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.action-btn:hover {
+  background: #00d4ff;
+  color: #000;
+}
+
+/* ===========================
+   CHANNEL GRID
+=========================== */
+
+.channel-wrapper {
+  flex: 1;
+  overflow: hidden;
+}
+
+.channels {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+  overflow-y: auto;
+  height: 100%;
+  padding-right: 5px;
+}
+
+/* ===========================
+   CHANNEL CARD
+=========================== */
+
+.card {
+  background: #101827;
+  border: 1px solid #1d355f;
+  border-radius: 12px;
+  padding: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #00d4ff;
+}
+
+.card-title {
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.card-number {
+  color: #00d4ff;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.card-category {
+  color: #9fb5dc;
+  font-size: 13px;
+}
+
+/* ===========================
+   LIVE BADGE
+=========================== */
+
+.badge {
+  float: right;
+  background: #ff0000;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+/* ===========================
+   SEARCH BAR
+=========================== */
+
+.search-box {
+  width: 320px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 12px;
+  background: #101a31;
+  border: 1px solid #20365d;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.search-box input:focus {
+  border-color: #00d4ff;
+  outline: none;
+}
+
+/* ===========================
+   TABLE
+=========================== */
+
+.table-container {
+  overflow: auto;
+  border-radius: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th {
+  background: #152445;
+  color: #00d4ff;
+  padding: 14px;
+  text-align: left;
+}
+
+table td {
+  padding: 12px;
+  border-bottom: 1px solid #1d355f;
+}
+
+table tr:hover {
+  background: #152445;
+}
+
+/* ===========================
+   PROGRESS BAR
+=========================== */
+
+.progress {
+  width: 100%;
+  height: 8px;
+  background: #0d1324;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress span {
+  display: block;
+  height: 100%;
+  background: #00d4ff;
+}
+
+/* ===========================
+   NOTIFICATION
+=========================== */
+
+.notification {
+  background: #102454;
+  border-left: 4px solid #00d4ff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* ===========================
+   SYSTEM STATUS
+=========================== */
+
+.status-online {
+  color: #00ff7f;
+  font-weight: bold;
+}
+
+.status-offline {
+  color: #ff4444;
+  font-weight: bold;
+}
+
+.status-warning {
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.dashboard-footer {
+  text-align: center;
+  color: #8ea2d9;
+  padding: 15px;
+  margin-top: 20px;
+  border-top: 1px solid #20365d;
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+.channels::-webkit-scrollbar {
+  width: 8px;
+}
+
+.channels::-webkit-scrollbar-thumb {
+  background: #00d4ff;
+  border-radius: 20px;
+}
+
+.channels::-webkit-scrollbar-track {
+  background: #091221;
+}
+header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+  background: #10151d;
+}
+
+.container {
+  display: flex;
+  height: calc(100vh - 70px);
+}
+
+.main {
+  flex: 1;
+  overflow: auto;
+  padding: 20px;
+}
+
+.hero {
+  height: 250px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0047ff, #00d2ff);
+  margin-bottom: 20px;
+}
