@@ -1,14 +1,14 @@
 [
   {
     "id": 10001,
-    "name": "Channel 10001",
+    "name": "CNN International HD",
     "country": "United States",
     "countryCode": "US",
     "category": "News",
     "language": "English",
-    "logo": "logos/channel10001.png",
-    "stream": "https://your-authorized-stream.example/live/channel10001.m3u8",
-    "epg": "Channel10001.us",
+    "logo": "logos/cnn.png",
+    "stream": "https://your-authorized-stream.example/live/cnn.m3u8",
+    "epg": "CNN.us",
     "quality": "HD",
     "type": "Free",
     "status": "Online",
@@ -19,14 +19,32 @@
   },
   {
     "id": 10002,
-    "name": "Channel 10002",
+    "name": "BBC World News HD",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "category": "News",
+    "language": "English",
+    "logo": "logos/bbcworldnews.png",
+    "stream": "https://your-authorized-stream.example/live/bbcworldnews.m3u8",
+    "epg": "BBCWorldNews.uk",
+    "quality": "FHD",
+    "type": "Free",
+    "status": "Online",
+    "favorite": false,
+    "locked": false,
+    "views": 0,
+    "lastUpdated": "2026-07-18T00:00:00Z"
+  },
+  {
+    "id": 10003,
+    "name": "Sky Sports News HD",
     "country": "United Kingdom",
     "countryCode": "GB",
     "category": "Sports",
     "language": "English",
-    "logo": "logos/channel10002.png",
-    "stream": "https://your-authorized-stream.example/live/channel10002.m3u8",
-    "epg": "Channel10002.uk",
+    "logo": "logos/skysportsnews.png",
+    "stream": "https://your-authorized-stream.example/live/skysportsnews.m3u8",
+    "epg": "SkySportsNews.uk",
     "quality": "FHD",
     "type": "Premium",
     "status": "Online",
@@ -34,9 +52,43 @@
     "locked": true,
     "views": 0,
     "lastUpdated": "2026-07-18T00:00:00Z"
+  },
+  {
+    "id": 10004,
+    "name": "Al Jazeera English",
+    "country": "Qatar",
+    "countryCode": "QA",
+    "category": "News",
+    "language": "English",
+    "logo": "logos/aljazeera.png",
+    "stream": "https://your-authorized-stream.example/live/aljazeera.m3u8",
+    "epg": "AlJazeera.qa",
+    "quality": "HD",
+    "type": "Free",
+    "status": "Online",
+    "favorite": false,
+    "locked": false,
+    "views": 0,
+    "lastUpdated": "2026-07-18T00:00:00Z"
+  },
+  {
+    "id": 10005,
+    "name": "Bloomberg Television",
+    "country": "United States",
+    "countryCode": "US",
+    "category": "Business",
+    "language": "English",
+    "logo": "logos/bloomberg.png",
+    "stream": "https://your-authorized-stream.example/live/bloomberg.m3u8",
+    "epg": "Bloomberg.us",
+    "quality": "HD",
+    "type": "Free",
+    "status": "Online",
+    "favorite": false,
+    "locked": false,
+    "views": 0,
+    "lastUpdated": "2026-07-18T00:00:00Z"
   }
 
-  // ...
-
-  // Continue sequentially to ID 12000
+  /* Continue sequentially through ID 12000 using the same schema */
 ]
