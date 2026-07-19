@@ -9,7 +9,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 
-
     <style>
       * {
         margin: 0;
@@ -216,131 +215,21 @@
       />
     </header>
 
-<!-- SIDEBAR -->
-<div class="sidebar">
+    <div class="container">
+      <div class="sidebar">
+        <h3>Countries</h3>
 
-<div class="logo">📺 BTECH-TV PRO MAX</div>
-<div class="sub">Ultra BTECH-TV world Engine X</div>
+        <div id="countries"></div>
 
-<div class="menu-title">🌍 Countries</div>
+        <h3>Categories</h3>
 
-<!-- ALL COUNTRIES -->
-<button class="nav-btn" onclick="load('ng')">🇳🇬 Nigeria</button>
-<button class="nav-btn" onclick="load('us')">🇺🇸 USA</button>
-<button class="nav-btn" onclick="load('uk')">🇬🇧 UK</button>
-<button class="nav-btn" onclick="load('in')">🇮🇳 India</button>
-<button class="nav-btn" onclick="load('fr')">🇫🇷 France</button>
-<button class="nav-btn" onclick="load('de')">🇩🇪 Germany</button>
-<button class="nav-btn" onclick="load('br')">🇧🇷 Brazil</button>
-<button class="nav-btn" onclick="load('za')">🇿🇦 South Africa</button>
-<button class="nav-btn" onclick="load('ca')">🇨🇦 Canada</button>
-<button class="nav-btn" onclick="load('au')">🇦🇺 Australia</button>
-<button class="nav-btn" onclick="load('jp')">🇯🇵 Japan</button>
-<button class="nav-btn" onclick="load('kr')">🇰🇷 South Korea</button>
-<button class="nav-btn" onclick="load('cn')">🇨🇳 China</button>
-<button class="nav-btn" onclick="load('es')">🇪🇸 Spain</button>
-<button class="nav-btn" onclick="load('it')">🇮🇹 Italy</button>
-<button class="nav-btn" onclick="load('tr')">🇹🇷 Turkey</button>
-<button class="nav-btn" onclick="load('mx')">🇲🇽 Mexico</button>
-<button class="nav-btn" onclick="load('ae')">🇦🇪 UAE</button>
-<button class="nav-btn" onclick="load('sa')">🇸🇦 Saudi Arabia</button>
-<button class="nav-btn" onclick="load('eg')">🇪🇬 Egypt</button>
-<button class="nav-btn" onclick="load('ar')">🇦🇷 Argentina</button>
-<button class="nav-btn" onclick="load('pk')">🇵🇰 Pakistan</button>
-<button class="nav-btn" onclick="load('id')">🇮🇩 Indonesia</button>
-<button class="nav-btn" onclick="load('ph')">🇵🇭 Philippines</button>
-<button class="nav-btn" onclick="load('al')">🇦🇱 Albania</button>
+        <div id="categories"></div>
 
-<div class="menu-title">🎬 Categories</div>
+        <h3>Languages</h3>
 
-<button class="nav-btn" onclick="loadCat('news')">📰 News</button>
-<button class="nav-btn" onclick="loadCat('sports')">⚽ Sports</button>
-<button class="nav-btn" onclick="loadCat('movies')">🎬 Movies</button>
-<button class="nav-btn" onclick="loadCat('music')">🎵 Music</button>
-<button class="nav-btn" onclick="loadCat('kids')">👶 Kids</button>
-<button class="nav-btn" onclick="loadCat('comedy')">😂 Comedy</button>
-<button class="nav-btn" onclick="loadCat('documentary')">📚 Documentary</button>
-<button class="nav-btn" onclick="loadCat('business')">💼 Business</button>
-<button class="nav-btn" onclick="loadCat('science')">🔬 Science</button>
-<button class="nav-btn" onclick="loadCat('travel')">✈ Travel</button>
+        <div id="languages"></div>
+      </div>
 
-<div class="menu-title">🗣 Languages</div>
-
-<button class="nav-btn" onclick="load('eng')">🇬🇧 English</button>
-<button class="nav-btn" onclick="load('spa')">🇪🇸 Spanish</button>
-<button class="nav-btn" onclick="load('ara')">🇸🇦 Arabic</button>
-<button class="nav-btn" onclick="load('fra')">🇫🇷 French</button>
-<button class="nav-btn" onclick="load('hin')">🇮🇳 Hindi</button>
-<button class="nav-btn" onclick="load('zho')">🇨🇳 Chinese</button>
-<button class="nav-btn" onclick="load('por')">🇵🇹 Portuguese</button>
-
-<div class="menu-title">🔥 Tools</div>
-
-<button class="nav-btn" onclick="scanStreams()">📡 Scan</button>
-<button class="nav-btn" onclick="speedBoost()">⚡ Boost</button>
-<button class="nav-btn" onclick="togglePiP()">📺 PiP</button>
-<button class="nav-btn" onclick="clearRecents()">🗑 Recents</button>
-<button class="nav-btn" onclick="recordMode()">⏺ Record</button>
-<button class="nav-btn" onclick="loadUltra()">🚀 Ultra Feeds</button>
-<button class="nav-btn" onclick="repairStreams()">🛠 Repair</button>
-<button class="nav-btn" onclick="optimizeMemory()">🧠 Optimize</button>
-
-</div>
-
-<!-- MAIN -->
-<div class="main">
-
-<div class="topbar">
-<div class="search-box">
-<input oninput="search(this.value)" placeholder="Search BTECH-TV World...">
-</div>
-<div style="display:flex;align-items:center;gap:10px"><div id="floatingTimer">⏱ 2m 00s</div><div class="live">🔴 BTECH-TV LIVE</div></div>
-</div>
-
-<div class="hero">
-<h3>BTECH-TV World PRO MAX SYSTEM</h3>
-<div class="stats">
-<div class="stat">📺 <div id="total">0</div></div>
-<div class="stat">⭐ Fav <div id="fav">0</div></div>
-<div class="stat">⚫ Dead <div id="dead">0</div></div>
-<div class="stat">🌍 Live <div id="live">0</div></div>
-</div>
-</div>
-
-<div class="player-container">
-<video id="video" controls autoplay muted></video>
-</div>
-
-<div class="controls">
-
-<div class="controls" style="display:flex;align-items:center;width:100%;">
-
-    <button onclick="next()">▶ Next</button>
-    <button onclick="prev()">◀ Prev</button>
-    <button onclick="toggleMute()">🔊 Mute</button>
-    <button onclick="toggleFullscreen()">⛶ Fullscreen</button>
-    <button onclick="loadUltra()">🚀 Global</button>
-
-    <!-- Pushes the text to the far right -->
-    <div style="
-        margin-left:auto;
-        color:#00d4ff;
-        font-size:13px;
-        font-weight:bold;
-        white-space:nowrap;
-        padding-left:20px;
-    ">
-        Design by <span style="color:#ffffff;">BINAINU SHAIBU</span> | BTECH WEBSITE DESIGN
-    </div>
-
-</div>
-</div>
-
-<div class="channel-wrapper">
-<div class="channels" id="grid"></div>
-</div>
-
-</div>
       <div class="main">
         <div class="hero">SMART IPTV DASHBOARD</div>
 
@@ -354,6 +243,116 @@
 
     <footer>Modern IPTV Dashboard</footer>
 
+    <script>
+      let CHANNELS = [];
+
+      async function loadData() {
+        try {
+          CHANNELS = await fetch("data/channels.json").then((r) => r.json());
+
+          renderChannels(CHANNELS);
+        } catch (e) {
+          console.log(e);
+        }
+
+        loadCountries();
+
+        loadCategories();
+
+        loadLanguages();
+      }
+
+      function renderChannels(list) {
+        let html = "";
+
+        list.forEach((c) => {
+          html += `
+
+<div
+class="card"
+onclick="play('${c.stream}')">
+
+<img src="${c.logo}">
+
+<div class="name">${c.name}</div>
+
+<div class="info">${c.country}</div>
+
+<div class="info">${c.category}</div>
+
+<span class="live">LIVE</span>
+
+</div>
+
+`;
+        });
+
+        document.getElementById("channels").innerHTML = html;
+      }
+
+      function play(url) {
+        document.getElementById("video").src = url;
+      }
+
+      function searchChannel(q) {
+        q = q.toLowerCase();
+
+        renderChannels(
+          CHANNELS.filter((c) => c.name.toLowerCase().includes(q)),
+        );
+      }
+
+      async function loadCountries() {
+        const data = await fetch("data/countries.json").then((r) => r.json());
+
+        let html = "";
+
+        data.forEach((x) => {
+          html += `<button>${x.flag} ${x.name}</button>`;
+        });
+
+        document.getElementById("countries").innerHTML = html;
+      }
+
+      async function loadCategories() {
+        const data = await fetch("data/categories.json").then((r) => r.json());
+
+        let html = "";
+
+        data.forEach((x) => {
+          html += `<button>${x.icon} ${x.name}</button>`;
+        });
+
+        document.getElementById("categories").innerHTML = html;
+      }
+
+      async function loadLanguages() {
+        const data = await fetch("data/languages.json").then((r) => r.json());
+
+        let html = "";
+
+        data.forEach((x) => {
+          html += `<button>${x.flag} ${x.name}</button>`;
+        });
+
+        document.getElementById("languages").innerHTML = html;
+      }
+
+      loadData();
+    </script>
+    let CHANNELS = []; async function loadData() { try { const response = await
+    fetch("data/channels.json"); if (!response.ok) { throw new Error("Unable to
+    load channels.json"); } CHANNELS = await response.json();
+    console.log(`Loaded ${CHANNELS.length} channels`); renderChannels(CHANNELS);
+    loadCountries(); loadCategories(); loadLanguages(); } catch (error) {
+    console.error(error); document.getElementById("channels").innerHTML = `
+    <div
+      style="color: white; padding: 40px; text-align: center; font-size: 22px"
+    >
+      Failed to load <b>data/channels.json</b>
+    </div>
+    `; } }
+      
 <script>
 
 let all=[],filtered=[],i=0;
@@ -544,114 +543,5 @@ clearInterval(monitorCheck);
 }
 },1000);
 </script>
-    <script>
-      let CHANNELS = [];
-
-      async function loadData() {
-        try {
-          CHANNELS = await fetch("data/channels.json").then((r) => r.json());
-
-          renderChannels(CHANNELS);
-        } catch (e) {
-          console.log(e);
-        }
-
-        loadCountries();
-
-        loadCategories();
-
-        loadLanguages();
-      }
-
-      function renderChannels(list) {
-        let html = "";
-
-        list.forEach((c) => {
-          html += `
-
-<div
-class="card"
-onclick="play('${c.stream}')">
-
-<img src="${c.logo}">
-
-<div class="name">${c.name}</div>
-
-<div class="info">${c.country}</div>
-
-<div class="info">${c.category}</div>
-
-<span class="live">LIVE</span>
-
-</div>
-
-`;
-        });
-
-        document.getElementById("channels").innerHTML = html;
-      }
-
-      function play(url) {
-        document.getElementById("video").src = url;
-      }
-
-      function searchChannel(q) {
-        q = q.toLowerCase();
-
-        renderChannels(
-          CHANNELS.filter((c) => c.name.toLowerCase().includes(q)),
-        );
-      }
-
-      async function loadCountries() {
-        const data = await fetch("data/countries.json").then((r) => r.json());
-
-        let html = "";
-
-        data.forEach((x) => {
-          html += `<button>${x.flag} ${x.name}</button>`;
-        });
-
-        document.getElementById("countries").innerHTML = html;
-      }
-
-      async function loadCategories() {
-        const data = await fetch("data/categories.json").then((r) => r.json());
-
-        let html = "";
-
-        data.forEach((x) => {
-          html += `<button>${x.icon} ${x.name}</button>`;
-        });
-
-        document.getElementById("categories").innerHTML = html;
-      }
-
-      async function loadLanguages() {
-        const data = await fetch("data/languages.json").then((r) => r.json());
-
-        let html = "";
-
-        data.forEach((x) => {
-          html += `<button>${x.flag} ${x.name}</button>`;
-        });
-
-        document.getElementById("languages").innerHTML = html;
-      }
-
-      loadData();
-    </script>
-    let CHANNELS = []; async function loadData() { try { const response = await
-    fetch("data/channels.json"); if (!response.ok) { throw new Error("Unable to
-    load channels.json"); } CHANNELS = await response.json();
-    console.log(`Loaded ${CHANNELS.length} channels`); renderChannels(CHANNELS);
-    loadCountries(); loadCategories(); loadLanguages(); } catch (error) {
-    console.error(error); document.getElementById("channels").innerHTML = `
-    <div
-      style="color: white; padding: 40px; text-align: center; font-size: 22px"
-    >
-      Failed to load <b>data/channels.json</b>
-    </div>
-    `; } }
   </body>
 </html>
