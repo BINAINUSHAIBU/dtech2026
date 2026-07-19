@@ -1,293 +1,287 @@
-search();
-filterChannels();
-/* ===================================
-   BTECH-TV WORLD PRO MAX
-   js/search.js
-=================================== */
+/* ==========================================
+   BTECH-TV WORLD ULTRA MAX X
+   search.js
+   Advanced IPTV Search Engine
+   ========================================== */
 
-/*
-=====================================
-SEARCH MODULE
-=====================================
-*/
+let searchResults = [];
+let currentFilter = "all";
 
-const Search = {
-  query: "",
+/* ==========================================
+   SEARCH BY TEXT
+========================================== */
 
-  results: [],
-};
+function searchChannel(query) {
 
-/*
-=====================================
-LIVE SEARCH
-=====================================
-*/
+    query = query.trim().toLowerCase();
 
-function search(keyword) {
-  Search.query = keyword.trim().toLowerCase();
-
-  if (Search.query === "") {
-    filtered = [...all];
-
-    render();
-
-    stats();
-
-    return;
-  }
-
-  Search.results = all.filter((channel) => {
-    return (
-      channel.name.toLowerCase().includes(Search.query) ||
-      (channel.category || "").toLowerCase().includes(Search.query)
-    );
-  });
-
-  filtered = [...Search.results];
-
-  render();
-
-  stats();
-}
-
-/*
-=====================================
-SEARCH BY CHANNEL NAME
-=====================================
-*/
-
-function searchByName(name) {
-  filtered = all.filter((channel) =>
-    channel.name.toLowerCase().includes(name.toLowerCase()),
-  );
-
-  render();
-}
-
-/*
-=====================================
-SEARCH CATEGORY
-=====================================
-*/
-
-function searchCategory(category) {
-  filtered = all.filter((channel) =>
-    (channel.category || "").toLowerCase().includes(category.toLowerCase()),
-  );
-
-  render();
-}
-
-/*
-=====================================
-SEARCH COUNTRY
-=====================================
-*/
-
-function searchCountry(country) {
-  filtered = all.filter((channel) =>
-    (channel.country || "").toLowerCase().includes(country.toLowerCase()),
-  );
-
-  render();
-}
-
-/*
-=====================================
-SEARCH LANGUAGE
-=====================================
-*/
-
-function searchLanguage(language) {
-  filtered = all.filter((channel) =>
-    (channel.language || "").toLowerCase().includes(language.toLowerCase()),
-  );
-
-  render();
-}
-
-/*
-=====================================
-SHOW FAVORITES
-=====================================
-*/
-
-function searchFavorites() {
-  filtered = all.filter((channel) => channel.favorite === true);
-
-  render();
-}
-
-/*
-=====================================
-SHOW LIVE CHANNELS
-=====================================
-*/
-
-function searchLive() {
-  filtered = all.filter(
-    (channel) => channel.url && channel.url.startsWith("http"),
-  );
-
-  render();
-}
-
-/*
-=====================================
-CLEAR SEARCH
-=====================================
-*/
-
-function clearSearch() {
-  const input = document.querySelector(".search-box input");
-
-  if (input) {
-    input.value = "";
-  }
-
-  filtered = [...all];
-
-  render();
-
-  stats();
-}
-
-/*
-=====================================
-SEARCH RESULT COUNT
-=====================================
-*/
-
-function searchCount() {
-  return filtered.length;
-}
-
-/*
-=====================================
-HIGHLIGHT SEARCH
-=====================================
-*/
-
-function highlight(text) {
-  if (Search.query === "") {
-    return text;
-  }
-
-  const regex = new RegExp(
-    "(" + Search.query + ")",
-
-    "gi",
-  );
-
-  return text.replace(
-    regex,
-
-    "<span class='search-highlight'>$1</span>",
-  );
-}
-
-/*
-=====================================
-NO RESULT MESSAGE
-=====================================
-*/
-
-function showNoResults() {
-  const grid = document.getElementById("grid");
-
-  if (!grid) return;
-
-  grid.innerHTML = `
-
-        <div style="
-            width:100%;
-            padding:50px;
-            text-align:center;
-            color:#00d4ff;
-            font-size:22px;
-        ">
-
-            No channels found.
-
-        </div>
-
-    `;
-}
-
-/*
-=====================================
-SEARCH WITH AUTO UPDATE
-=====================================
-*/
-
-function performSearch(value) {
-  search(value);
-
-  if (filtered.length === 0) {
-    showNoResults();
-  }
-}
-
-/*
-=====================================
-VOICE SEARCH
-=====================================
-*/
-
-function voiceSearch() {
-  if (!("webkitSpeechRecognition" in window)) {
-    alert("Voice search is not supported.");
-
-    return;
-  }
-
-  const recognition = new webkitSpeechRecognition();
-
-  recognition.lang = "en-US";
-
-  recognition.start();
-
-  recognition.onresult = function (event) {
-    const text = event.results[0][0].transcript;
-
-    const input = document.querySelector(".search-box input");
-
-    if (input) {
-      input.value = text;
+    if (query === "") {
+        renderChannels(CHANNELS);
+        return;
     }
 
-    performSearch(text);
-  };
+    searchResults = CHANNELS.filter(channel => {
+
+        return (
+
+            channel.name.toLowerCase().includes(query) ||
+
+            channel.country.toLowerCase().includes(query) ||
+
+            channel.category.toLowerCase().includes(query) ||
+
+            (channel.language || "").toLowerCase().includes(query)
+
+        );
+
+    });
+
+    renderChannels(searchResults);
+
+    updateSearchCount(searchResults.length);
+
 }
 
-/*
-=====================================
-RECENT SEARCHES
-=====================================
-*/
+/* ==========================================
+   SEARCH COUNTRY
+========================================== */
 
-const recentSearches = [];
+function searchCountry(country) {
 
-function saveRecentSearch(keyword) {
-  if (keyword.trim() === "") return;
+    currentFilter = country;
 
-  if (!recentSearches.includes(keyword)) {
-    recentSearches.unshift(keyword);
-  }
+    const result = CHANNELS.filter(channel =>
+        channel.country === country
+    );
 
-  if (recentSearches.length > 10) {
-    recentSearches.pop();
-  }
+    renderChannels(result);
+
+    updateSearchCount(result.length);
+
 }
 
-function getRecentSearches() {
-  return recentSearches;
+/* ==========================================
+   SEARCH CATEGORY
+========================================== */
+
+function searchCategory(category) {
+
+    currentFilter = category;
+
+    const result = CHANNELS.filter(channel =>
+        channel.category === category
+    );
+
+    renderChannels(result);
+
+    updateSearchCount(result.length);
+
 }
 
-/*
-=====================================
-MODULE READY
-=====================================
-*/
+/* ==========================================
+   SEARCH LANGUAGE
+========================================== */
 
-console.log("Search Module Loaded");
+function searchLanguage(language) {
+
+    currentFilter = language;
+
+    const result = CHANNELS.filter(channel =>
+        (channel.language || "").toLowerCase() === language.toLowerCase()
+    );
+
+    renderChannels(result);
+
+    updateSearchCount(result.length);
+
+}
+
+/* ==========================================
+   SHOW ALL CHANNELS
+========================================== */
+
+function showAllChannels() {
+
+    currentFilter = "all";
+
+    renderChannels(CHANNELS);
+
+    updateSearchCount(CHANNELS.length);
+
+}
+
+/* ==========================================
+   LIVE CHANNELS
+========================================== */
+
+function showLiveChannels() {
+
+    const result = CHANNELS.filter(channel =>
+        channel.live !== false
+    );
+
+    renderChannels(result);
+
+    updateSearchCount(result.length);
+
+}
+
+/* ==========================================
+   FAVORITES
+========================================== */
+
+function searchFavorites() {
+
+    const favorites = JSON.parse(
+        localStorage.getItem("favorites") || "[]"
+    );
+
+    const result = CHANNELS.filter(channel =>
+        favorites.includes(channel.name)
+    );
+
+    renderChannels(result);
+
+    updateSearchCount(result.length);
+
+}
+
+/* ==========================================
+   RECENT CHANNELS
+========================================== */
+
+function searchRecent() {
+
+    const recent = JSON.parse(
+        localStorage.getItem("recentChannels") || "[]"
+    );
+
+    const result = CHANNELS.filter(channel =>
+        recent.includes(channel.name)
+    );
+
+    renderChannels(result);
+
+    updateSearchCount(result.length);
+
+}
+
+/* ==========================================
+   SORT
+========================================== */
+
+function sortChannels(type) {
+
+    let list = [...CHANNELS];
+
+    switch (type) {
+
+        case "name":
+
+            list.sort((a, b) =>
+                a.name.localeCompare(b.name));
+
+            break;
+
+        case "country":
+
+            list.sort((a, b) =>
+                a.country.localeCompare(b.country));
+
+            break;
+
+        case "category":
+
+            list.sort((a, b) =>
+                a.category.localeCompare(b.category));
+
+            break;
+
+        default:
+
+            break;
+
+    }
+
+    renderChannels(list);
+
+}
+
+/* ==========================================
+   RANDOM SEARCH
+========================================== */
+
+function randomChannelSearch() {
+
+    const random =
+        CHANNELS[Math.floor(Math.random() * CHANNELS.length)];
+
+    renderChannels([random]);
+
+}
+
+/* ==========================================
+   SEARCH RESULT COUNT
+========================================== */
+
+function updateSearchCount(total) {
+
+    let counter = document.getElementById("searchCount");
+
+    if (!counter) {
+
+        counter = document.createElement("div");
+
+        counter.id = "searchCount";
+
+        counter.style.margin = "15px 0";
+        counter.style.color = "#00d2ff";
+        counter.style.fontWeight = "bold";
+
+        const main = document.querySelector(".main");
+
+        if (main)
+            main.insertBefore(counter, document.getElementById("channels"));
+
+    }
+
+    counter.innerHTML = `📺 ${total} Channel(s) Found`;
+
+}
+
+/* ==========================================
+   SEARCH INPUT LISTENER
+========================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const search = document.querySelector(".search");
+
+    if (!search) return;
+
+    search.addEventListener("input", e => {
+
+        searchChannel(e.target.value);
+
+    });
+
+});
+
+/* ==========================================
+   CLEAR SEARCH
+========================================== */
+
+function clearSearch() {
+
+    const input = document.querySelector(".search");
+
+    if (input)
+        input.value = "";
+
+    showAllChannels();
+
+}
+
+/* ==========================================
+   END
+========================================== */
