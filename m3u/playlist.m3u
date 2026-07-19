@@ -1,0 +1,79 @@
+#EXTM3U x-tvg-url="https://epgshare01.online/epgshare01/epg_ripper_ALL_SOURCES1.xml.gz"
+
+# =====================================================
+# BTECH-TV WORLD ULTRA MAX X
+# Demo IPTV Playlist
+# =====================================================
+
+# ---------- NEWS ----------
+
+#EXTINF:-1 tvg-id="BBCNews.uk" tvg-name="BBC News HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/b/bc/BBC_News_2022_%28Alt%29.svg" group-title="News",BBC News HD
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+
+#EXTINF:-1 tvg-id="CNN.us" tvg-name="CNN International" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/b/b1/CNN.svg" group-title="News",CNN International
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+
+#EXTINF:-1 tvg-id="AlJazeera.qa" tvg-name="Al Jazeera" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/51/Aljazeera_eng.svg" group-title="News",Al Jazeera
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+
+# ---------- SPORTS ----------
+
+#EXTINF:-1 tvg-id="ESPN.us" tvg-name="ESPN HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/2/2f/ESPN_wordmark.svg" group-title="Sports",ESPN HD
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+
+#EXTINF:-1 tvg-id="SkySports.uk" tvg-name="Sky Sports" tvg-logo="https://upload.wikimedia.org/wikipedia/en/b/b7/Sky_Sports_Main_Event.png" group-title="Sports",Sky Sports
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+
+# ---------- MOVIES ----------
+
+#EXTINF:-1 tvg-id="HBO.us" tvg-name="HBO Movies" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/de/HBO_logo.svg" group-title="Movies",HBO Movies
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+
+#EXTINF:-1 tvg-id="StarMovies.in" tvg-name="Star Movies" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e8/Star_Movies_logo.svg" group-title="Movies",Star Movies
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+
+# ---------- MUSIC ----------
+
+#EXTINF:-1 tvg-id="MTV.us" tvg-name="MTV Live" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/9/92/MTV_2021.svg" group-title="Music",MTV Live
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+
+# ---------- KIDS ----------
+
+#EXTINF:-1 tvg-id="Cartoon.us" tvg-name="Cartoon Network" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/0/04/Cartoon_Network_2010_logo.svg" group-title="Kids",Cartoon Network
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+
+#EXTINF:-1 tvg-id="Disney.us" tvg-name="Disney Channel" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/6/64/Disney_Channel_logo_%282014%29.svg" group-title="Kids",Disney Channel
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+
+# ---------- DOCUMENTARY ----------
+
+#EXTINF:-1 tvg-id="NatGeo.us" tvg-name="National Geographic" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/fc/Natgeologo.svg" group-title="Documentary",National Geographic
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+
+#EXTINF:-1 tvg-id="Discovery.us" tvg-name="Discovery Channel" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/3/3e/Discovery_logo.svg" group-title="Documentary",Discovery Channel
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+
+# ---------- BUSINESS ----------
+
+#EXTINF:-1 tvg-id="Bloomberg.us" tvg-name="Bloomberg TV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/3/3b/Bloomberg_Television_logo.svg" group-title="Business",Bloomberg TV
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+
+# ---------- SCIENCE ----------
+
+#EXTINF:-1 tvg-id="NASA.us" tvg-name="NASA TV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" group-title="Science",NASA TV
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+
+# ---------- TRAVEL ----------
+
+#EXTINF:-1 tvg-id="TravelXP.in" tvg-name="Travel XP" tvg-logo="" group-title="Travel",Travel XP
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+
+# ---------- WEATHER ----------
+
+#EXTINF:-1 tvg-id="Weather.us" tvg-name="Weather Channel" tvg-logo="" group-title="Weather",Weather Channel
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+
+# ---------- ENTERTAINMENT ----------
+
+#EXTINF:-1 tvg-id="BTECH.demo" tvg-name="BTECH TV Demo" tvg-logo="../assets/logo.png" group-title="Entertainment",BTECH TV Demo
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
