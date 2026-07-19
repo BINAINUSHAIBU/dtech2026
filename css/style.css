@@ -253,6 +253,61 @@ video{
     margin-bottom:10px;
 }
 
+.hero-banner{
+    width:100%;
+    margin-bottom:20px;
+    overflow:hidden;
+    border-radius:18px;
+    box-shadow:0 10px 35px rgba(0,0,0,.4);
+}
+
+.hero-banner img{
+    width:100%;
+    display:block;
+    border-radius:18px;
+}
+.hero-banner{
+    background:linear-gradient(135deg,#00152b,#003b70,#00b4ff);
+    color:#fff;
+    padding:70px 40px;
+    border-radius:18px;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.hero-banner h1{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.hero-banner p{
+    font-size:20px;
+    opacity:.9;
+}
+.player-btn{
+    width:48px;
+    height:48px;
+    border:none;
+    background:#00d2ff;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.player-btn:hover{
+    transform:scale(1.08);
+    background:#19e0ff;
+}
+
+.player-btn img{
+    width:24px;
+    height:24px;
+}
+
+
 .stat-card span{
     font-size:30px;
     font-weight:bold;
