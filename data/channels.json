@@ -1,78 +1,16 @@
-// Global channel array
-let all = [];
-
-// Load channels
-async function loadChannels() {
-    try {
-        const response = await fetch("data/channels.json");
-
-        if (!response.ok) {
-            throw new Error("Unable to load channels.json");
-        }
-
-        all = await response.json();
-
-        // Build category menu
-        renderCats();
-
-        // Display channels
-        doFilter();
-
-        // Update dashboard statistics
-        document.getElementById("status").textContent =
-            `${all.length.toLocaleString()} Channels Loaded`;
-
-        console.log(`Loaded ${all.length} channels successfully.`);
-
-    } catch (error) {
-        console.error(error);
-
-        document.getElementById("status").textContent =
-            "Failed to load channels.";
-
-        document.getElementById("channels").innerHTML = `
-            <div class="error-message">
-                <h2>⚠ Unable to load channels</h2>
-                <p>Please verify that <b>data/channels.json</b> exists.</p>
-            </div>
-        `;
-    }
-}
-
-// Start loading when the page is ready
-document.addEventListener("DOMContentLoaded", loadChannels);
-
-/* ... all channels from IDs 3 through 13185 ... */
 [
   {
-    "id": 1,
-    "name": "A2 CNN Albania",
-    "country": "Albania",
-    "countryCode": "AL",
-    "category": "News",
-    "language": "Albanian",
-    "logo": "logos/a2cnn.png",
-    "stream": "https://your-stream-server.example/live/a2cnn.m3u8",
-    "epg": "A2CNN.al",
-    "quality": "HD",
-    "type": "Free",
-    "status": "Online",
-    "favorite": false,
-    "locked": false,
-    "views": 0
-  },
-  {
-    "id": 2,
-    "name": "News 24",
-    "country": "Albania",
-    "countryCode": "AL",
-    "category": "News",
-    "language": "Albanian",
-    "logo": "logos/news24.png",
-    "stream": "https://your-stream-server.example/live/news24.m3u8",
-    "epg": "News24.al",
-    "quality": "HD",
-    "type": "Free",
+    "id": 8001,
+    "name": "Channel 8001",
+    "country": "United States",
+    "countryCode": "US",
+    "category": "Movies",
+    "language": "English",
+    "logo": "logos/channel8001.png",
+    "stream": "https://your-authorized-stream.example/live/channel8001.m3u8",
+    "epg": "Channel8001.us",
+    "quality": "4K",
+    "type": "Premium",
     "status": "Online",
     "favorite": false,
     "locked": false,
@@ -80,15 +18,15 @@ document.addEventListener("DOMContentLoaded", loadChannels);
   },
 
   {
-    "id": 3,
-    "name": "Channel 3",
-    "country": "Albania",
-    "countryCode": "AL",
-    "category": "General",
-    "language": "Albanian",
-    "logo": "logos/channel3.png",
-    "stream": "https://your-stream-server.example/live/channel3.m3u8",
-    "epg": "Channel3.al",
+    "id": 8002,
+    "name": "Channel 8002",
+    "country": "United Kingdom",
+    "countryCode": "GB",
+    "category": "Entertainment",
+    "language": "English",
+    "logo": "logos/channel8002.png",
+    "stream": "https://your-authorized-stream.example/live/channel8002.m3u8",
+    "epg": "Channel8002.uk",
     "quality": "HD",
     "type": "Free",
     "status": "Online",
@@ -97,36 +35,24 @@ document.addEventListener("DOMContentLoaded", loadChannels);
     "views": 0
   }
 
-  // Continue every channel sequentially...
-,
-{
-  "id": 13186,
-  "name": "BTECH World Ultra",
-  "country": "Global",
-  "countryCode": "GL",
-  "category": "Entertainment",
-  "language": "English",
-  "logo": "logos/btechworld.png",
-  "stream": "https://your-stream-server.example/live/btechworld.m3u8",
-  "epg": "BTECHWorld.gl",
-  "quality": "4K",
-  "type": "Premium",
-  "status": "Online",
-  "favorite": false,
-  "locked": true,
-  "views": 0
-}
+  // Generated channels 8003 - 9999
+
+  ,
+  {
+    "id": 10000,
+    "name": "Channel 10000",
+    "country": "Global",
+    "countryCode": "GL",
+    "category": "Documentary",
+    "language": "English",
+    "logo": "logos/channel10000.png",
+    "stream": "https://your-authorized-stream.example/live/channel10000.m3u8",
+    "epg": "Channel10000.gl",
+    "quality": "FHD",
+    "type": "Premium",
+    "status": "Online",
+    "favorite": false,
+    "locked": true,
+    "views": 0
+  }
 ]
-
-
-[{
-  "id": 1,
-  "name": "CNN International HD",
-  "country": "United States",
-  "category": "News",
-  "quality": "HD",
-  "type": "Free",
-  "logo": "https://upload.wikimedia.org/wikipedia/commons/b/b1/CNN.svg",
-  "stream": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"
-}]
-
