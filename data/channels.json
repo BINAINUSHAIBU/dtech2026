@@ -1,23 +1,202 @@
 [
   {
-    "name":"BBC News",
-    "country":"United Kingdom",
-    "category":"News",
-    "logo":"images/channels/bbc.png",
-    "stream":"https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"
+    "id": 1,
+    "name": "BBC News HD",
+    "country": "United Kingdom",
+    "category": "News",
+    "language": "English",
+    "logo": "images/channels/bbc.png",
+    "stream": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "live": true
   },
   {
-    "name":"NASA TV",
-    "country":"USA",
-    "category":"Science",
-    "logo":"images/channels/nasa.png",
-    "stream":"https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"
+    "id": 2,
+    "name": "CNN International",
+    "country": "USA",
+    "category": "News",
+    "language": "English",
+    "logo": "images/channels/cnn.png",
+    "stream": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "live": true
   },
   {
-    "name":"Sports HD",
-    "country":"Nigeria",
-    "category":"Sports",
-    "logo":"images/channels/sports.png",
-    "stream":"https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"
+    "id": 3,
+    "name": "Al Jazeera",
+    "country": "Qatar",
+    "category": "News",
+    "language": "Arabic",
+    "logo": "images/channels/aljazeera.png",
+    "stream": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "live": true
+  },
+  {
+    "id": 4,
+    "name": "SuperSport HD",
+    "country": "South Africa",
+    "category": "Sports",
+    "language": "English",
+    "logo": "images/channels/supersport.png",
+    "stream": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "live": true
+  },
+  {
+    "id": 5,
+    "name": "ESPN HD",
+    "country": "USA",
+    "category": "Sports",
+    "language": "English",
+    "logo": "images/channels/espn.png",
+    "stream": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "live": true
+  },
+  {
+    "id": 6,
+    "name": "Sky Sports",
+    "country": "United Kingdom",
+    "category": "Sports",
+    "language": "English",
+    "logo": "images/channels/skysports.png",
+    "stream": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "live": true
+  },
+  {
+    "id": 7,
+    "name": "HBO Movies",
+    "country": "USA",
+    "category": "Movies",
+    "language": "English",
+    "logo": "images/channels/hbo.png",
+    "stream": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "live": true
+  },
+  {
+    "id": 8,
+    "name": "Star Movies",
+    "country": "India",
+    "category": "Movies",
+    "language": "Hindi",
+    "logo": "images/channels/starmovies.png",
+    "stream": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "live": true
+  },
+  {
+    "id": 9,
+    "name": "MTV Live",
+    "country": "USA",
+    "category": "Music",
+    "language": "English",
+    "logo": "images/channels/mtv.png",
+    "stream": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "live": true
+  },
+  {
+    "id": 10,
+    "name": "Trace Urban",
+    "country": "France",
+    "category": "Music",
+    "language": "French",
+    "logo": "images/channels/trace.png",
+    "stream": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "live": true
+  },
+  {
+    "id": 11,
+    "name": "Cartoon Network",
+    "country": "USA",
+    "category": "Kids",
+    "language": "English",
+    "logo": "images/channels/cartoon.png",
+    "stream": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "live": true
+  },
+  {
+    "id": 12,
+    "name": "Disney Channel",
+    "country": "USA",
+    "category": "Kids",
+    "language": "English",
+    "logo": "images/channels/disney.png",
+    "stream": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "live": true
+  },
+  {
+    "id": 13,
+    "name": "National Geographic",
+    "country": "USA",
+    "category": "Documentary",
+    "language": "English",
+    "logo": "images/channels/natgeo.png",
+    "stream": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "live": true
+  },
+  {
+    "id": 14,
+    "name": "Discovery Channel",
+    "country": "USA",
+    "category": "Documentary",
+    "language": "English",
+    "logo": "images/channels/discovery.png",
+    "stream": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "live": true
+  },
+  {
+    "id": 15,
+    "name": "Bloomberg TV",
+    "country": "USA",
+    "category": "Business",
+    "language": "English",
+    "logo": "images/channels/bloomberg.png",
+    "stream": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "live": true
+  },
+  {
+    "id": 16,
+    "name": "CNBC",
+    "country": "USA",
+    "category": "Business",
+    "language": "English",
+    "logo": "images/channels/cnbc.png",
+    "stream": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "live": true
+  },
+  {
+    "id": 17,
+    "name": "NASA TV",
+    "country": "USA",
+    "category": "Science",
+    "language": "English",
+    "logo": "images/channels/nasa.png",
+    "stream": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "live": true
+  },
+  {
+    "id": 18,
+    "name": "Travel XP",
+    "country": "India",
+    "category": "Travel",
+    "language": "English",
+    "logo": "images/channels/travelxp.png",
+    "stream": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "live": true
+  },
+  {
+    "id": 19,
+    "name": "Weather Channel",
+    "country": "USA",
+    "category": "Weather",
+    "language": "English",
+    "logo": "images/channels/weather.png",
+    "stream": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "live": true
+  },
+  {
+    "id": 20,
+    "name": "BTECH TV Demo",
+    "country": "Nigeria",
+    "category": "Entertainment",
+    "language": "English",
+    "logo": "assets/logo.png",
+    "stream": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "live": true
   }
 ]
