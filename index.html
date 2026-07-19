@@ -213,20 +213,41 @@
       />
     </header>
 
-    <div class="container">
-      <div class="sidebar">
-        <h3>Countries</h3>
+ <div class="countries">
+<button onclick="filterCountry('Nigeria')">🇳🇬 Nigeria</button>
+<button onclick="filterCountry('United States')">🇺🇸 USA</button>
+<button onclick="filterCountry('United Kingdom')">🇬🇧 UK</button>
+<button onclick="filterCountry('France')">🇫🇷 France</button>
+<button onclick="filterCountry('India')">🇮🇳 India</button>
+<button onclick="filterCountry('South Africa')">🇿🇦 South Africa</button>
+</div>
 
-        <div id="countries"></div>
+<div class="categories">
+<button onclick="filterCategory('News')">📰 News</button>
+<button onclick="filterCategory('Sports')">⚽ Sports</button>
+<button onclick="filterCategory('Movies')">🎬 Movies</button>
+<button onclick="filterCategory('Music')">🎵 Music</button>
+<button onclick="filterCategory('Kids')">👶 Kids</button>
+<button onclick="filterCategory('Documentary')">📚 Documentary</button>
+<button onclick="filterCategory('Business')">💼 Business</button>
+<button onclick="filterCategory('Science')">🔬 Science</button>
+<button onclick="filterCategory('Entertainment')">🎭 Entertainment</button>
+</div>
 
-        <h3>Categories</h3>
+<div class="languages">
+<button onclick="filterLanguage('English')">🇬🇧 English</button>
+<button onclick="filterLanguage('French')">🇫🇷 French</button>
+<button onclick="filterLanguage('Spanish')">🇪🇸 Spanish</button>
+<button onclick="filterLanguage('Arabic')">🇸🇦 Arabic</button>
+<button onclick="filterLanguage('Hindi')">🇮🇳 Hindi</button>
+<button onclick="filterLanguage('Chinese')">🇨🇳 Chinese</button>
+</div>
 
-        <div id="categories"></div>
-
-        <h3>Languages</h3>
-
-        <div id="languages"></div>
-      </div>
+<input
+id="searchBox"
+type="text"
+placeholder="Search Channels..."
+onkeyup="searchChannels()">
 
       <div class="main">
         <div class="hero">SMART IPTV DASHBOARD</div>
