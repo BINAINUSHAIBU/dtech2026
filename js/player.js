@@ -1,457 +1,387 @@
-next();
-prev();
-toggleMute();
-toggleFullscreen();
-togglePiP();
-/* ===================================
-   BTECH-TV WORLD PRO MAX
-   js/player.js
-=================================== */
+/* ==========================================
+   BTECH-TV WORLD ULTRA MAX X
+   player.js
+   Advanced IPTV Video Player
+   ========================================== */
 
-/*
-=====================================
-GLOBAL PLAYER VARIABLES
-=====================================
-*/
+const video = document.getElementById("video");
 
-let video = document.getElementById("video");
-let hls = null;
-let currentChannel = 0;
+let currentVolume = 1;
+let isMuted = false;
 
-/*
-=====================================
-PLAY CHANNEL
-=====================================
-*/
+/* ==========================================
+   PLAY CHANNEL
+========================================== */
 
-function play(index) {
-  if (filtered.length === 0) return;
+function playChannel(url, title = "Live Channel") {
 
-  currentChannel = index;
+    if (!video) return;
 
-  const channel = filtered[currentChannel];
+    // HLS Support
+    if (url.endsWith(".m3u8")) {
 
-  if (!channel) return;
+        if (window.Hls && Hls.isSupported()) {
 
-  updateNowPlaying(channel);
+            if (window.hlsPlayer) {
+                window.hlsPlayer.destroy();
+            }
 
-  document.title = channel.name + " | BTECH-TV WORLD PRO MAX";
+            window.hlsPlayer = new Hls({
+                enableWorker: true,
+                lowLatencyMode: true,
+                backBufferLength: 30,
+                maxBufferLength: 10,
+                maxMaxBufferLength: 20,
+                liveSyncDuration: 3,
+                liveMaxLatencyDuration: 5
+            });
 
-  showLoading();
+            window.hlsPlayer.loadSource(url);
+            window.hlsPlayer.attachMedia(video);
 
-  if (hls) {
-    hls.destroy();
-    hls = null;
-  }
+            window.hlsPlayer.on(Hls.Events.MANIFEST_PARSED, () => {
+                video.play().catch(() => {});
+            });
 
-  if (Hls.isSupported()) {
-    hls = new Hls();
+        } else {
 
-    hls.loadSource(channel.url);
+            video.src = url;
+            video.play().catch(() => {});
 
-    hls.attachMedia(video);
+        }
 
-    hls.on(Hls.Events.MANIFEST_PARSED, function () {
-      hideLoading();
+    } else {
 
-      video.play();
-    });
+        video.src = url;
+        video.play().catch(() => {});
 
-    hls.on(Hls.Events.ERROR, function () {
-      hideLoading();
+    }
 
-      console.log("Unable to load stream.");
-    });
-  } else {
-    video.src = channel.url;
+    setChannelTitle(title);
 
-    video.onloadedmetadata = function () {
-      hideLoading();
-
-      video.play();
-    };
-  }
 }
 
-/*
-=====================================
-NEXT CHANNEL
-=====================================
-*/
+/* ==========================================
+   PAUSE
+========================================== */
 
-function next() {
-  if (filtered.length === 0) return;
+function pauseChannel() {
 
-  currentChannel++;
+    if (video)
+        video.pause();
 
-  if (currentChannel >= filtered.length) {
-    currentChannel = 0;
-  }
-
-  play(currentChannel);
 }
 
-/*
-=====================================
-PREVIOUS CHANNEL
-=====================================
-*/
+/* ==========================================
+   PLAY
+========================================== */
 
-function prev() {
-  if (filtered.length === 0) return;
+function resumeChannel() {
 
-  currentChannel--;
+    if (video)
+        video.play();
 
-  if (currentChannel < 0) {
-    currentChannel = filtered.length - 1;
-  }
-
-  play(currentChannel);
 }
 
-/*
-=====================================
-PLAY / PAUSE
-=====================================
-*/
+/* ==========================================
+   STOP
+========================================== */
+
+function stopChannel() {
+
+    if (!video) return;
+
+    video.pause();
+    video.removeAttribute("src");
+    video.load();
+
+}
+
+/* ==========================================
+   TOGGLE PLAY
+========================================== */
 
 function togglePlay() {
-  if (video.paused) {
-    video.play();
-  } else {
-    video.pause();
-  }
+
+    if (video.paused)
+
+        video.play();
+
+    else
+
+        video.pause();
+
 }
 
-/*
-=====================================
-STOP PLAYER
-=====================================
-*/
+/* ==========================================
+   VOLUME
+========================================== */
 
-function stopPlayer() {
-  video.pause();
+function volumeUp() {
 
-  video.removeAttribute("src");
+    if (!video) return;
 
-  video.load();
+    video.volume = Math.min(1, video.volume + 0.1);
+
 }
 
-/*
-=====================================
-MUTE
-=====================================
-*/
+function volumeDown() {
 
-function toggleMute() {
-  video.muted = !video.muted;
+    if (!video) return;
+
+    video.volume = Math.max(0, video.volume - 0.1);
+
 }
-
-/*
-=====================================
-SET VOLUME
-=====================================
-*/
 
 function setVolume(value) {
-  video.volume = value;
+
+    if (!video) return;
+
+    video.volume = value;
+
 }
 
-/*
-=====================================
-FULLSCREEN
-=====================================
-*/
+/* ==========================================
+   MUTE
+========================================== */
 
-function toggleFullscreen() {
-  const player = document.querySelector(".player-container");
+function toggleMute() {
 
-  if (!document.fullscreenElement) {
-    player.requestFullscreen();
-  } else {
-    document.exitFullscreen();
-  }
+    if (!video) return;
+
+    isMuted = !isMuted;
+
+    video.muted = isMuted;
+
 }
 
-/*
-=====================================
-PICTURE IN PICTURE
-=====================================
-*/
+/* ==========================================
+   FULLSCREEN
+========================================== */
 
-async function togglePiP() {
-  if (!document.pictureInPictureEnabled) {
-    alert("Picture-in-Picture not supported.");
+function fullscreenPlayer() {
 
-    return;
-  }
+    const player = document.querySelector(".player");
 
-  try {
-    if (document.pictureInPictureElement) {
-      document.exitPictureInPicture();
+    if (!player) return;
+
+    if (document.fullscreenElement) {
+
+        document.exitFullscreen();
+
     } else {
-      await video.requestPictureInPicture();
+
+        player.requestFullscreen();
+
     }
-  } catch (error) {
-    console.log(error);
-  }
+
 }
 
-/*
-=====================================
-PLAYBACK SPEED
-=====================================
-*/
+/* ==========================================
+   PICTURE IN PICTURE
+========================================== */
 
-function playback(rate) {
-  video.playbackRate = rate;
+async function pictureInPicture() {
+
+    if (!document.pictureInPictureEnabled) return;
+
+    try {
+
+        if (document.pictureInPictureElement)
+
+            await document.exitPictureInPicture();
+
+        else
+
+            await video.requestPictureInPicture();
+
+    } catch (e) {
+
+        console.log(e);
+
+    }
+
 }
 
-/*
-=====================================
-REWIND
-=====================================
-*/
+/* ==========================================
+   MINI PLAYER
+========================================== */
 
-function rewind(seconds = 10) {
-  video.currentTime -= seconds;
+function miniPlayer() {
+
+    document.querySelector(".player").classList.toggle("mini");
+
 }
 
-/*
-=====================================
-FORWARD
-=====================================
-*/
+/* ==========================================
+   PLAYBACK SPEED
+========================================== */
+
+function setPlaybackSpeed(speed) {
+
+    if (!video) return;
+
+    video.playbackRate = speed;
+
+}
+
+/* ==========================================
+   SEEK
+========================================== */
 
 function forward(seconds = 10) {
-  video.currentTime += seconds;
+
+    if (!video) return;
+
+    video.currentTime += seconds;
+
 }
 
-/*
-=====================================
-RESTART STREAM
-=====================================
-*/
+function rewind(seconds = 10) {
 
-function restartStream() {
-  video.currentTime = 0;
+    if (!video) return;
 
-  video.play();
+    video.currentTime -= seconds;
+
 }
 
-/*
-=====================================
-CAPTURE CURRENT FRAME
-=====================================
-*/
+/* ==========================================
+   SCREENSHOT
+========================================== */
 
-function captureFrame() {
-  const canvas = document.createElement("canvas");
+function takeScreenshot() {
 
-  canvas.width = video.videoWidth;
+    const canvas = document.createElement("canvas");
 
-  canvas.height = video.videoHeight;
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
 
-  const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext("2d");
 
-  ctx.drawImage(video, 0, 0);
+    ctx.drawImage(video, 0, 0);
 
-  const image = canvas.toDataURL("image/png");
+    const link = document.createElement("a");
 
-  const link = document.createElement("a");
+    link.download = "channel.png";
+    link.href = canvas.toDataURL("image/png");
 
-  link.href = image;
+    link.click();
 
-  link.download = "channel-frame.png";
-
-  link.click();
 }
 
-/*
-=====================================
-NOW PLAYING
-=====================================
-*/
+/* ==========================================
+   CHANNEL TITLE
+========================================== */
 
-function updateNowPlaying(channel) {
-  let box = document.getElementById("nowPlaying");
+function setChannelTitle(title) {
 
-  if (!box) return;
+    let label = document.getElementById("channelTitle");
 
-  box.innerHTML = `
+    if (!label) {
 
-        <h3>Now Playing</h3>
+        label = document.createElement("div");
 
-        <p>${channel.name}</p>
+        label.id = "channelTitle";
 
-    `;
+        label.style.position = "absolute";
+        label.style.top = "15px";
+        label.style.left = "15px";
+        label.style.padding = "8px 14px";
+        label.style.background = "rgba(0,0,0,.65)";
+        label.style.color = "#fff";
+        label.style.borderRadius = "25px";
+        label.style.fontWeight = "bold";
+        label.style.zIndex = "999";
+
+        document.querySelector(".player").appendChild(label);
+
+    }
+
+    label.innerHTML = "📺 " + title;
+
 }
 
-/*
-=====================================
-AUTO NEXT IF STREAM ENDS
-=====================================
-*/
+/* ==========================================
+   BUFFER EVENTS
+========================================== */
 
-video.addEventListener("ended", function () {
-  next();
+video?.addEventListener("waiting", () => {
+
+    console.log("Buffering...");
+
 });
 
-/*
-=====================================
-VIDEO EVENTS
-=====================================
-*/
+video?.addEventListener("playing", () => {
 
-video.addEventListener("play", function () {
-  console.log("Playing");
+    console.log("Playing");
+
 });
 
-video.addEventListener("pause", function () {
-  console.log("Paused");
+/* ==========================================
+   ERROR HANDLING
+========================================== */
+
+video?.addEventListener("error", () => {
+
+    console.log("Playback Error");
+
 });
 
-video.addEventListener("waiting", function () {
-  showLoading();
+/* ==========================================
+   KEYBOARD SHORTCUTS
+========================================== */
+
+document.addEventListener("keydown", function(e){
+
+    switch(e.key.toLowerCase()){
+
+        case " ":
+            e.preventDefault();
+            togglePlay();
+            break;
+
+        case "f":
+            fullscreenPlayer();
+            break;
+
+        case "m":
+            toggleMute();
+            break;
+
+        case "p":
+            pictureInPicture();
+            break;
+
+        case "arrowright":
+            forward(10);
+            break;
+
+        case "arrowleft":
+            rewind(10);
+            break;
+
+        case "+":
+            volumeUp();
+            break;
+
+        case "-":
+            volumeDown();
+            break;
+
+    }
+
 });
 
-video.addEventListener("playing", function () {
-  hideLoading();
+/* ==========================================
+   AUTO PLAY WHEN READY
+========================================== */
+
+video?.addEventListener("canplay", () => {
+
+    video.play().catch(()=>{});
+
 });
 
-video.addEventListener("error", function () {
-  hideLoading();
-
-  console.log("Playback Error");
-});
-
-/*
-=====================================
-KEYBOARD SHORTCUTS
-=====================================
-*/
-
-document.addEventListener("keydown", function (e) {
-  switch (e.key) {
-    case "ArrowRight":
-      next();
-
-      break;
-
-    case "ArrowLeft":
-      prev();
-
-      break;
-
-    case " ":
-      e.preventDefault();
-
-      togglePlay();
-
-      break;
-
-    case "m":
-
-    case "M":
-      toggleMute();
-
-      break;
-
-    case "f":
-
-    case "F":
-      toggleFullscreen();
-
-      break;
-
-    case "p":
-
-    case "P":
-      togglePiP();
-
-      break;
-  }
-});
-
-/*
-=====================================
-PLAYER READY
-=====================================
-*/
-
-console.log("Player Module Loaded");
-
-const sounds = {
-  click: new Audio("assets/sounds/click.mp3"),
-  success: new Audio("assets/sounds/success.mp3"),
-  error: new Audio("assets/sounds/error.mp3"),
-  notification: new Audio("assets/sounds/notification.mp3"),
-  startup: new Audio("assets/sounds/startup.mp3"),
-};
-
-function playSound(name) {
-  if (sounds[name]) {
-    sounds[name].currentTime = 0;
-    sounds[name].play().catch(() => {});
-  }
-}
-playSound("click");
-playSound("success");
-playSound("notification");
-playSound("error");
-playSound("startup");
-const sounds = {
-  click: new Audio("assets/sounds/click.mp3"),
-  success: new Audio("assets/sounds/success.mp3"),
-  error: new Audio("assets/sounds/error.mp3"),
-  notification: new Audio("assets/sounds/notification.mp3"),
-  startup: new Audio("assets/sounds/startup.mp3"),
-};
-
-function playSound(name) {
-  if (sounds[name]) {
-    sounds[name].currentTime = 0;
-    sounds[name].play().catch(() => {});
-  }
-}
-playSound("click");
-playSound("success");
-playSound("notification");
-playSound("error");
-playSound("startup");
-
-playSound("click");
-playSound("success");
-playSound("notification");
-playSound("error");
-playSound("startup");
-
-/* PLAYER */
-.player-container{
-background:#000;
-border-radius:10px;
-overflow:hidden;
-height:320px;
-flex-shrink:0;
-}
-
-video{width:100%;height:100%;}
-
-/* CONTROLS */
-.controls{
-display:flex;
-flex-wrap:wrap;
-gap:8px;
-margin:10px 0;
-flex-shrink:0;
-}
-
-.controls button{
-padding:8px 10px;
-border:none;
-border-radius:6px;
-background:#152445;
-color:#fff;
-cursor:pointer;
-}
-.controls button:hover{background:#00d4ff;color:#000}
+/* ==========================================
+   END
+========================================== */
