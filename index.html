@@ -245,8 +245,87 @@
     <footer>Modern IPTV Dashboard</footer>
 
     <script>
-      let CHANNELS = [];
+let CHANNELS = [];
+let channelMap = {};
+let logoMap = {};
 
+// Load IPTV-Org API instead of local channels.json
+async function loadData() {
+
+    try {
+
+        const [channelsRes, streamsRes, logosRes] = await Promise.all([
+            fetch("https://iptv-org.github.io/api/channels.json").then(r => r.json()),
+            fetch("https://iptv-org.github.io/api/streams.json").then(r => r.json()),
+            fetch("https://iptv-org.github.io/api/logos.json").then(r => r.json())
+        ]);
+
+        // Channel lookup
+        channelsRes.forEach(ch => {
+            if (!ch.is_nsfw && !ch.closed) {
+                channelMap[ch.id] = ch;
+            }
+        });
+
+        // Logo lookup
+        logosRes.forEach(l => {
+            if (!logoMap[l.channel]) {
+                logoMap[l.channel] = l.url;
+            }
+        });
+
+        const seen = {};
+
+        streamsRes.forEach(stream => {
+
+            if (!stream.url) return;
+            if (seen[stream.url]) return;
+
+            seen[stream.url] = true;
+
+            const ch = channelMap[stream.channel];
+
+            CHANNELS.push({
+
+                name: ch ? ch.name : (stream.title || "Unknown"),
+
+                logo: logoMap[stream.channel] || "https://dummyimage.com/400x240/000/ffffff&text=TV",
+
+                stream: stream.url,
+
+                country: ch ? ch.country : "Unknown",
+
+                category: ch && ch.categories.length
+                    ? ch.categories[0]
+                    : "Other",
+
+                language: ch && ch.languages.length
+                    ? ch.languages[0]
+                    : "Unknown"
+
+            });
+
+        });
+
+        CHANNELS.sort((a, b) => a.name.localeCompare(b.name));
+
+        renderChannels(CHANNELS);
+
+        loadCountries();
+        loadCategories();
+        loadLanguages();
+
+    } catch (err) {
+
+        console.error(err);
+
+        document.getElementById("channels").innerHTML =
+        `<div style="padding:40px;color:#fff">
+            Unable to load IPTV API.
+        </div>`;
+    }
+
+}
       async function loadData() {
         try {
           CHANNELS = await fetch("data/channels.json").then((r) => r.json());
@@ -291,9 +370,38 @@ onclick="play('${c.stream}')">
         document.getElementById("channels").innerHTML = html;
       }
 
-      function play(url) {
-        document.getElementById("video").src = url;
-      }
+      let hls = null;
+
+function play(url) {
+
+    const video = document.getElementById("video");
+
+    if (hls) {
+        hls.destroy();
+        hls = null;
+    }
+
+    if (Hls.isSupported()) {
+
+        hls = new Hls();
+
+        hls.loadSource(url);
+
+        hls.attachMedia(video);
+
+        hls.on(Hls.Events.MANIFEST_PARSED, function () {
+            video.play();
+        });
+
+    } else {
+
+        video.src = url;
+
+        video.play();
+
+    }
+
+}
 
       function searchChannel(q) {
         q = q.toLowerCase();
