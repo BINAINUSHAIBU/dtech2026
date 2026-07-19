@@ -445,3 +445,32 @@ footer{
     width:24px;
     height:24px;
 }
+
+
+.player-btn{
+    width:48px;
+    height:48px;
+    border:none;
+    border-radius:50%;
+    background:#00d2ff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.player-btn:hover{
+    background:#19e0ff;
+    transform:scale(1.08);
+}
+
+.player-btn img{
+    width:24px;
+    height:24px;
+}
+
+
+
+
+
