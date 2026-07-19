@@ -1,162 +1,26 @@
 [
   {
-    "id": 1,
-    "name": "Nigeria",
-    "code": "NG",
-    "flag": "🇳🇬",
-    "channels": 320,
-    "region": "Africa"
+    "name":"Nigeria",
+    "flag":"🇳🇬"
   },
   {
-    "id": 2,
-    "name": "United States",
-    "code": "US",
-    "flag": "🇺🇸",
-    "channels": 1450,
-    "region": "North America"
+    "name":"USA",
+    "flag":"🇺🇸"
   },
   {
-    "id": 3,
-    "name": "United Kingdom",
-    "code": "GB",
-    "flag": "🇬🇧",
-    "channels": 780,
-    "region": "Europe"
+    "name":"United Kingdom",
+    "flag":"🇬🇧"
   },
   {
-    "id": 4,
-    "name": "Canada",
-    "code": "CA",
-    "flag": "🇨🇦",
-    "channels": 420,
-    "region": "North America"
+    "name":"Canada",
+    "flag":"🇨🇦"
   },
   {
-    "id": 5,
-    "name": "France",
-    "code": "FR",
-    "flag": "🇫🇷",
-    "channels": 510,
-    "region": "Europe"
+    "name":"India",
+    "flag":"🇮🇳"
   },
   {
-    "id": 6,
-    "name": "Germany",
-    "code": "DE",
-    "flag": "🇩🇪",
-    "channels": 620,
-    "region": "Europe"
-  },
-  {
-    "id": 7,
-    "name": "Spain",
-    "code": "ES",
-    "flag": "🇪🇸",
-    "channels": 430,
-    "region": "Europe"
-  },
-  {
-    "id": 8,
-    "name": "Italy",
-    "code": "IT",
-    "flag": "🇮🇹",
-    "channels": 410,
-    "region": "Europe"
-  },
-  {
-    "id": 9,
-    "name": "India",
-    "code": "IN",
-    "flag": "🇮🇳",
-    "channels": 1250,
-    "region": "Asia"
-  },
-  {
-    "id": 10,
-    "name": "China",
-    "code": "CN",
-    "flag": "🇨🇳",
-    "channels": 860,
-    "region": "Asia"
-  },
-  {
-    "id": 11,
-    "name": "Japan",
-    "code": "JP",
-    "flag": "🇯🇵",
-    "channels": 370,
-    "region": "Asia"
-  },
-  {
-    "id": 12,
-    "name": "South Korea",
-    "code": "KR",
-    "flag": "🇰🇷",
-    "channels": 280,
-    "region": "Asia"
-  },
-  {
-    "id": 13,
-    "name": "Australia",
-    "code": "AU",
-    "flag": "🇦🇺",
-    "channels": 260,
-    "region": "Oceania"
-  },
-  {
-    "id": 14,
-    "name": "Brazil",
-    "code": "BR",
-    "flag": "🇧🇷",
-    "channels": 580,
-    "region": "South America"
-  },
-  {
-    "id": 15,
-    "name": "Mexico",
-    "code": "MX",
-    "flag": "🇲🇽",
-    "channels": 390,
-    "region": "North America"
-  },
-  {
-    "id": 16,
-    "name": "South Africa",
-    "code": "ZA",
-    "flag": "🇿🇦",
-    "channels": 240,
-    "region": "Africa"
-  },
-  {
-    "id": 17,
-    "name": "Egypt",
-    "code": "EG",
-    "flag": "🇪🇬",
-    "channels": 230,
-    "region": "Africa"
-  },
-  {
-    "id": 18,
-    "name": "Turkey",
-    "code": "TR",
-    "flag": "🇹🇷",
-    "channels": 360,
-    "region": "Europe/Asia"
-  },
-  {
-    "id": 19,
-    "name": "United Arab Emirates",
-    "code": "AE",
-    "flag": "🇦🇪",
-    "channels": 180,
-    "region": "Middle East"
-  },
-  {
-    "id": 20,
-    "name": "Global",
-    "code": "GL",
-    "flag": "🌍",
-    "channels": 4500,
-    "region": "Worldwide"
+    "name":"South Africa",
+    "flag":"🇿🇦"
   }
 ]
