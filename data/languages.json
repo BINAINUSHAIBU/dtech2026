@@ -1,0 +1,26 @@
+[
+  {
+    "name":"English",
+    "flag":"🇬🇧"
+  },
+  {
+    "name":"French",
+    "flag":"🇫🇷"
+  },
+  {
+    "name":"Arabic",
+    "flag":"🇸🇦"
+  },
+  {
+    "name":"Spanish",
+    "flag":"🇪🇸"
+  },
+  {
+    "name":"Portuguese",
+    "flag":"🇵🇹"
+  },
+  {
+    "name":"Hindi",
+    "flag":"🇮🇳"
+  }
+]
