@@ -6,7 +6,7 @@
     "category": "News",
     "language": "English",
     "logo": "images/channels/bbc.png",
-    "stream": "'https://www.apsattv.com/vizio.m3u",
+    "stream": "http://mytv.fun:8080/99xctzjwoo/94tfra516t/16350",
     "live": true
   },
   {
