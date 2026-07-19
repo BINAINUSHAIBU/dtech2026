@@ -1,27 +1,4 @@
 
-[
-  {
-    "id": 1,
-    "name": ",Action Hollywood Movies HD",
-    "country": "United Kingdom",
-    "category": "News",
-    "language": "English",
-    "logo": "images/channels/bbc.png",
-    "stream": "https://cdn-apse1-prod.tsv2.amagi.tv/linear/amg01076-lightningintern-actionhollywood-samsungnz/playlist.m3u8",
-    "live": true
-  },
-
-[
-  {
-    "id": 1,
-    "name": ",Black News Channel HD",
-    "country": "United Kingdom",
-    "category": "News",
-    "language": "English",
-    "logo": "images/channels/bbc.png",
-    "stream": "https://blacknewschannel-amazon.amagi.tv/playlist.m3u8",
-    "live": true
-  },
 
 [
   {
