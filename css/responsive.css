@@ -1,286 +1,338 @@
-/* ===================================
-   BTECH-TV WORLD PRO MAX
-   css/responsive.css
-=================================== */
+/* ==========================================
+   BTECH-TV WORLD ULTRA MAX X
+   responsive.css
+   Responsive Layout
+   ========================================== */
 
-/* ===================================
+/* ===========================
    LARGE DESKTOP
-=================================== */
+=========================== */
 
-@media screen and (min-width: 1600px) {
-  .sidebar {
-    width: 320px;
-  }
+@media (max-width:1400px){
 
-  .channels {
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  }
-
-  .player-container {
-    height: 500px;
-  }
-
-  .hero h2 {
-    font-size: 34px;
-  }
+.hero{
+    font-size:36px;
 }
 
-/* ===================================
-   DESKTOP
-=================================== */
-
-@media screen and (max-width: 1400px) {
-  .channels {
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  }
+.grid{
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
 }
 
-/* ===================================
+}
+
+/* ===========================
    LAPTOP
-=================================== */
+=========================== */
 
-@media screen and (max-width: 1200px) {
-  .sidebar {
-    width: 240px;
-  }
+@media (max-width:1200px){
 
-  .stats {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .channels {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  }
+.sidebar{
+    width:220px;
 }
 
-/* ===================================
+footer{
+    left:220px;
+}
+
+.search{
+    width:260px;
+}
+
+.player{
+    height:380px;
+}
+
+.hero{
+    height:200px;
+    font-size:32px;
+}
+
+}
+
+/* ===========================
    TABLET
-=================================== */
+=========================== */
 
-@media screen and (max-width: 992px) {
-  body {
-    flex-direction: column;
-    overflow: auto;
-  }
+@media (max-width:992px){
 
-  .sidebar {
-    width: 100%;
-    height: auto;
-    border-right: none;
-    border-bottom: 1px solid #20365d;
-  }
-
-  .main {
-    width: 100%;
-    padding: 15px;
-  }
-
-  .topbar {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-  }
-
-  .top-right {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .search-box {
-    width: 100%;
-  }
-
-  .hero {
-    padding: 15px;
-  }
-
-  .player-container {
-    height: 350px;
-  }
-
-  .channels {
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  }
+.container{
+    flex-direction:column;
 }
 
-/* ===================================
+.sidebar{
+    width:100%;
+    height:220px;
+    border-right:none;
+    border-bottom:1px solid #222;
+}
+
+.main{
+    height:calc(100vh - 290px);
+}
+
+footer{
+    left:0;
+}
+
+.hero{
+    height:170px;
+    font-size:28px;
+}
+
+.player{
+    height:320px;
+}
+
+.grid{
+    grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+}
+
+.stats{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* ===========================
    MOBILE
-=================================== */
+=========================== */
 
-@media screen and (max-width: 768px) {
-  .logo {
-    font-size: 22px;
-  }
+@media (max-width:768px){
 
-  .sub {
-    font-size: 12px;
-  }
-
-  .menu-title {
-    font-size: 12px;
-  }
-
-  .nav-btn {
-    padding: 10px;
-    font-size: 14px;
-  }
-
-  .hero h2 {
-    font-size: 22px;
-  }
-
-  .stats {
-    grid-template-columns: 1fr;
-  }
-
-  .stat {
-    padding: 15px;
-  }
-
-  .player-container {
-    height: 250px;
-  }
-
-  .controls {
-    justify-content: center;
-  }
-
-  .controls button {
-    flex: 1 1 45%;
-    min-width: 120px;
-  }
-
-  .channels {
-    grid-template-columns: 1fr;
-  }
-
-  .card {
-    padding: 15px;
-  }
-
-  .footer {
-    font-size: 12px;
-  }
+body{
+    overflow:auto;
 }
 
-/* ===================================
+header{
+    flex-direction:column;
+    height:auto;
+    padding:15px;
+    gap:15px;
+}
+
+.logo{
+    font-size:22px;
+    text-align:center;
+}
+
+.search{
+    width:100%;
+}
+
+.sidebar{
+    height:auto;
+    padding:15px;
+}
+
+.sidebar h3{
+    margin-top:15px;
+}
+
+.sidebar button{
+    font-size:14px;
+    padding:10px;
+}
+
+.main{
+    padding:15px;
+    height:auto;
+}
+
+.hero{
+    height:140px;
+    font-size:22px;
+    text-align:center;
+    padding:20px;
+}
+
+.player{
+    height:220px;
+}
+
+.grid{
+    grid-template-columns:1fr;
+    gap:15px;
+}
+
+.card img{
+    height:150px;
+}
+
+.stats{
+    grid-template-columns:1fr;
+}
+
+.stat-card{
+    padding:18px;
+}
+
+.player-controls{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+}
+
+.volume-slider{
+    width:70px;
+}
+
+footer{
+    position:relative;
+    left:0;
+    margin-top:20px;
+}
+
+}
+
+/* ===========================
    SMALL MOBILE
-=================================== */
+=========================== */
 
-@media screen and (max-width: 576px) {
-  .main {
-    padding: 10px;
-  }
+@media (max-width:480px){
 
-  .player-container {
-    height: 220px;
-  }
-
-  .topbar {
-    gap: 10px;
-  }
-
-  .top-right {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  #floatingTimer {
-    font-size: 14px;
-    padding: 8px 12px;
-  }
-
-  .live {
-    font-size: 12px;
-    padding: 6px 10px;
-  }
-
-  .controls {
-    gap: 8px;
-  }
-
-  .controls button {
-    width: 100%;
-    font-size: 13px;
-  }
-
-  .search-box input {
-    font-size: 14px;
-  }
+.logo{
+    font-size:18px;
 }
 
-/* ===================================
-   EXTRA SMALL DEVICES
-=================================== */
-
-@media screen and (max-width: 400px) {
-  .logo {
-    font-size: 18px;
-  }
-
-  .hero h2 {
-    font-size: 18px;
-  }
-
-  .hero {
-    padding: 12px;
-  }
-
-  .player-container {
-    height: 180px;
-  }
-
-  .stat h3 {
-    font-size: 24px;
-  }
-
-  .card-title {
-    font-size: 15px;
-  }
+.hero{
+    font-size:18px;
+    height:120px;
 }
 
-/* ===================================
-   LANDSCAPE PHONES
-=================================== */
-
-@media screen and (max-height: 500px) and (orientation: landscape) {
-  .sidebar {
-    overflow-y: auto;
-  }
-
-  .player-container {
-    height: 220px;
-  }
-
-  .channels {
-    max-height: 250px;
-  }
+.player{
+    height:180px;
 }
 
-/* ===================================
-   PRINT
-=================================== */
+.card{
+    border-radius:10px;
+}
 
-@media print {
-  body {
-    background: #fff;
-    color: #000;
-  }
+.card img{
+    height:120px;
+}
 
-  .sidebar,
-  .controls,
-  .live,
-  #floatingTimer,
-  #trialOverlay {
-    display: none !important;
-  }
+.name{
+    font-size:16px;
+}
 
-  .main {
-    width: 100%;
-  }
+.info{
+    font-size:12px;
+}
 
-  .player-container {
-    display: none;
-  }
+.live{
+    font-size:11px;
+    padding:5px 10px;
+}
+
+.btn{
+    width:100%;
+}
+
+.search{
+    font-size:14px;
+}
+
+}
+
+/* ===========================
+   ULTRA SMALL DEVICES
+=========================== */
+
+@media (max-width:360px){
+
+.hero{
+    font-size:16px;
+}
+
+.player{
+    height:160px;
+}
+
+.logo{
+    font-size:16px;
+}
+
+.sidebar button{
+    font-size:12px;
+}
+
+.name{
+    font-size:15px;
+}
+
+.info{
+    font-size:11px;
+}
+
+}
+
+/* ===========================
+   LANDSCAPE MOBILE
+=========================== */
+
+@media (max-height:500px) and (orientation:landscape){
+
+header{
+    height:60px;
+}
+
+.sidebar{
+    display:none;
+}
+
+.container{
+    display:block;
+}
+
+.main{
+    width:100%;
+    height:calc(100vh - 60px);
+}
+
+.hero{
+    display:none;
+}
+
+.player{
+    height:100vh;
+    border-radius:0;
+}
+
+.grid{
+    display:none;
+}
+
+footer{
+    display:none;
+}
+
+}
+
+/* ===========================
+   4K / LARGE SCREENS
+=========================== */
+
+@media (min-width:1800px){
+
+.container{
+    max-width:1800px;
+    margin:auto;
+}
+
+.hero{
+    font-size:52px;
+}
+
+.player{
+    height:600px;
+}
+
+.grid{
+    grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+}
+
+.card img{
+    height:180px;
+}
+
 }
