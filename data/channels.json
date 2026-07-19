@@ -6,7 +6,7 @@
     "category": "News",
     "language": "English",
     "logo": "images/channels/bbc.png",
-    "stream": "http://www.1tvmedia.com/",
+    "stream": "https://tv.a2news.com/live/smil:a2cnnweb.stream.smil/playlist.m3u8",
     "live": true
   },
   {
