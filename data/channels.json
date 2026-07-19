@@ -6,7 +6,7 @@
     "category": "News",
     "language": "English",
     "logo": "images/channels/bbc.png",
-    "stream": "http://mytv.fun:8080/99xctzjwoo/94tfra516t/16350",
+    "stream": "http://121.91.61.106:8000/play/a03o/index.m3u8",
     "live": true
   },
   {
