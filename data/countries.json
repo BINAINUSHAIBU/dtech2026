@@ -2,7 +2,8 @@
   {
     "name": "Nigeria",
     "flag": "🇳🇬",
-    "code": "NG"
+    "code": "NG",
+    "playlist": "https://iptv-org.github.io/iptv/countries/ng.m3u"
   },
   {
     "name": "United States",
