@@ -307,3 +307,10 @@ window.addEventListener("offline", () => {
 /* ===========================
    END
 =========================== */
+
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        document.getElementById("loadingScreen").style.display = "none";
+    }, 2000);
+});
+
