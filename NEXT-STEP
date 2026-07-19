@@ -1,0 +1,702 @@
+
+
+Today 1:10 PM
+
+index(1).html
+File
+CREATE ALL FILE FOR THIS
+
+Generated image: Futuristic TV app showcase design
+
+
+Edit
+
+
+Generated image: BTECH-TV logo with sleek gradients
+
+
+Edit
+
+
+Generated image: Glowing blue pause button icon
+
+Edit
+
+
+Generated image: Glowing blue stop button icon
+
+Edit
+
+
+Generated image: Glossy blue rewind button icon
+
+
+Edit
+
+
+Generated image: Glossy fast-forward button icon
+
+Edit
+
+
+Generated image: Blue volume icon with glowing details
+
+Edit
+
+
+Generated image: Muted blue speaker icon
+
+Edit
+
+
+Generated image: Glossy blue fullscreen button emblem
+
+
+Edit
+
+
+Generated image: PiP icon in glowing blue button
+
+Edit
+
+
+Generated image: Blue star icon with glowing ring
+
+Edit
+
+
+Generated image: Glowing blue search icon
+
+Edit
+
+
+Generated image: Blue gear icon with glowing ring
+
+Edit
+
+
+Generated image: Blue refresh icon with glowing ring
+
+Edit
+
+
+Generated image: Glowing blue shuffle button icon
+
+Edit
+
+
+Generated image: Futuristic download button with glowing effect
+
+Edit
+
+
+Generated image: Glowing "LIVE" button design
+
+Edit
+
+
+Generated image: Glossy Nigerian flag in circular frame
+
+Edit
+
+
+Generated image: Glossy metallic American flag badge
+
+Edit
+
+
+Generated image: UK and France flag badges
+
+
+Edit
+
+
+<?php
+/**
+ * ===========================================
+ * BTECH-TV WORLD ULTRA MAX X
+ * API Configuration
+ * File: api/config.php
+ * ===========================================
+ */
+
+date_default_timezone_set("Africa/Lagos");
+
+/*
+|--------------------------------------------------------------------------
+| Application
+|--------------------------------------------------------------------------
+*/
+
+define("APP_NAME", "BTECH-TV WORLD ULTRA MAX X");
+define("APP_VERSION", "1.0.0");
+define("APP_URL", "http://localhost/BTECH-TV");
+
+/*
+|--------------------------------------------------------------------------
+| Database Configuration
+|--------------------------------------------------------------------------
+| Update these values for your MySQL server.
+*/
+
+define("DB_HOST", "localhost");
+define("DB_NAME", "btechtv");
+define("DB_USER", "root");
+define("DB_PASS", "");
+
+/*
+|--------------------------------------------------------------------------
+| Create Database Connection
+|--------------------------------------------------------------------------
+*/
+
+try {
+
+    $pdo = new PDO(
+
+        "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8mb4",
+
+        DB_USER,
+
+        DB_PASS,
+
+        [
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+            PDO::ATTR_EMULATE_PREPARES => false
+        ]
+
+    );
+
+} catch (PDOException $e) {
+
+    die(json_encode([
+        "success" => false,
+        "message" => "Database Connection Failed",
+        "error" => $e->getMessage()
+    ]));
+
+}
+
+/*
+|--------------------------------------------------------------------------
+| Security
+|--------------------------------------------------------------------------
+*/
+
+session_start();
+
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: Content-Type");
+header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
+header("Content-Type: application/json");
+
+/*
+|--------------------------------------------------------------------------
+| Helper Functions
+|--------------------------------------------------------------------------
+*/
+
+function response($success, $message = "", $data = [])
+{
+
+    echo json_encode([
+
+        "success" => $success,
+
+        "message" => $message,
+
+        "timestamp" => date("Y-m-d H:i:s"),
+
+        "data" => $data
+
+    ], JSON_PRETTY_PRINT);
+
+    exit;
+}
+
+function generateToken($length = 32)
+{
+    return bin2hex(random_bytes($length / 2));
+}
+
+function sanitize($text)
+{
+    return htmlspecialchars(trim($text), ENT_QUOTES, "UTF-8");
+}
+
+function isLoggedIn()
+{
+    return isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true;
+}
+
+function requireLogin()
+{
+    if (!isLoggedIn()) {
+
+        response(false, "Unauthorized Access");
+
+    }
+}
+
+/*
+|--------------------------------------------------------------------------
+| Demo Settings
+|--------------------------------------------------------------------------
+*/
+
+$SETTINGS = [
+
+    "trial_minutes" => 2,
+
+    "max_channels" => 10000,
+
+    "stream_timeout" => 20,
+
+    "enable_cache" => true,
+
+    "enable_favorites" => true,
+
+    "enable_recent" => true,
+
+    "enable_downloads" => true,
+
+    "enable_recording" => false,
+
+    "maintenance_mode" => false
+
+];
+
+/*
+|--------------------------------------------------------------------------
+| End Configuration
+|--------------------------------------------------------------------------
+*/
+?>
+Save as:
+
+api/
+└── config.php
+This config.php serves as the central configuration file for your project and provides:
+
+✅ MySQL database connection (PDO)
+
+✅ Session management
+
+✅ JSON API headers
+
+✅ Application constants
+
+✅ Helper functions (response(), sanitize(), generateToken())
+
+✅ Login authentication helpers
+
+✅ Global IPTV settings
+
+✅ Error handling for database connections
+
+It is designed to be included at the top of your other PHP API files:
+
+require_once "config.php";
+This gives all your API endpoints (login.php, channels.php, playlist.php, etc.) access to the shared database connection and utility functions.
+
+
+
+├── m3u/
+│   └── playlist.m3u
+
+#EXTM3U x-tvg-url="https://epgshare01.online/epgshare01/epg_ripper_ALL_SOURCES1.xml.gz"
+
+# =====================================================
+# BTECH-TV WORLD ULTRA MAX X
+# Demo IPTV Playlist
+# =====================================================
+
+# ---------- NEWS ----------
+
+#EXTINF:-1 tvg-id="BBCNews.uk" tvg-name="BBC News HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/b/bc/BBC_News_2022_%28Alt%29.svg" group-title="News",BBC News HD
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+
+#EXTINF:-1 tvg-id="CNN.us" tvg-name="CNN International" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/b/b1/CNN.svg" group-title="News",CNN International
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+
+#EXTINF:-1 tvg-id="AlJazeera.qa" tvg-name="Al Jazeera" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/51/Aljazeera_eng.svg" group-title="News",Al Jazeera
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+
+# ---------- SPORTS ----------
+
+#EXTINF:-1 tvg-id="ESPN.us" tvg-name="ESPN HD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/2/2f/ESPN_wordmark.svg" group-title="Sports",ESPN HD
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+
+#EXTINF:-1 tvg-id="SkySports.uk" tvg-name="Sky Sports" tvg-logo="https://upload.wikimedia.org/wikipedia/en/b/b7/Sky_Sports_Main_Event.png" group-title="Sports",Sky Sports
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+
+# ---------- MOVIES ----------
+
+#EXTINF:-1 tvg-id="HBO.us" tvg-name="HBO Movies" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/d/de/HBO_logo.svg" group-title="Movies",HBO Movies
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+
+#EXTINF:-1 tvg-id="StarMovies.in" tvg-name="Star Movies" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e8/Star_Movies_logo.svg" group-title="Movies",Star Movies
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+
+# ---------- MUSIC ----------
+
+#EXTINF:-1 tvg-id="MTV.us" tvg-name="MTV Live" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/9/92/MTV_2021.svg" group-title="Music",MTV Live
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+
+# ---------- KIDS ----------
+
+#EXTINF:-1 tvg-id="Cartoon.us" tvg-name="Cartoon Network" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/0/04/Cartoon_Network_2010_logo.svg" group-title="Kids",Cartoon Network
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+
+#EXTINF:-1 tvg-id="Disney.us" tvg-name="Disney Channel" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/6/64/Disney_Channel_logo_%282014%29.svg" group-title="Kids",Disney Channel
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+
+# ---------- DOCUMENTARY ----------
+
+#EXTINF:-1 tvg-id="NatGeo.us" tvg-name="National Geographic" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/fc/Natgeologo.svg" group-title="Documentary",National Geographic
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+
+#EXTINF:-1 tvg-id="Discovery.us" tvg-name="Discovery Channel" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/3/3e/Discovery_logo.svg" group-title="Documentary",Discovery Channel
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+
+# ---------- BUSINESS ----------
+
+#EXTINF:-1 tvg-id="Bloomberg.us" tvg-name="Bloomberg TV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/3/3b/Bloomberg_Television_logo.svg" group-title="Business",Bloomberg TV
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+
+# ---------- SCIENCE ----------
+
+#EXTINF:-1 tvg-id="NASA.us" tvg-name="NASA TV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" group-title="Science",NASA TV
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+
+# ---------- TRAVEL ----------
+
+#EXTINF:-1 tvg-id="TravelXP.in" tvg-name="Travel XP" tvg-logo="" group-title="Travel",Travel XP
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+
+# ---------- WEATHER ----------
+
+#EXTINF:-1 tvg-id="Weather.us" tvg-name="Weather Channel" tvg-logo="" group-title="Weather",Weather Channel
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+
+# ---------- ENTERTAINMENT ----------
+
+#EXTINF:-1 tvg-id="BTECH.demo" tvg-name="BTECH TV Demo" tvg-logo="../assets/logo.png" group-title="Entertainment",BTECH TV Demo
+https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8
+Save this file as:
+
+m3u/
+└── playlist.m3u
+This playlist includes:
+
+✅ Standard #EXTM3U header
+
+✅ EPG URL support
+
+✅ Grouped channels (News, Sports, Movies, Music, Kids, Documentary, Business, Science, Travel, Weather, Entertainment)
+
+✅ TVG metadata (tvg-id, tvg-name, tvg-logo)
+
+✅ Demo HLS streams that are suitable for testing your IPTV player.
+
+
+
+├── README.md
+└── LICENSE
+
+Here are the final two files for your project.
+
+README.md
+# 📺 BTECH-TV WORLD ULTRA MAX X
+
+A modern IPTV streaming platform built with HTML, CSS, JavaScript, PHP, and JSON.
+
+---
+
+## Features
+
+- 📺 Live IPTV Streaming
+- 🌍 Country Filter
+- 🎬 Category Filter
+- 🌐 Language Filter
+- ⭐ Favorites
+- 🕘 Recently Watched
+- 🔍 Smart Search
+- 📱 Responsive Design
+- 🌙 Dark Theme
+- ⛶ Fullscreen
+- 🖼 Picture in Picture
+- 🎲 Shuffle Channels
+- ⬇ Download Playlist
+- 🔄 Refresh Streams
+- ⚡ Fast HLS Player
+- 📡 M3U Playlist Support
+- 📊 Super Admin Dashboard
+- 👥 User Login System
+- ⚙ Settings Manager
+- 📁 JSON Database
+- 🐘 PHP API
+- 💾 Local Storage Support
+
+---
+
+# Project Structure
+
+```
+BTECH-TV/
+
+├── index.html
+
+├── css/
+│   ├── style.css
+│   ├── player.css
+│   └── responsive.css
+
+├── js/
+│   ├── app.js
+│   ├── player.js
+│   ├── search.js
+│   ├── countries.js
+│   ├── categories.js
+│   ├── languages.js
+│   ├── favorites.js
+│   └── settings.js
+
+├── data/
+│   ├── channels.json
+│   ├── countries.json
+│   ├── categories.json
+│   └── languages.json
+
+├── assets/
+│   ├── logo.png
+│   ├── hero.jpg
+│   ├── banner.png
+│   ├── favicon.ico
+│   ├── loading.gif
+│   ├── icons/
+│   └── flags/
+
+├── api/
+│   ├── config.php
+│   ├── login.php
+│   ├── channels.php
+│   └── playlist.php
+
+├── m3u/
+│   └── playlist.m3u
+
+├── README.md
+└── LICENSE
+```
+
+---
+
+## Installation
+
+1. Copy the project into your web server.
+
+```
+htdocs/
+```
+
+or
+
+```
+www/
+```
+
+2. Start Apache.
+
+3. Open your browser.
+
+```
+http://localhost/BTECH-TV
+```
+
+---
+
+## Requirements
+
+- PHP 8+
+- Apache / Nginx
+- Modern Browser
+- Internet connection for remote IPTV playlists
+
+---
+
+## Default Login
+
+Administrator
+
+Username
+
+```
+admin
+```
+
+Password
+
+```
+admin123
+```
+
+Super Admin
+
+Username
+
+```
+superadmin
+```
+
+Password
+
+```
+super123
+```
+
+Demo User
+
+Username
+
+```
+user
+```
+
+Password
+
+```
+user123
+```
+
+---
+
+## Version
+
+1.0.0
+
+---
+
+## Author
+
+BTECH WEBDESIGN TRAINING
+
+---
+
+## Copyright
+
+© 2026 BTECH-TV WORLD ULTRA MAX X
+
+All Rights Reserved.
+LICENSE
+MIT License
+
+Copyright (c) 2026 BTECH WEBDESIGN TRAINING
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+✅ Your complete BTECH-TV WORLD ULTRA MAX X project structure is now covered, including HTML, CSS, JavaScript, PHP APIs, JSON databases, M3U playlist, assets layout, README, and LICENSE.
+
+
+NEXT
+
+Great! The next step is to create the deployment and configuration files so the project is ready for GitHub, hosting, and production.
+
+Next project structure
+├── .gitignore
+├── .htaccess
+├── package.json
+├── manifest.json
+├── service-worker.js
+├── robots.txt
+├── sitemap.xml
+├── browserconfig.xml
+├── security.txt
+├── CHANGELOG.md
+├── CONTRIBUTING.md
+├── CODE_OF_CONDUCT.md
+├── docker-compose.yml
+├── Dockerfile
+├── nginx.conf
+├── composer.json
+├── phpunit.xml
+├── database/
+│   ├── btechtv.sql
+│   ├── users.sql
+│   ├── favorites.sql
+│   ├── history.sql
+│   └── settings.sql
+├── uploads/
+│   ├── logos/
+│   ├── thumbnails/
+│   ├── playlists/
+│   └── backups/
+├── logs/
+│   ├── error.log
+│   ├── access.log
+│   └── player.log
+├── backup/
+│   └── backup.php
+├── cron/
+│   ├── update-playlists.php
+│   ├── cleanup.php
+│   └── health-check.php
+├── docs/
+│   ├── API.md
+│   ├── INSTALL.md
+│   ├── USER_GUIDE.md
+│   └── ADMIN_GUIDE.md
+These files will make BTECH-TV WORLD ULTRA MAX X a complete professional IPTV project with:
+
+✅ Progressive Web App (PWA)
+
+✅ Offline mode
+
+✅ Auto-updating playlists
+
+✅ MySQL database
+
+✅ Docker deployment
+
+✅ Nginx configuration
+
+✅ Apache configuration
+
+✅ GitHub-ready repository
+
+✅ Automatic backups
+
+✅ Server logs
+
+✅ Security configuration
+
+✅ Installation guide
+
+✅ Admin documentation
+
+This is the final production layer before adding advanced features such as subscription billing, EPG integration, REST API authentication, analytics, and multi-user administration.
+
+Chats with attachments paused
+You’ve used all your messages with Instant until 7:28 AM. Upgrade to keep working with files and images here, or start a new chat to continue with a lower quality model.
+
+New chat
+
+Upgrade
+├── .gitignore
+
