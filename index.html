@@ -3,352 +3,335 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>BTECH-TV WORLD PRO MAX</title>
 
-    <title>BTECH-TV WORLD ULTRA MAX X</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, Helvetica, sans-serif;
-      }
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/player.css" />
+    <link rel="stylesheet" href="css/trial.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
 
-      body {
-        background: #080808;
-        color: #fff;
-        overflow: hidden;
-      }
-
-      header {
-        height: 70px;
-        background: #111;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 25px;
-        border-bottom: 1px solid #222;
-      }
-
-      .logo {
-        font-size: 24px;
-        font-weight: bold;
-        color: #00d2ff;
-      }
-
-      .search {
-        width: 350px;
-        padding: 10px;
-        border-radius: 25px;
-        border: none;
-        outline: none;
-      }
-
-      .container {
-        display: flex;
-        height: calc(100vh - 70px);
-      }
-
-      .sidebar {
-        width: 250px;
-        background: #151515;
-        overflow: auto;
-        padding: 20px;
-      }
-
-      .sidebar h3 {
-        margin-bottom: 10px;
-        color: #00d2ff;
-      }
-
-      .sidebar button {
-        width: 100%;
-        padding: 12px;
-        margin-bottom: 8px;
-        background: #222;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-      }
-
-      .sidebar button:hover {
-        background: #00d2ff;
-      }
-
-      .main {
-        flex: 1;
-        overflow: auto;
-        padding: 20px;
-      }
-
-      .hero {
-        height: 250px;
-        border-radius: 20px;
-        background: linear-gradient(135deg, #004cff, #00d2ff);
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        font-size: 40px;
-        font-weight: bold;
-
-        margin-bottom: 25px;
-      }
-
-      .player {
-        height: 420px;
-        background: black;
-        border-radius: 15px;
-        overflow: hidden;
-        margin-bottom: 30px;
-      }
-
-      video {
-        width: 100%;
-        height: 100%;
-        background: black;
-      }
-
-      .grid {
-        display: grid;
-
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-
-        gap: 20px;
-      }
-
-      .card {
-        background: #1a1a1a;
-
-        border-radius: 12px;
-
-        padding: 15px;
-
-        transition: 0.3s;
-
-        cursor: pointer;
-      }
-
-      .card:hover {
-        transform: scale(1.04);
-
-        background: #222;
-      }
-
-      .card img {
-        width: 100%;
-
-        height: 120px;
-
-        object-fit: contain;
-
-        background: white;
-
-        border-radius: 8px;
-      }
-
-      .name {
-        margin-top: 10px;
-
-        font-size: 18px;
-      }
-
-      .info {
-        color: #999;
-
-        margin-top: 6px;
-
-        font-size: 14px;
-      }
-
-      .live {
-        margin-top: 10px;
-
-        display: inline-block;
-
-        padding: 5px 10px;
-
-        background: red;
-
-        border-radius: 20px;
-
-        font-size: 12px;
-      }
-
-      footer {
-        position: fixed;
-
-        bottom: 0;
-
-        left: 250px;
-
-        right: 0;
-
-        height: 45px;
-
-        background: #111;
-
-        display: flex;
-
-        align-items: center;
-
-        justify-content: center;
-
-        font-size: 13px;
-      }
-    </style>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
   </head>
 
   <body>
-    <header>
-      <div class="logo">BTECH-TV WORLD ULTRA MAX X</div>
-
-      <input
-        class="search"
-        placeholder="Search Channel..."
-        onkeyup="searchChannel(this.value)"
-      />
-    </header>
-
-    <div class="container">
-      <div class="sidebar">
-        <h3>Countries</h3>
-
-        <div id="countries"></div>
-
-        <h3>Categories</h3>
-
-        <div id="categories"></div>
-
-        <h3>Languages</h3>
-
-        <div id="languages"></div>
-      </div>
-
-      <div class="main">
-        <div class="hero">SMART IPTV DASHBOARD</div>
-
-        <div class="player">
-          <video id="video" controls autoplay></video>
+    <div id="trialOverlay">
+      <div id="trialBox">
+        <!-- LOGO -->
+        <div style="text-align: center; margin-bottom: 20px">
+          <img
+            src="logo.png"
+            alt="BTECH-TV WORLD PRO MAX"
+            style="width: 260px; max-width: 95%"
+          />
         </div>
 
-        <div id="channels" class="grid"></div>
+        <h1 style="font-size: 44px; margin: 0; font-weight: 900; color: #fff">
+          BTECH-TV Trial Version
+        </h1>
+
+        <h2
+          id="timer"
+          style="color: #ff3333; font-size: 42px; margin: 20px 0 10px"
+        ></h2>
+
+        <p style="font-size: 28px">Watch free for 2 minutes.</p>
+
+        <p style="color: #bfbfbf; font-size: 20px">
+          Your trial version has expired.
+        </p>
+
+        <!-- PAYMENT -->
+        <div id="paymentArea" style="display: none">
+          <div
+            style="
+              margin-top: 25px;
+              border: 2px solid #007bff;
+              border-radius: 20px;
+              padding: 25px;
+              background: #071126;
+              box-shadow: 0 0 25px #007bff55;
+            "
+          >
+            <select id="package">
+              <option value="index_premium-package.html">package</option>
+
+              <option value="index_premium-package.html">👑 Premium</option>
+
+              <option value="index_super-Compact_plus-package.html">
+                👑 Super Compact Plus
+              </option>
+
+              <option value="index_super-premium-package.html">
+                👑 Super Premium
+              </option>
+
+              <option value="index_super-premium_Compact_plus-package.html">
+                👑 Super Premium Compact Plus
+              </option>
+
+              <option value="index_super-premium_plus-package.html">
+                👑 Super Premium Plus
+              </option>
+            </select>
+            <input type="text" placeholder="Full Name" />
+
+            <input type="email" placeholder="Email Address" />
+
+            <input type="tel" placeholder="Phone Number" />
+
+            <input type="text" placeholder="Other Information" />
+
+            <button onclick="pay()">Pay Demo</button>
+          </div>
+        </div>
       </div>
     </div>
-
-    <footer>Modern IPTV Dashboard</footer>
-
-    <script>
-      let CHANNELS = [];
-
-      async function loadData() {
-        try {
-          CHANNELS = await fetch("data/channels.json").then((r) => r.json());
-
-          renderChannels(CHANNELS);
-        } catch (e) {
-          console.log(e);
-        }
-
-        loadCountries();
-
-        loadCategories();
-
-        loadLanguages();
-      }
-
-      function renderChannels(list) {
-        let html = "";
-
-        list.forEach((c) => {
-          html += `
-
-<div
-class="card"
-onclick="play('${c.stream}')">
-
-<img src="${c.logo}">
-
-<div class="name">${c.name}</div>
-
-<div class="info">${c.country}</div>
-
-<div class="info">${c.category}</div>
-
-<span class="live">LIVE</span>
-
-</div>
-
-`;
-        });
-
-        document.getElementById("channels").innerHTML = html;
-      }
-
-      function play(url) {
-        document.getElementById("video").src = url;
-      }
-
-      function searchChannel(q) {
-        q = q.toLowerCase();
-
-        renderChannels(
-          CHANNELS.filter((c) => c.name.toLowerCase().includes(q)),
-        );
-      }
-
-      async function loadCountries() {
-        const data = await fetch("data/countries.json").then((r) => r.json());
-
-        let html = "";
-
-        data.forEach((x) => {
-          html += `<button>${x.flag} ${x.name}</button>`;
-        });
-
-        document.getElementById("countries").innerHTML = html;
-      }
-
-      async function loadCategories() {
-        const data = await fetch("data/categories.json").then((r) => r.json());
-
-        let html = "";
-
-        data.forEach((x) => {
-          html += `<button>${x.icon} ${x.name}</button>`;
-        });
-
-        document.getElementById("categories").innerHTML = html;
-      }
-
-      async function loadLanguages() {
-        const data = await fetch("data/languages.json").then((r) => r.json());
-
-        let html = "";
-
-        data.forEach((x) => {
-          html += `<button>${x.flag} ${x.name}</button>`;
-        });
-
-        document.getElementById("languages").innerHTML = html;
-      }
-
-      loadData();
-    </script>
-    let CHANNELS = []; async function loadData() { try { const response = await
-    fetch("data/channels.json"); if (!response.ok) { throw new Error("Unable to
-    load channels.json"); } CHANNELS = await response.json();
-    console.log(`Loaded ${CHANNELS.length} channels`); renderChannels(CHANNELS);
-    loadCountries(); loadCategories(); loadLanguages(); } catch (error) {
-    console.error(error); document.getElementById("channels").innerHTML = `
-    <div
-      style="color: white; padding: 40px; text-align: center; font-size: 22px"
-    >
-      Failed to load <b>data/channels.json</b>
+    <button class="nav-btn">
+      <img src="assets/icons/home.svg" alt="Home" />
+      Home
+      <img src="assets/icons/live.svg" alt="Live" width="24" height="24" />
+      <img src="assets/icons/sports.svg" alt="Sports" width="24" height="24" />
+      <img src="assets/icons/movies.svg" alt="Movies" width="24" height="24" />
+      <img src="assets/icons/news.svg" alt="News" width="24" height="24" />
+      <button class="nav-btn">
+        <img src="assets/icons/music.svg" alt="Music" />
+        Music
+      </button>
+      <button class="nav-btn">
+        <img src="assets/icons/kids.svg" alt="Kids" />
+        Kids
+      </button>
+      <button class="nav-btn">
+        <img src="assets/icons/settings.svg" alt="Settings" />
+        Settings
+      </button>
+      <button class="nav-btn">
+        <img src="assets/icons/search.svg" alt="Search" />
+        Search
+      </button>
+      <button class="nav-btn">
+        <img src="assets/icons/favorite.svg" alt="Favorites" />
+        Favorites
+      </button>
+      <button class="nav-btn">
+        <img src="assets/icons/user.svg" alt="User" />
+        User Profile
+      </button>
+      <button class="nav-btn">
+        <img src="assets/icons/admin.svg" alt="Admin" />
+        Admin Panel
+      </button>
+      <button class="player-btn">
+        <img src="assets/icons/play.svg" alt="Play" />
+        Play
+      </button>
+      <button class="player-btn">
+        <img src="assets/icons/next.svg" alt="Next" />
+        Next
+      </button>
+      <button class="player-btn">
+        <img src="assets/icons/previous.svg" alt="Previous" />
+        Previous
+      </button>
+      <button class="player-btn" onclick="toggleFullscreen()">
+        <img src="assets/icons/fullscreen.svg" alt="Fullscreen" />
+        Fullscreen
+      </button>
+      <button class="player-btn" onclick="toggleMute()">
+        <img src="assets/icons/mute.svg" alt="Mute" />
+        Mute
+      </button>
+      <button class="player-btn" onclick="toggleMute()">
+        <img src="assets/icons/unmute.svg" alt="Unmute" />
+        Unmute
+      </button>
+      <link rel="icon" type="image/svg+xml" href="assets/icons/logo-icon.svg" />
+    </button>
+    <div class="trial-logo">
+      <img src="images/logo.png" alt="BTECH-TV WORLD PRO MAX" />
     </div>
-    `; } }
+    <input id="fullName" type="text" placeholder="Full Name" />
+
+    <input id="email" type="email" placeholder="Email Address" />
+
+    <input id="phone" type="tel" placeholder="Phone Number" />
+
+    <input id="otherInfo" type="text" placeholder="Other Information" />
+
+    <select id="package">
+      ...
+    </select>
+    <!-- HTML Layout Here -->
+    <button onclick="playSound('click')">Click Me</button>
+
+    <button onclick="playSound('success')">Success</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+
+    <div id="loadingAnimation"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+
+    <div id="loadingAnimation"></div>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <div class="logo">📺 BTECH-TV PRO MAX</div>
+      <div class="sub">Ultra BTECH-TV world Engine X</div>
+
+      <div class="menu-title">🌍 Countries</div>
+
+      <!-- ALL COUNTRIES -->
+      <button class="nav-btn" onclick="load('ng')">🇳🇬 Nigeria</button>
+      <button class="nav-btn" onclick="load('us')">🇺🇸 USA</button>
+      <button class="nav-btn" onclick="load('uk')">🇬🇧 UK</button>
+      <button class="nav-btn" onclick="load('in')">🇮🇳 India</button>
+      <button class="nav-btn" onclick="load('fr')">🇫🇷 France</button>
+      <button class="nav-btn" onclick="load('de')">🇩🇪 Germany</button>
+      <button class="nav-btn" onclick="load('br')">🇧🇷 Brazil</button>
+      <button class="nav-btn" onclick="load('za')">🇿🇦 South Africa</button>
+      <button class="nav-btn" onclick="load('ca')">🇨🇦 Canada</button>
+      <button class="nav-btn" onclick="load('au')">🇦🇺 Australia</button>
+      <button class="nav-btn" onclick="load('jp')">🇯🇵 Japan</button>
+      <button class="nav-btn" onclick="load('kr')">🇰🇷 South Korea</button>
+      <button class="nav-btn" onclick="load('cn')">🇨🇳 China</button>
+      <button class="nav-btn" onclick="load('es')">🇪🇸 Spain</button>
+      <button class="nav-btn" onclick="load('it')">🇮🇹 Italy</button>
+      <button class="nav-btn" onclick="load('tr')">🇹🇷 Turkey</button>
+      <button class="nav-btn" onclick="load('mx')">🇲🇽 Mexico</button>
+      <button class="nav-btn" onclick="load('ae')">🇦🇪 UAE</button>
+      <button class="nav-btn" onclick="load('sa')">🇸🇦 Saudi Arabia</button>
+      <button class="nav-btn" onclick="load('eg')">🇪🇬 Egypt</button>
+      <button class="nav-btn" onclick="load('ar')">🇦🇷 Argentina</button>
+      <button class="nav-btn" onclick="load('pk')">🇵🇰 Pakistan</button>
+      <button class="nav-btn" onclick="load('id')">🇮🇩 Indonesia</button>
+      <button class="nav-btn" onclick="load('ph')">🇵🇭 Philippines</button>
+      <button class="nav-btn" onclick="load('al')">🇦🇱 Albania</button>
+
+      <div class="menu-title">🎬 Categories</div>
+
+      <button class="nav-btn" onclick="loadCat('news')">📰 News</button>
+      <button class="nav-btn" onclick="loadCat('sports')">⚽ Sports</button>
+      <button class="nav-btn" onclick="loadCat('movies')">🎬 Movies</button>
+      <button class="nav-btn" onclick="loadCat('music')">🎵 Music</button>
+      <button class="nav-btn" onclick="loadCat('kids')">👶 Kids</button>
+      <button class="nav-btn" onclick="loadCat('comedy')">😂 Comedy</button>
+      <button class="nav-btn" onclick="loadCat('documentary')">
+        📚 Documentary
+      </button>
+      <button class="nav-btn" onclick="loadCat('business')">💼 Business</button>
+      <button class="nav-btn" onclick="loadCat('science')">🔬 Science</button>
+      <button class="nav-btn" onclick="loadCat('travel')">✈ Travel</button>
+
+      <div class="menu-title">🗣 Languages</div>
+
+      <button class="nav-btn" onclick="load('eng')">🇬🇧 English</button>
+      <button class="nav-btn" onclick="load('spa')">🇪🇸 Spanish</button>
+      <button class="nav-btn" onclick="load('ara')">🇸🇦 Arabic</button>
+      <button class="nav-btn" onclick="load('fra')">🇫🇷 French</button>
+      <button class="nav-btn" onclick="load('hin')">🇮🇳 Hindi</button>
+      <button class="nav-btn" onclick="load('zho')">🇨🇳 Chinese</button>
+      <button class="nav-btn" onclick="load('por')">🇵🇹 Portuguese</button>
+
+      <div class="menu-title">🔥 Tools</div>
+
+      <button class="nav-btn" onclick="scanStreams()">📡 Scan</button>
+      <button class="nav-btn" onclick="speedBoost()">⚡ Boost</button>
+      <button class="nav-btn" onclick="togglePiP()">📺 PiP</button>
+      <button class="nav-btn" onclick="clearRecents()">🗑 Recents</button>
+      <button class="nav-btn" onclick="recordMode()">⏺ Record</button>
+      <button class="nav-btn" onclick="loadUltra()">🚀 Ultra Feeds</button>
+      <button class="nav-btn" onclick="repairStreams()">🛠 Repair</button>
+      <button class="nav-btn" onclick="optimizeMemory()">🧠 Optimize</button>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+      <div class="topbar">
+        <div class="search-box">
+          <input
+            oninput="search(this.value)"
+            placeholder="Search BTECH-TV World..."
+          />
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px">
+          <div id="floatingTimer">⏱ 2m 00s</div>
+          <div class="live">🔴 BTECH-TV LIVE</div>
+        </div>
+      </div>
+
+      <div class="hero">
+        <h3>BTECH-TV World PRO MAX SYSTEM</h3>
+        <div class="stats">
+          <div class="stat">
+            📺
+            <div id="total">0</div>
+          </div>
+          <div class="stat">
+            ⭐ Fav
+            <div id="fav">0</div>
+          </div>
+          <div class="stat">
+            ⚫ Dead
+            <div id="dead">0</div>
+          </div>
+          <div class="stat">
+            🌍 Live
+            <div id="live">0</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="player-container">
+        <video id="video" controls autoplay muted></video>
+      </div>
+
+      <div class="controls">
+        <div
+          class="controls"
+          style="display: flex; align-items: center; width: 100%"
+        >
+          <button onclick="next()">▶ Next</button>
+          <button onclick="prev()">◀ Prev</button>
+          <button onclick="toggleMute()">🔊 Mute</button>
+          <button onclick="toggleFullscreen()">⛶ Fullscreen</button>
+          <button onclick="loadUltra()">🚀 Global</button>
+
+          <!-- Pushes the text to the far right -->
+          <div
+            style="
+              margin-left: auto;
+              color: #00d4ff;
+              font-size: 13px;
+              font-weight: bold;
+              white-space: nowrap;
+              padding-left: 20px;
+            "
+          >
+            Design by <span style="color: #ffffff">BINAINU SHAIBU</span> | BTECH
+            WEBSITE DESIGN
+          </div>
+        </div>
+      </div>
+
+      <div class="channel-wrapper">
+        <div class="channels" id="grid"></div>
+      </div>
+    </div>
+    <script src="js/player.js"></script>
+    <script src="js/channels.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/trial.js"></script>
+    <script src="js/payment.js"></script>
+    <script src="js/stats.js"></script>
+    <script src="js/tools.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
