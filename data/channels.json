@@ -7,7 +7,7 @@
     "category": "Movies",
     "language": "English",
     "logo": "logos/channel8001.png",
-    "stream": "https://your-authorized-stream.example/live/channel8001.m3u8",
+    "stream": "https://fe.tring.al/delta/105/out/u/1200_1.m3u8/live/channel8001.m3u8",
     "epg": "Channel8001.us",
     "quality": "4K",
     "type": "Premium",
