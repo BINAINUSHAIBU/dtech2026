@@ -1,464 +1,309 @@
-/* ===================================
-   BTECH-TV WORLD PRO MAX
-   js/app.js
-=================================== */
+/* ==========================================
+   BTECH-TV WORLD ULTRA MAX X
+   app.js
+   Main Application
+========================================== */
 
-/*
-=====================================
-GLOBAL VARIABLES
-=====================================
-*/
+let CHANNELS = [];
+let FILTERED = [];
+let CURRENT_CHANNEL = null;
 
-let all = [];
-let filtered = [];
-let currentChannel = 0;
-
-let video = document.getElementById("video");
-
-let hls = null;
-
-/*
-=====================================
-APPLICATION STARTUP
-=====================================
-*/
+/* ===========================
+   INITIALIZE
+=========================== */
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("==================================");
-  console.log(" BTECH-TV WORLD PRO MAX Started ");
-  console.log("==================================");
-
-  initializePlayer();
-
-  initializeDashboard();
-
-  initializeTrial();
-
-  initializeEvents();
-
-  loadUltra();
+    initializeApp();
 });
 
-/*
-=====================================
-PLAYER INITIALIZATION
-=====================================
-*/
+async function initializeApp() {
 
-function initializePlayer() {
-  if (!video) {
-    console.error("Video player not found.");
+    await loadData();
 
-    return;
-  }
+    setupSearch();
 
-  video.volume = 0.5;
+    setupKeyboard();
 
-  video.muted = true;
+    console.log("BTECH-TV WORLD ULTRA MAX X Loaded");
 }
 
-/*
-=====================================
-DASHBOARD
-=====================================
-*/
-
-function initializeDashboard() {
-  updateStatistics();
-}
-
-/*
-=====================================
-TRIAL
-=====================================
-*/
-
-function initializeTrial() {
-  if (typeof startTrial === "function") {
-    startTrial();
-  }
-}
-
-/*
-=====================================
-EVENTS
-=====================================
-*/
-
-function initializeEvents() {
-  /*
-    Keyboard shortcuts
-    */
-
-  document.addEventListener("keydown", function (e) {
-    switch (e.key) {
-      case "ArrowRight":
-        next();
-
-        break;
-
-      case "ArrowLeft":
-        prev();
-
-        break;
-
-      case " ":
-        e.preventDefault();
-
-        if (video.paused) {
-          video.play();
-        } else {
-          video.pause();
-        }
-
-        break;
-
-      case "m":
-
-      case "M":
-        toggleMute();
-
-        break;
-
-      case "f":
-
-      case "F":
-        toggleFullscreen();
-
-        break;
-    }
-  });
-}
-
-/*
-=====================================
-AUTO PLAY FIRST CHANNEL
-=====================================
-*/
-
-function autoPlay() {
-  if (filtered.length > 0) {
-    play(0);
-  }
-}
-
-/*
-=====================================
-AFTER CHANNELS LOADED
-=====================================
-*/
-
-function afterChannelsLoaded() {
-  updateStatistics();
-
-  render();
-
-  autoPlay();
-}
-
-/*
-=====================================
-LOADING SCREEN
-=====================================
-*/
-
-function showLoading() {
-  let player = document.querySelector(".player-container");
-
-  if (!player) return;
-
-  let loading = document.createElement("div");
-
-  loading.className = "player-loading";
-
-  loading.id = "loadingScreen";
-
-  loading.innerHTML = '<div class="spinner"></div>';
-
-  player.appendChild(loading);
-}
-
-function hideLoading() {
-  let loading = document.getElementById("loadingScreen");
-
-  if (loading) {
-    loading.remove();
-  }
-}
-
-/*
-=====================================
-NOTIFICATION
-=====================================
-*/
-
-function notify(message) {
-  console.log(message);
-}
-
-/*
-=====================================
-UPDATE TITLE
-=====================================
-*/
-
-function updateTitle(channel) {
-  if (!channel) return;
-
-  document.title = channel.name + " | BTECH-TV WORLD PRO MAX";
-}
-
-/*
-=====================================
-STATISTICS
-=====================================
-*/
-
-function updateStatistics() {
-  if (typeof stats === "function") {
-    stats();
-  }
-}
-
-/*
-=====================================
-REFRESH DASHBOARD
-=====================================
-*/
-
-function refreshDashboard() {
-  updateStatistics();
-
-  render();
-}
-
-/*
-=====================================
-NETWORK STATUS
-=====================================
-*/
-
-window.addEventListener("online", function () {
-  notify("Internet Connected");
-});
-
-window.addEventListener("offline", function () {
-  notify("Internet Disconnected");
-});
-
-/*
-=====================================
-WINDOW RESIZE
-=====================================
-*/
-
-window.addEventListener("resize", function () {
-  console.log(
-    "Screen Size:",
-
-    window.innerWidth,
-
-    "x",
-
-    window.innerHeight,
-  );
-});
-
-/*
-=====================================
-ERROR HANDLER
-=====================================
-*/
-
-window.onerror = function (message) {
-  console.error(message);
-};
-
-/*
-=====================================
-WELCOME MESSAGE
-=====================================
-*/
-
-console.log("Welcome to BTECH-TV WORLD PRO MAX");
-
-/*
-=====================================
-VERSION
-=====================================
-*/
-
-const APP = {
-  name: "BTECH-TV WORLD PRO MAX",
-
-  version: "1.0",
-
-  developer: "BINAINU SHAIBU",
-
-  company: "BTECH WEBSITE DESIGN",
-};
-
-console.table(APP);
-
-<style>#trialOverlay{position:relative;inset:0;background:rgba(0,0,0,.92);z-index:9999;display:flex;align-items:center;justify-content:center}#trialBox{background:#111;padding:20px;border-radius:12px;width:420px;color:white;border:1px solid #00d4ff}#paymentArea{display:none}#trialBox input,#trialBox select,#trialBox button{width:100%;padding:10px;margin:8px 0;border-radius:6px}</style>
-<style>
-#floatingTimer{
-position:relative;
-top:15px;
-right:15px;
-z-index:10000;
-background:#111a31;
-color:#00d4ff;
-padding:12px 18px;
-border-radius:10px;
-border:1px solid #00d4ff;
-font-weight:bold;
-font-size:18px;
-box-shadow:0 0 10px rgba(0,212,255,.5);
-}
-</style>
-
-/* ==========================================================
-   BTECH-TV WORLD ULTRA MAX X
-   Channel Loader
-========================================================== */
-
-let allChannels = [];
-
-// Load every channel database
-async function loadAllChannels() {
-
-    const files = [
-        "data/channels_part1.json",
-        "data/channels_part2.json",
-        "data/channels_part3.json",
-        "data/channels_part4.json",
-        "data/channels_part5.json",
-        "data/channels_part6.json",
-        "data/channels_part7.json"
-    ];
-
-    const status = document.getElementById("status");
+/* ===========================
+   LOAD JSON FILES
+=========================== */
+
+async function loadData() {
 
     try {
 
-        if (status) {
-            status.textContent = "Loading IPTV channels...";
-        }
+        const response = await fetch("data/channels.json");
 
-        const responses = await Promise.all(
+        if (!response.ok)
+            throw new Error("Unable to load channels.json");
 
-            files.map(async file => {
+        CHANNELS = await response.json();
 
-                const response = await fetch(file);
+        FILTERED = [...CHANNELS];
 
-                if (!response.ok) {
-                    throw new Error(`Unable to load ${file}`);
-                }
+        renderChannels(FILTERED);
 
-                return response.json();
+        loadCountries();
 
-            })
+        loadCategories();
 
-        );
+        loadLanguages();
 
-        // Merge all files
-        allChannels = responses.flat();
-
-        // Sort by ID
-        allChannels.sort((a, b) => a.id - b.id);
-
-        console.log(
-            `Loaded ${allChannels.length.toLocaleString()} channels`
-        );
-
-        // Render categories
-        if (typeof renderCats === "function") {
-            renderCats();
-        }
-
-        // Render countries
-        if (typeof renderCountries === "function") {
-            renderCountries();
-        }
-
-        // Render languages
-        if (typeof renderLanguages === "function") {
-            renderLanguages();
-        }
-
-        // Apply filters
-        if (typeof doFilter === "function") {
-            doFilter();
-        }
-
-        // Dashboard statistics
-        if (status) {
-            status.textContent =
-                `${allChannels.length.toLocaleString()} Channels Loaded`;
-        }
-
-        const total = document.getElementById("totalChannels");
-
-        if (total) {
-            total.textContent =
-                allChannels.length.toLocaleString();
-        }
-
-        return allChannels;
+        updateStatistics();
 
     }
-    catch (error) {
 
-        console.error(error);
+    catch (err) {
 
-        if (status) {
-            status.textContent =
-                "❌ Failed to load IPTV channels";
-        }
+        console.error(err);
 
-        return [];
-
+        document.getElementById("channels").innerHTML = `
+        <div style="
+            color:white;
+            text-align:center;
+            padding:60px;
+            font-size:22px;">
+            Failed to load channels.json
+        </div>`;
     }
 
 }
 
-/* ==========================================================
-   Helpers
-========================================================== */
+/* ===========================
+   RENDER CHANNELS
+=========================== */
 
-function getChannelById(id) {
-    return allChannels.find(channel => channel.id === id);
+function renderChannels(list) {
+
+    const container = document.getElementById("channels");
+
+    if (!container) return;
+
+    if (list.length === 0) {
+
+        container.innerHTML = `
+        <h2 style="text-align:center;padding:40px;">
+        No Channels Found
+        </h2>`;
+
+        return;
+
+    }
+
+    container.innerHTML = list.map(channel => `
+
+<div class="card"
+onclick="playChannel('${channel.stream}')">
+
+<img src="${channel.logo}"
+onerror="this.src='assets/logo.png'">
+
+<div class="card-content">
+
+<div class="name">${channel.name}</div>
+
+<div class="info">🌍 ${channel.country}</div>
+
+<div class="info">📺 ${channel.category}</div>
+
+<div class="info">🗣 ${channel.language || "English"}</div>
+
+<span class="live">LIVE</span>
+
+</div>
+
+</div>
+
+`).join("");
+
 }
 
-function getFavorites() {
-    return allChannels.filter(channel => channel.favorite);
+/* ===========================
+   PLAY CHANNEL
+=========================== */
+
+function playChannel(url) {
+
+    const video = document.getElementById("video");
+
+    if (!video) return;
+
+    CURRENT_CHANNEL = url;
+
+    video.src = url;
+
+    video.play().catch(() => { });
+
 }
 
-function getPremiumChannels() {
-    return allChannels.filter(channel => channel.type === "Premium");
+/* ===========================
+   SEARCH
+=========================== */
+
+function setupSearch() {
+
+    const search = document.querySelector(".search");
+
+    if (!search) return;
+
+    search.addEventListener("keyup", function () {
+
+        const keyword = this.value.toLowerCase();
+
+        FILTERED = CHANNELS.filter(channel =>
+
+            channel.name.toLowerCase().includes(keyword) ||
+
+            channel.country.toLowerCase().includes(keyword) ||
+
+            channel.category.toLowerCase().includes(keyword)
+
+        );
+
+        renderChannels(FILTERED);
+
+    });
+
 }
 
-function getFreeChannels() {
-    return allChannels.filter(channel => channel.type === "Free");
+/* ===========================
+   STATISTICS
+=========================== */
+
+function updateStatistics() {
+
+    const total = document.getElementById("totalChannels");
+
+    if (total)
+        total.innerText = CHANNELS.length;
+
 }
 
-function getLockedChannels() {
-    return allChannels.filter(channel => channel.locked);
+/* ===========================
+   RANDOM CHANNEL
+=========================== */
+
+function randomChannel() {
+
+    if (CHANNELS.length === 0) return;
+
+    const random = CHANNELS[Math.floor(Math.random() * CHANNELS.length)];
+
+    playChannel(random.stream);
+
 }
 
-function getOnlineChannels() {
-    return allChannels.filter(channel => channel.status === "Online");
+/* ===========================
+   REFRESH
+=========================== */
+
+function refreshChannels() {
+
+    loadData();
+
 }
 
-/* ==========================================================
-   Auto Start
-========================================================== */
+/* ===========================
+   FULLSCREEN
+=========================== */
 
-window.addEventListener("DOMContentLoaded", async () => {
+function fullscreenPlayer() {
 
-    await loadAllChannels();
+    const player = document.querySelector(".player");
 
-    console.log("BTECH-TV Channel Database Ready");
+    if (!player) return;
+
+    if (player.requestFullscreen)
+
+        player.requestFullscreen();
+
+}
+
+/* ===========================
+   MINI PLAYER
+=========================== */
+
+function miniPlayer() {
+
+    const player = document.querySelector(".player");
+
+    if (!player) return;
+
+    player.classList.toggle("mini");
+
+}
+
+/* ===========================
+   THEME
+=========================== */
+
+function toggleTheme() {
+
+    document.body.classList.toggle("light-mode");
+
+}
+
+/* ===========================
+   KEYBOARD SHORTCUTS
+=========================== */
+
+function setupKeyboard() {
+
+    document.addEventListener("keydown", function (e) {
+
+        switch (e.key.toLowerCase()) {
+
+            case "f":
+                fullscreenPlayer();
+                break;
+
+            case "m":
+                miniPlayer();
+                break;
+
+            case "r":
+                randomChannel();
+                break;
+
+            case "t":
+                toggleTheme();
+                break;
+
+        }
+
+    });
+
+}
+
+/* ===========================
+   AUTO REFRESH
+=========================== */
+
+setInterval(() => {
+
+    console.log("Refreshing IPTV Data...");
+
+}, 300000);
+
+/* ===========================
+   NETWORK STATUS
+=========================== */
+
+window.addEventListener("online", () => {
+
+    console.log("Internet Connected");
 
 });
+
+window.addEventListener("offline", () => {
+
+    console.log("Internet Disconnected");
+
+});
+
+/* ===========================
+   END
+=========================== */
