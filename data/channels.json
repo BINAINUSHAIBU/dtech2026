@@ -12,9 +12,7 @@
     "category": "Science",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg",
     "stream": "https://example.com/live/nasa.m3u8"
-  }
-]
-[
+  },
   {
     "name": "Al Jazeera English",
     "country": "Qatar",
@@ -28,10 +26,7 @@
     "category": "News",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/6/65/France24.svg",
     "stream": "https://example.com/live/france24.m3u8"
-  }
-]
-
-[
+  },
   {
     "name": "DW English",
     "country": "Germany",
@@ -45,9 +40,7 @@
     "category": "News",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/3/39/Euronews_2016_logo.svg",
     "stream": "https://example.com/live/euronews.m3u8"
-  }
-]
-[
+  },
   {
     "name": "ABC News Live",
     "country": "USA",
@@ -61,9 +54,7 @@
     "category": "News",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/5/57/Sky-news-logo.png",
     "stream": "https://example.com/live/skynews.m3u8"
-  }
-]
-[
+  },
   {
     "name": "NHK World-Japan",
     "country": "Japan",
@@ -77,9 +68,7 @@
     "category": "News",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/8/8d/CGTN.svg",
     "stream": "https://example.com/live/cgtn.m3u8"
-  }
-]
-[
+  },
   {
     "name": "TRT World",
     "country": "Turkey",
@@ -93,9 +82,7 @@
     "category": "News",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/4/49/WION_logo.svg",
     "stream": "https://example.com/live/wion.m3u8"
-  }
-]
-[
+  },
   {
     "name": "PBS NewsHour",
     "country": "USA",
@@ -109,26 +96,7 @@
     "category": "Documentary",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/8/8d/CGTN.svg",
     "stream": "https://example.com/live/cgtndoc.m3u8"
-  }
-]
-[
-  {
-    "name": "National Geographic",
-    "country": "USA",
-    "category": "Documentary",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/f/fc/National_Geographic_Channel.svg",
-    "stream": "https://example.com/live/natgeowild.m3u8"
   },
-  {
-    "name": "Discovery Channel",
-    "country": "USA",
-    "category": "Documentary",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/7/75/Discovery_Channel_-_Logo.svg",
-    "stream": "https://example.com/live/discovery.m3u8"
-  }
-]
-
-[
   {
     "name": "National Geographic",
     "country": "USA",
