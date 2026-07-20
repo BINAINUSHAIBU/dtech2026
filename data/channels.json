@@ -1,91 +1,16 @@
-/**
- * ===========================================
- * BTECH-TV IPTV
- * Merge JSON Channel Files
- * Creates: data/channels.json
- * ===========================================
- */
-
-const fs = require("fs");
-const path = require("path");
-
-const DATA_DIR = path.join(__dirname, "data");
-
-const INPUT_FILES = [
-    "channels_part1.json",
-    "channels_part2.json",
-    "channels_part3.json",
-    "channels_part4.json",
-    "channels_part5.json",
-    "channels_part6.json",
-    "channels_part7.json"
-];
-
-let channels = [];
-
-console.log("====================================");
-console.log(" BTECH-TV CHANNEL MERGER");
-console.log("====================================");
-
-for (const file of INPUT_FILES) {
-
-    const filePath = path.join(DATA_DIR, file);
-
-    if (!fs.existsSync(filePath)) {
-        console.log(`❌ Missing: ${file}`);
-        continue;
-    }
-
-    try {
-
-        const json = JSON.parse(
-            fs.readFileSync(filePath, "utf8")
-        );
-
-        if (Array.isArray(json)) {
-
-            channels.push(...json);
-
-            console.log(`✅ ${file} : ${json.length} channels`);
-
-        } else {
-
-            console.log(`⚠ ${file} is not an array`);
-
-        }
-
-    } catch (err) {
-
-        console.log(`❌ Error reading ${file}`);
-        console.log(err.message);
-
-    }
-
-}
-
-channels.sort((a, b) => a.id - b.id);
-
-const ids = new Set();
-channels = channels.filter(channel => {
-
-    if (ids.has(channel.id)) return false;
-
-    ids.add(channel.id);
-
-    return true;
-
-});
-
-const OUTPUT = path.join(DATA_DIR, "channels.json");
-
-fs.writeFileSync(
-    OUTPUT,
-    JSON.stringify(channels, null, 2),
-    "utf8"
-);
-
-console.log("------------------------------------");
-console.log(`Total Channels : ${channels.length}`);
-console.log(`Saved File     : ${OUTPUT}`);
-console.log("------------------------------------");
-console.log("Merge Complete!");
+[
+  {
+    "name": "BBC News",
+    "country": "United Kingdom",
+    "category": "News",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/b/bc/BBC_News_2022.svg",
+    "stream": "https://example.com/live/bbc.m3u8"
+  },
+  {
+    "name": "NASA TV",
+    "country": "USA",
+    "category": "Science",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg",
+    "stream": "https://example.com/live/nasa.m3u8"
+  }
+]
