@@ -1,56 +1,91 @@
+/**
+ * ===========================================
+ * BTECH-TV IPTV
+ * Merge JSON Channel Files
+ * Creates: data/channels.json
+ * ===========================================
+ */
 
-[
-  {
-    "id": 1,
-    "name": "A2 CNN Albania",
-    "country": "Albania",
-    "countryCode": "AL",
-    "category": "News",
-    "language": "Albanian",
-    "logo": "logos/a2cnn.png",
-    "stream": "https://your-stream-server.example/live/a2cnn.m3u8",
-    "epg": "A2CNN.al",
-    "quality": "HD",
-    "type": "Free",
-    "status": "Online",
-    "favorite": false,
-    "locked": false,
-    "views": 0
-  },
-  {
-    "id": 2,
-    "name": "News 24",
-    "country": "Albania",
-    "countryCode": "AL",
-    "category": "News",
-    "language": "Albanian",
-    "logo": "logos/news24.png",
-    "stream": "https://your-stream-server.example/live/news24.m3u8",
-    "epg": "News24.al",
-    "quality": "HD",
-    "type": "Free",
-    "status": "Online",
-    "favorite": false,
-    "locked": false,
-    "views": 0
-  },
+const fs = require("fs");
+const path = require("path");
 
-  {
-    "id": 3,
-    "name": "Channel 3",
-    "country": "Albania",
-    "countryCode": "AL",
-    "category": "General",
-    "language": "Albanian",
-    "logo": "logos/channel3.png",
-    "stream": "https://your-stream-server.example/live/channel3.m3u8",
-    "epg": "Channel3.al",
-    "quality": "HD",
-    "type": "Free",
-    "status": "Online",
-    "favorite": false,
-    "locked": false,
-    "views": 0
-  }
+const DATA_DIR = path.join(__dirname, "data");
 
-  // Continue every channel sequentially...
+const INPUT_FILES = [
+    "channels_part1.json",
+    "channels_part2.json",
+    "channels_part3.json",
+    "channels_part4.json",
+    "channels_part5.json",
+    "channels_part6.json",
+    "channels_part7.json"
+];
+
+let channels = [];
+
+console.log("====================================");
+console.log(" BTECH-TV CHANNEL MERGER");
+console.log("====================================");
+
+for (const file of INPUT_FILES) {
+
+    const filePath = path.join(DATA_DIR, file);
+
+    if (!fs.existsSync(filePath)) {
+        console.log(`❌ Missing: ${file}`);
+        continue;
+    }
+
+    try {
+
+        const json = JSON.parse(
+            fs.readFileSync(filePath, "utf8")
+        );
+
+        if (Array.isArray(json)) {
+
+            channels.push(...json);
+
+            console.log(`✅ ${file} : ${json.length} channels`);
+
+        } else {
+
+            console.log(`⚠ ${file} is not an array`);
+
+        }
+
+    } catch (err) {
+
+        console.log(`❌ Error reading ${file}`);
+        console.log(err.message);
+
+    }
+
+}
+
+channels.sort((a, b) => a.id - b.id);
+
+const ids = new Set();
+channels = channels.filter(channel => {
+
+    if (ids.has(channel.id)) return false;
+
+    ids.add(channel.id);
+
+    return true;
+
+});
+
+const OUTPUT = path.join(DATA_DIR, "channels.json");
+
+fs.writeFileSync(
+    OUTPUT,
+    JSON.stringify(channels, null, 2),
+    "utf8"
+);
+
+console.log("------------------------------------");
+console.log(`Total Channels : ${channels.length}`);
+console.log(`Saved File     : ${OUTPUT}`);
+console.log("------------------------------------");
+console.log("Merge Complete!");
