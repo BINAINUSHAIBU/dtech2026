@@ -4,7 +4,15 @@
     "country": "United Kingdom",
     "category": "News",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/b/bc/BBC_News_2022.svg", 
-    "stream": "https://example.com/live/bbc.m3u8"
+    "stream": "https://jmp2.uk/plu-62bdabbc5611f2000761ca30.m3u8
+"
+  },
+   {
+    "name": "BBC News",
+    "country": "United Kingdom",
+    "category": "News",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/b/bc/BBC_News_2022.svg", 
+    "stream": "https://jmp2.uk/plu-6874ad743ffa5e0c917f6e20.m3u8"
   },
   {
     "name": "NASA TV",
