@@ -1,19 +1,5 @@
 [
   {
-    "name": "BBC News",
-    "country": "United Kingdom",
-    "category": "News",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/b/bc/BBC_News_2022.svg",
-    "stream": "https://jmp2.uk/plu-62bdabbc5611f2000761ca30.m3u8"
-  },
-  {
-    "name": "BBC Drama",
-    "country": "United Kingdom",
-    "category": "Drama",
-    "logo": "https://i.imgur.com/HctHhLL.png",
-    "stream": "https://jmp2.uk/plu-60d35a74c63c3c0008df6a90.m3u8 
-  },
-  {
     "name": "NASA TV",
     "country": "USA",
     "category": "Science",
