@@ -110,9 +110,7 @@
     "category": "Documentary",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/7/75/Discovery_Channel_-_Logo.svg",
     "stream": "https://example.com/live/discovery.m3u8"
-  }
-]
-,
+  },
 {
   "name": "CNN International",
   "country": "USA",
@@ -1660,4 +1658,5 @@
   "logo": "https://upload.wikimedia.org/wikipedia/commons/5/57/Sky-logo.svg",
   "stream": "https://example.com/live/skywitness.m3u8"
 }
+  }
 
