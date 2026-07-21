@@ -3,7 +3,7 @@
     "name": "BBC News",
     "country": "United Kingdom",
     "category": "News",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/b/bc/BBC_News_2022.svg",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/b/bc/BBC_News_2022.svg", 
     "stream": "https://example.com/live/bbc.m3u8"
   },
   {
