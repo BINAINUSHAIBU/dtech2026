@@ -110,5 +110,47 @@
     "category": "Documentary",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/7/75/Discovery_Channel_-_Logo.svg",
     "stream": "https://example.com/live/discovery.m3u8"
-  }
+  },
+{
+  "name": "CNN International",
+  "country": "USA",
+  "category": "News",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/b/b1/CNN.svg",
+  "stream": "https://example.com/live/cnn.m3u8"
+},
+{
+  "name": "Bloomberg TV",
+  "country": "USA",
+  "category": "Business",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Bloomberg_Television_logo.svg",
+  "stream": "https://example.com/live/bloomberg.m3u8"
+},
+{
+  "name": "CNBC Europe",
+  "country": "United Kingdom",
+  "category": "Business",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/e/e3/CNBC_logo.svg",
+  "stream": "https://example.com/live/cnbc.m3u8"
+},
+{
+  "name": "Animal Planet",
+  "country": "USA",
+  "category": "Documentary",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Animal_Planet_logo_2018.svg",
+  "stream": "https://example.com/live/animalplanet.m3u8"
+},
+{
+  "name": "History Channel",
+  "country": "USA",
+  "category": "Documentary",
+  "logo": "https://upload.wikimedia.org/wikipedia/commons/5/5a/History_Logo.svg",
+  "stream": "https://example.com/live/history.m3u8"
+},
+{
+  "name": "BBC Earth",
+  "country": "United Kingdom",
+  "category": "Documentary",
+  "logo": "https://upload.wikimedia.org/wikipedia/en/3/3e/BBC_Earth_logo.svg",
+  "stream": "https://example.com/live/bbcearth.m3u8"
+}
 ]
