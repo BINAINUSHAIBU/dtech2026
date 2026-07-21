@@ -10,7 +10,7 @@
     "name": "NASA TV",
     "country": "USA",
     "category": "Science",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg", 
     "stream": "https://example.com/live/nasa.m3u8"
   },
   {
