@@ -1,4 +1,53 @@
 [
+ {
+    "name": "Andorra TV",
+    "country": "Andorra",
+    "category": "General",
+    "logo": "",
+    "stream": "https://livesg1.rtva.hiway.media/11a6d6f4-ee13-47c7-9c27-7313cf5424e2/manifest.m3u8"
+  },
+  {
+    "name": "Abu Dhabi TV",
+    "country": "United Arab Emirates",
+    "category": "General",
+    "logo": "",
+    "stream": "http://185.9.2.18/chid_326/index.m3u8"
+  },
+  {
+    "name": "Ajman TV",
+    "country": "United Arab Emirates",
+    "category": "General",
+    "logo": "",
+    "stream": "https://cdn1.logichost.in/ajmantv/live/playlist.m3u8"
+  },
+  {
+    "name": "Al Arabiya",
+    "country": "United Arab Emirates",
+    "category": "News",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Al_Arabiya_Logo.svg",
+    "stream": "https://live.alarabiya.net/alarabiapublish/alarabiya.smil/playlist.m3u8"
+  },
+  {
+    "name": "Al Arabiya Business",
+    "country": "United Arab Emirates",
+    "category": "Business",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Al_Arabiya_Logo.svg",
+    "stream": "https://live.alarabiya.net/alarabiapublish/aswaaq.smil/playlist.m3u8"
+  },
+  {
+    "name": "Al Arabiya Programs",
+    "country": "United Arab Emirates",
+    "category": "Entertainment",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Al_Arabiya_Logo.svg",
+    "stream": "https://live.alarabiya.net/alarabiapublish/aaprograms.smil/playlist.m3u8"
+  },
+  {
+    "name": "Al Qamar TV",
+    "country": "United Arab Emirates",
+    "category": "Religious",
+    "logo": "",
+    "stream": "https://streamer3.premio.link/alqamar/playlist.m3u8"
+  },
   {
     "name": "BBC News",
     "country": "United Kingdom",
