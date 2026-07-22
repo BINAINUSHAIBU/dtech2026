@@ -289,6 +289,208 @@
     "stream": "https://svs.itworkscdn.net/smc1live/smc1.smil/playlist.m3u8"
   },
   {
+    "name": "Sharjah TV",
+    "country": "United Arab Emirates",
+    "category": "General",
+    "logo": "",
+    "stream": "https://cdn-globecast.akamaized.net/live/eds/sharjah_tv/hls_roku/index.m3u8"
+  },
+  {
+    "name": "Sky News Arabia",
+    "country": "United Arab Emirates",
+    "category": "News",
+    "logo": "",
+    "stream": "https://stream.skynewsarabia.com/ott/ott.m3u8",
+    "not24x7": true
+  },
+  {
+    "name": "Sky News Arabia",
+    "country": "United Arab Emirates",
+    "category": "News",
+    "logo": "",
+    "stream": "https://live-stream.skynewsarabia.com/c-horizontal-channel/horizontal-stream/index.m3u8"
+  },
+  {
+    "name": "Sky News Arabia",
+    "country": "United Arab Emirates",
+    "category": "News",
+    "logo": "",
+    "stream": "https://stream.skynewsarabia.com/hls/sna.m3u8",
+    "not24x7": true
+  },
+  {
+    "name": "Sky News Arabia Vertical",
+    "country": "United Arab Emirates",
+    "category": "News",
+    "logo": "",
+    "stream": "https://stream.skynewsarabia.com/vertical/vertical.m3u8",
+    "not24x7": true
+  },
+  {
+    "name": "Sky News Arabia Vertical",
+    "country": "United Arab Emirates",
+    "category": "News",
+    "logo": "",
+    "stream": "https://live-stream.skynewsarabia.com/c-vertical-channel/vertical-stream/index.m3u8"
+  },
+  {
+    "name": "Spacetoon Arabic",
+    "country": "United Arab Emirates",
+    "category": "Kids",
+    "logo": "",
+    "stream": "https://live-uae-next.spacetoongo.com/ST_MENA_NEXT/hls/r9p2hjipmw2kl.m3u8"
+  },
+  {
+    "name": "Watar Radio",
+    "country": "United Arab Emirates",
+    "category": "Radio",
+    "logo": "",
+    "stream": "https://svs.itworkscdn.net/smcwatarlive/smcwatar/playlist.m3u8"
+  },
+  {
+    "name": "Zee Aflam",
+    "country": "United Arab Emirates",
+    "category": "Movies",
+    "logo": "",
+    "stream": "http://41.223.30.230/ZEEAFLAM/index.m3u8"
+  },
+  {
+    "name": "Zee Alwan",
+    "country": "United Arab Emirates",
+    "category": "Entertainment",
+    "logo": "",
+    "stream": "http://41.223.30.230/ZEEALWAN/index.m3u8"
+  },
+  {
+    "name": "Peace TV English",
+    "country": "United Arab Emirates",
+    "category": "Religious",
+    "logo": "",
+    "stream": "http://tvsen5.aynascope.net/peacetv/index.m3u8"
+  },
+  {
+    "name": "AMC",
+    "country": "Afghanistan",
+    "category": "Entertainment",
+    "logo": "",
+    "stream": "https://amchls.wns.live/hls/stream.m3u8"
+  },
+  {
+    "name": "Bahar TV",
+    "country": "Afghanistan",
+    "category": "General",
+    "logo": "",
+    "stream": "https://59d39900ebfb8.streamlock.net/bahartv/bahartv/playlist.m3u8",
+    "not24x7": true
+  },
+  {
+    "name": "Barbud Music",
+    "country": "Afghanistan",
+    "category": "Music",
+    "logo": "",
+    "stream": "https://raw.githubusercontent.com/taodicakhia/IPTV_Exception/master/channels/af/tolomusic.m3u8"
+  },
+  {
+    "name": "Dunya Naw TV",
+    "country": "Afghanistan",
+    "category": "News",
+    "logo": "",
+    "stream": "https://dunyanhls.wns.live/hls/stream.m3u8"
+  },
+  {
+    "name": "Eslah TV",
+    "country": "Afghanistan",
+    "category": "Religious",
+    "logo": "",
+    "stream": "https://eslahtvhls.wns.live/hls/stream.m3u8"
+  },
+  {
+    "name": "Hewad TV",
+    "country": "Afghanistan",
+    "category": "General",
+    "logo": "",
+    "stream": "http://51.210.199.58/hls/stream.m3u8",
+    "not24x7": true
+  },
+  {
+    "name": "Iman TV",
+    "country": "United States",
+    "category": "Religious",
+    "logo": "",
+    "stream": "https://live.relentlessinnovations.net:1936/imantv/imantv/playlist.m3u8"
+  },
+  {
+    "name": "Kayhan TV",
+    "country": "Afghanistan",
+    "category": "General",
+    "logo": "",
+    "stream": "https://playout395.livestreamingcdn.com/live/Stream1/playlist.m3u8"
+  },
+  {
+    "name": "Lemar TV",
+    "country": "Afghanistan",
+    "category": "Entertainment",
+    "logo": "",
+    "stream": "https://tgn.bozztv.com/eshgtv-dvrfl05/gin-lemar/index.m3u8"
+  },
+  {
+    "name": "RTA",
+    "country": "Afghanistan",
+    "category": "General",
+    "logo": "",
+    "stream": "https://rta-tv.akamaized.net/live/SD/RTA-1/RTA/RTA-1.m3u8"
+  },
+  {
+    "name": "Shams TV",
+    "country": "Afghanistan",
+    "category": "Education",
+    "logo": "",
+    "stream": "https://fflive-darya-educationtv.b-cdn.net/master.m3u8"
+  },
+  {
+    "name": "Shamshad TV",
+    "country": "Afghanistan",
+    "category": "Entertainment",
+    "logo": "",
+    "stream": "https://5a1178b42cc03.streamlock.net/shamshadtelevision/shamshadtelevision/playlist.m3u8",
+    "not24x7": true
+  },
+  {
+    "name": "Sharq Radio TV",
+    "country": "Afghanistan",
+    "category": "Radio",
+    "logo": "",
+    "stream": "https://59nyqa5elwap-hls-live.5centscdn.com/Sharq/eec89088ee408b80387155272b113256.sdp/playlist.m3u8"
+  },
+  {
+    "name": "Tamadon TV",
+    "country": "Afghanistan",
+    "category": "Religious",
+    "logo": "",
+    "stream": "https://hls.tamadon.live/hls/stream.m3u8"
+  },
+  {
+    "name": "TOLOnews",
+    "country": "Afghanistan",
+    "category": "News",
+    "logo": "",
+    "stream": "https://raw.githubusercontent.com/taodicakhia/IPTV_Exception/master/channels/af/tolonews.m3u8"
+  },
+  {
+    "name": "Tolo TV",
+    "country": "Afghanistan",
+    "category": "Entertainment",
+    "logo": "",
+    "stream": "https://tgn.bozztv.com/eshgtv-dvrfl05/gin-tolohd/tracks-v1a1/mono.m3u8"
+  },
+  {
+    "name": "TOLOnews",
+    "country": "Afghanistan",
+    "category": "News",
+    "logo": "",
+    "stream": "https://tgn.bozztv.com/eshgtv-dvrfl05/gin-tolonews/index.m3u8"
+  },
+  {
     "name": "BBC News",
     "country": "United Kingdom",
     "category": "News",
