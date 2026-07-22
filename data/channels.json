@@ -490,6 +490,114 @@
     "logo": "",
     "stream": "https://tgn.bozztv.com/eshgtv-dvrfl05/gin-tolonews/index.m3u8"
   },
+ [
+  {
+    "name": "Barbud Music",
+    "country": "Afghanistan",
+    "category": "Music",
+    "logo": "",
+    "stream": "https://raw.githubusercontent.com/taodicakhia/IPTV_Exception/master/channels/af/tolomusic.m3u8"
+  },
+  {
+    "name": "Dunya Naw TV",
+    "country": "Afghanistan",
+    "category": "News",
+    "logo": "",
+    "stream": "https://dunyanhls.wns.live/hls/stream.m3u8"
+  },
+  {
+    "name": "Eslah TV",
+    "country": "Afghanistan",
+    "category": "Religious",
+    "logo": "",
+    "stream": "https://eslahtvhls.wns.live/hls/stream.m3u8"
+  },
+  {
+    "name": "Hewad TV",
+    "country": "Afghanistan",
+    "category": "General",
+    "logo": "",
+    "stream": "http://51.210.199.58/hls/stream.m3u8",
+    "not24x7": true
+  },
+  {
+    "name": "Iman TV",
+    "country": "United States",
+    "category": "Religious",
+    "logo": "",
+    "stream": "https://live.relentlessinnovations.net:1936/imantv/imantv/playlist.m3u8"
+  },
+  {
+    "name": "Kayhan TV",
+    "country": "Afghanistan",
+    "category": "General",
+    "logo": "",
+    "stream": "https://playout395.livestreamingcdn.com/live/Stream1/playlist.m3u8"
+  },
+  {
+    "name": "Lemar TV",
+    "country": "Afghanistan",
+    "category": "Entertainment",
+    "logo": "",
+    "stream": "https://tgn.bozztv.com/eshgtv-dvrfl05/gin-lemar/index.m3u8"
+  },
+  {
+    "name": "RTA",
+    "country": "Afghanistan",
+    "category": "General",
+    "logo": "",
+    "stream": "https://rta-tv.akamaized.net/live/SD/RTA-1/RTA/RTA-1.m3u8"
+  },
+  {
+    "name": "Shams TV",
+    "country": "Afghanistan",
+    "category": "Education",
+    "logo": "",
+    "stream": "https://fflive-darya-educationtv.b-cdn.net/master.m3u8"
+  },
+  {
+    "name": "Shamshad TV",
+    "country": "Afghanistan",
+    "category": "Entertainment",
+    "logo": "",
+    "stream": "https://5a1178b42cc03.streamlock.net/shamshadtelevision/shamshadtelevision/playlist.m3u8",
+    "not24x7": true
+  },
+  {
+    "name": "Sharq Radio TV",
+    "country": "Afghanistan",
+    "category": "Radio",
+    "logo": "",
+    "stream": "https://59nyqa5elwap-hls-live.5centscdn.com/Sharq/eec89088ee408b80387155272b113256.sdp/playlist.m3u8"
+  },
+  {
+    "name": "Tamadon TV",
+    "country": "Afghanistan",
+    "category": "Religious",
+    "logo": "",
+    "stream": "https://hls.tamadon.live/hls/stream.m3u8"
+  },
+  {
+    "name": "TOLO News",
+    "country": "Afghanistan",
+    "category": "News",
+    "logo": "",
+    "stream": "https://raw.githubusercontent.com/taodicakhia/IPTV_Exception/master/channels/af/tolonews.m3u8"
+  },
+  {
+    "name": "Tolo TV",
+    "country": "Afghanistan",
+    "category": "Entertainment",
+    "logo": "",
+    "stream": "https://tgn.bozztv.com/eshgtv-dvrfl05/gin-tolohd/tracks-v1a1/mono.m3u8"
+  },
+  {
+    "name": "TOLO News",
+    "country": "Afghanistan",
+    "category": "News",
+    "logo": "",
+    "stream": "https://tgn.bozztv.com/eshgtv-dvrfl05/gin-tolonews/index.m3u8"
+  },
   {
     "name": "BBC News",
     "country": "United Kingdom",
