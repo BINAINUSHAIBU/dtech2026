@@ -314,3 +314,18 @@ window.addEventListener("load", () => {
     }, 2000);
 });
 
+window.addEventListener(
+    "wheel",
+    function (e) {
+        e.preventDefault();
+    },
+    { passive: false }
+);
+document.addEventListener(
+    "touchmove",
+    function (e) {
+        e.preventDefault();
+    },
+    { passive: false }
+);
+
