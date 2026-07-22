@@ -162,6 +162,133 @@
     "stream": "https://dbbv9umqcd7cs.cloudfront.net/out/v1/db15b75c3cc0400c91961468d6a232ac/index.m3u8"
   },
   {
+    "name": "MBC FM",
+    "country": "United Arab Emirates",
+    "category": "Radio",
+    "logo": "",
+    "stream": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-fm/3f36f7db6086acf058dc51681c87f8ad/index.m3u8"
+  },
+  {
+    "name": "MBC Mood",
+    "country": "Saudi Arabia",
+    "category": "Music",
+    "logo": "",
+    "stream": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-wanasah/13e82ea6232fa647c43b26e8a41f173d/index.m3u8"
+  },
+  {
+    "name": "MBC Persia",
+    "country": "United Arab Emirates",
+    "category": "Entertainment",
+    "logo": "",
+    "stream": "https://shd-gcp-live.edgenextcdn.net/live/bitmovin-mbc-persia/818ee8e4b592dc497608f066d825bfb4/index.m3u8"
+  },
+  {
+    "name": "MBC Persia",
+    "country": "United Arab Emirates",
+    "category": "Entertainment",
+    "logo": "",
+    "stream": "https://hls.mbcpersia.live/hls/stream.m3u8"
+  },
+  {
+    "name": "Nour TV",
+    "country": "United Arab Emirates",
+    "category": "Religious",
+    "logo": "",
+    "stream": "https://cdn.bestream.io:19360/elfaro4/elfaro4.m3u8"
+  },
+  {
+    "name": "OSN Movies Action",
+    "country": "United Arab Emirates",
+    "category": "Movies",
+    "logo": "",
+    "stream": "http://116.90.120.151:8000/play/a0ax/index.m3u8"
+  },
+  {
+    "name": "Peace TV Bangla",
+    "country": "United Arab Emirates",
+    "category": "Religious",
+    "logo": "",
+    "stream": "https://dzkyvlfyge.erbvr.com/PeaceTvBangla/index.m3u8"
+  },
+  {
+    "name": "Peace TV Bangla",
+    "country": "United Arab Emirates",
+    "category": "Religious",
+    "logo": "",
+    "stream": "https://trs1.aynaott.com/PeaceTvBanglaHD/index.m3u8"
+  },
+  {
+    "name": "Peace TV Chinese",
+    "country": "United Arab Emirates",
+    "category": "Religious",
+    "logo": "",
+    "stream": "https://dzkyvlfyge.erbvr.com/PeaceTvChinese/index.m3u8"
+  },
+  {
+    "name": "Peace TV English",
+    "country": "United Arab Emirates",
+    "category": "Religious",
+    "logo": "",
+    "stream": "https://dzkyvlfyge.erbvr.com/PeaceTvEnglish/index.m3u8"
+  },
+  {
+    "name": "Peace TV Urdu",
+    "country": "United Arab Emirates",
+    "category": "Religious",
+    "logo": "",
+    "stream": "https://dzkyvlfyge.erbvr.com/PeaceTvUrdu/index.m3u8"
+  },
+  {
+    "name": "Pulse95 Radio",
+    "country": "United Arab Emirates",
+    "category": "Radio",
+    "logo": "",
+    "stream": "https://svs.itworkscdn.net/pulse95live/pulse96/playlist.m3u8"
+  },
+  {
+    "name": "Sharjah 2",
+    "country": "United Arab Emirates",
+    "category": "General",
+    "logo": "",
+    "stream": "https://svs.itworkscdn.net/smc2live/smc2tv.smil/playlist.m3u8"
+  },
+  {
+    "name": "Sharjah Radio",
+    "country": "United Arab Emirates",
+    "category": "Radio",
+    "logo": "",
+    "stream": "https://svs.itworkscdn.net/smcradiolive/smcradiolive/playlist.m3u8"
+  },
+  {
+    "name": "Sharjah Radio Quran",
+    "country": "United Arab Emirates",
+    "category": "Religious",
+    "logo": "",
+    "stream": "https://live.kwikmotion.com/smcquranlive/quranradiolive/playlist.m3u8"
+  },
+  {
+    "name": "Sharjah Sports",
+    "country": "United Arab Emirates",
+    "category": "Sports",
+    "logo": "",
+    "stream": "https://svs.itworkscdn.net/smc4sportslive/smc4tv.smil/playlist.m3u8",
+    "geoBlocked": true
+  },
+  {
+    "name": "Sharjah TV",
+    "country": "United Arab Emirates",
+    "category": "General",
+    "logo": "",
+    "stream": "https://live.kwikmotion.com/smc1live/smc1tv.smil/playlist.m3u8"
+  },
+  {
+    "name": "Sharjah TV",
+    "country": "United Arab Emirates",
+    "category": "General",
+    "logo": "",
+    "stream": "https://svs.itworkscdn.net/smc1live/smc1.smil/playlist.m3u8"
+  },
+  {
     "name": "BBC News",
     "country": "United Kingdom",
     "category": "News",
