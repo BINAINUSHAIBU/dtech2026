@@ -324,3 +324,64 @@
 }
 
 }
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;      /* Disable scrolling */
+    position: fixed;
+    touch-action: none;    /* Prevent touch scrolling */
+    overscroll-behavior: none;
+}
+
+#app,
+.dashboard,
+.main-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;      /* Disable scrolling */
+    position: fixed;
+    touch-action: none;    /* Prevent touch scrolling */
+    overscroll-behavior: none;
+}
+
+#app,
+.dashboard,
+.main-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+.dashboard {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar,
+.channel-list {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.player-area {
+    overflow: hidden;
+}
