@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07101f">
+<title>ORBITECH MASTER V22 — Responsive Design Studio</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="brand"><div class="logo">O</div><div><strong>ORBITECH MASTER</strong><small>BUILD • AUTOMATE • DELIVER</small></div></div>
+  <nav id="nav">
+    <button class="active" data-view="command">⌘ Command Center</button>
+    <button data-view="universe">◈ Project Universe</button>
+    <button data-view="canvas">▦ Visual Canvas</button>
+    <button data-view="workspace">⌘ Code Workspace</button>
+    <button data-view="preview">▷ Live Preview & QA</button>
+    <button data-view="ai">✦ AI Engine</button>
+    <button data-view="testlab">✓ Test & Deploy Lab</button>
+    <button data-view="buildstudio">✦ Autonomous Build Studio</button>
+    <button data-view="visualbuilder">▧ Visual Website Builder</button>
+    <button data-view="versions">◷ Versions & Diff</button>
+    <button data-view="integrations">◉ Integrations</button>
+    <button data-view="environments">◇ Environments</button>
+    <button data-view="collaboration">◎ Collaboration</button>
+    <button data-view="automation">⚙ Automation</button>
+    <button data-view="observability">◌ Observability</button>
+    <button data-view="delivery">➜ Delivery</button>
+    <button data-view="security">◆ Security</button>
+  </nav>
+  <div class="side-status"><span class="dot"></span> CORE ONLINE<br><small>Controlled execution mode</small></div>
+</aside>
+
+<main class="main">
+<header class="topbar">
+  <div><span class="eyebrow">ORBITECH MASTER PLATFORM</span><h1 id="viewTitle">Command Center</h1></div>
+  <div class="top-actions"><button id="themeBtn">☾</button><button class="primary" id="newProject">+ New Project</button></div>
+</header>
+
+<section id="command" class="view active">
+  <div class="hero panel">
+    <div><span class="badge">V18 • AI ENGINE + BUILD STUDIO</span>
+    <h2>Turn your ideas into organized projects, starter code, workflows and delivery packages.</h2>
+    <p>Describe what you want to build. ORBITECH MASTER creates a starter project workspace, tracks the build stages and lets you export your files.</p></div>
+    <div class="command-box"><label for="templateSelect" class="muted">Quick-start template</label><select id="templateSelect" class="template-select"><option value="custom">Custom project brief</option><option value="portfolio">Developer portfolio</option><option value="business">Business website</option><option value="learning">Online learning platform</option><option value="dashboard">Admin dashboard</option><option value="streaming">ORBIT streaming catalogue</option></select><textarea id="mission" placeholder="Example: Build a multilingual education platform with a website, API, database, admin dashboard and deployment plan."></textarea><div class="row"><select id="mode"><option>Balanced</option><option>Quality First</option><option>Security First</option><option>Fast Prototype</option></select><button class="primary" id="buildMission">Generate Project</button></div></div>
+  </div>
+  <div class="stats">
+    <div class="stat"><b id="projectsCount">0</b><span>Projects</span></div><div class="stat"><b>52</b><span>Tools & roles</span></div>
+    <div class="stat"><b id="versionsCount">0</b><span>Versions</span></div><div class="stat"><b id="eventsCount">0</b><span>Events</span></div>
+    <div class="stat"><b>ENFORCED</b><span>Security</span></div>
+  </div>
+  <div class="grid2">
+    <div class="panel"><div class="panel-head"><h3>System Pipeline</h3><span>CONTROLLED</span></div><div class="pipeline" id="pipeline"></div></div>
+    <div class="panel"><div class="panel-head"><h3>Execution Console</h3><button id="clearLog">Clear</button></div><pre id="console">ORBITECH MASTER V18 ready.\nAwaiting mission.</pre></div>
+  </div>
+</section>
+
+<section id="ai" class="view">
+  <div class="panel ai-hero"><div><span class="badge">V18 • AI ENGINE</span><h2>Connect an AI provider to help build your project.</h2><p class="muted">Requests go through the local Node.js backend. Provider keys stay on the server and are never entered into this browser form.</p></div><div class="ai-status-card"><b id="aiStatus">Checking backend…</b><span id="aiModelLabel">Provider status</span><button id="checkAI">Check Connection</button></div></div>
+  <div class="grid2 ai-grid"><div class="panel"><h3>AI Workbench</h3><label for="aiTask">Task</label><select id="aiTask"><option value="plan">Plan a project</option><option value="code">Generate code</option><option value="debug">Debug code</option><option value="review">Review code for issues</option><option value="explain">Explain a technical concept</option></select><label for="aiPrompt">Describe what you need</label><textarea id="aiPrompt" class="ai-prompt" placeholder="Example: Create an accessible responsive navigation component in vanilla JavaScript."></textarea><label for="aiContext">Optional code or context</label><textarea id="aiContext" class="ai-context" placeholder="Paste relevant code or requirements here (do not paste passwords, API keys or private data)."></textarea><div class="row"><select id="aiTemperature"><option value="0.2">Precise</option><option value="0.5" selected>Balanced</option><option value="0.8">Creative</option></select><button id="runAI" class="primary">Run AI Task</button></div><p class="muted small">Requires Node.js and a configured OpenAI-compatible API endpoint and key. Provider usage may incur charges.</p></div><div class="panel"><div class="panel-head"><h3>AI Response</h3><div class="row"><button id="copyAI">Copy</button><button id="saveAI">Save as ai-response.md</button></div></div><div id="aiOutput" class="ai-output" aria-live="polite">Your AI result will appear here. The engine will report a clear connection error if the backend or provider is not configured.</div></div></div>
+</section>
+
+
+
+<section id="universe" class="view">
+  <div class="panel"><div class="panel-head"><h3>Project Universe</h3><button class="primary" id="addProject">Add Project</button></div><div id="projectList" class="cards"></div></div>
+</section>
+
+<section id="canvas" class="view">
+  <div class="panel"><div class="panel-head"><h3>Visual Project Canvas</h3><div><button id="addNode">+ Node</button><button id="resetCanvas">Reset</button></div></div><p class="muted">Arrange the architecture as a visual dependency map. Canvas state is stored locally.</p><div id="canvasBoard" class="canvas"></div></div>
+</section>
+
+<section id="workspace" class="view">
+  <div class="panel"><div class="panel-head"><h3>Code Workspace</h3><span id="currentFile">index.html</span></div><div class="workspace"><div><input id="fileSearch" class="file-search" type="search" placeholder="Filter files…" aria-label="Filter files"><div id="fileTree" class="filetree"></div></div><textarea id="editor" spellcheck="false"></textarea></div><div class="row end"><button id="saveFile" class="primary">Save File</button><button id="runPreview">▷ Preview</button><button id="runChecks">Run QA Checks</button><button id="exportBundle">Export Project Files</button><button id="downloadManifest">Export Manifest</button><button id="backupState">Backup Workspace</button><button id="importState">Import Backup</button><input id="importFile" type="file" accept="application/json,.json" hidden></div></div>
+</section>
+
+<section id="preview" class="view">
+  <div class="panel"><div class="panel-head"><h3>Live Preview & Quality Checks</h3><div class="row"><button id="refreshPreview" class="primary">Refresh Preview</button><button id="previewChecks">Run QA Checks</button></div></div>
+  <p class="muted">Preview uses your current workspace HTML, CSS and JavaScript inside a sandboxed frame. It is a local development preview, not a production hosting environment.</p>
+  <div class="preview-shell"><iframe id="previewFrame" title="Project live preview" sandbox="allow-scripts" srcdoc="<!doctype html><html><body style='font-family:system-ui;padding:2rem;background:#f5f7fb;color:#1d2939'><h1>ORBITECH Preview</h1><p>Generate or open a project, then select Refresh Preview.</p></body></html>"></iframe></div>
+  <div class="panel-head qa-head"><h3>QA report</h3><span id="qaSummary">Not run yet</span></div><div id="qaResults" class="qa-results"><div class="empty">Run checks to inspect project files for common starter issues.</div></div></div>
+</section>
+
+
+<section id="testlab" class="view">
+  <div class="panel ai-hero"><div><span class="badge">V20 • QUALITY GATE</span><h2>Test your project before delivery.</h2><p class="muted">Run browser-side syntax and structure checks, review deployment readiness, and export hosting configuration starters. These checks are advisory, not a substitute for real test suites or security review.</p></div><div class="ai-status-card"><b id="testStatus">READY TO TEST</b><span id="testScore">No test run yet</span><button class="primary" id="runTestLab">Run All Checks</button></div></div>
+  <div class="grid2"><div class="panel"><div class="panel-head"><h3>Project Test Report</h3><button id="exportTestReport">Export Report</button></div><div id="testLabResults" class="qa-results"><div class="empty">Run all checks to inspect JavaScript syntax, JSON validity, HTML entry points, linked local assets, and secret-like patterns.</div></div></div>
+  <div class="panel"><div class="panel-head"><h3>Deployment Readiness</h3><button id="exportDeployKit" class="primary">Export Deploy Kit</button></div><p class="muted small">Mark the items you have completed. This checklist is stored in this browser.</p><div class="deploy-checks" id="deployChecks">
+    <label><input type="checkbox" data-deploy="tests"> Project checks reviewed and passed</label>
+    <label><input type="checkbox" data-deploy="secrets"> No private keys or credentials in frontend files</label>
+    <label><input type="checkbox" data-deploy="mobile"> Mobile layout and accessibility reviewed</label>
+    <label><input type="checkbox" data-deploy="backend"> Backend environment variables configured securely</label>
+    <label><input type="checkbox" data-deploy="hosting"> Hosting build command and publish directory verified</label>
+    <label><input type="checkbox" data-deploy="backup"> Backup or version snapshot created</label>
+  </div><div id="deployProgress" class="notice">0 of 6 deployment checks completed.</div></div></div>
+  <div class="panel"><h3>Deployment kit contents</h3><p class="muted">The export contains starter configuration files and a manifest. Review and adapt the files for your selected hosting provider before publishing.</p><div class="delivery-grid"><div><b>Netlify</b><p>netlify.toml starter</p></div><div><b>Environment</b><p>.env.example without secrets</p></div><div><b>Deployment guide</b><p>DEPLOYMENT.md with checklist</p></div><div><b>Test report</b><p>JSON report of latest local checks</p></div></div></div>
+</section>
+
+
+<section id="buildstudio" class="view">
+  <div class="panel ai-hero"><div><span class="badge">V20 • AUTONOMOUS BUILD STUDIO</span><h2>Generate a multi-file project from a clear build brief.</h2><p class="muted">The configured AI provider can return a structured set of project files. Review the brief, save a workspace snapshot, and explicitly approve replacing the current workspace. Generated code is never executed automatically.</p></div><div class="ai-status-card"><b id="buildStudioStatus">READY</b><span id="buildStudioMeta">AI provider required</span><button id="buildStudioCheck">Check Provider</button></div></div>
+  <div class="grid2"><div class="panel"><h3>Build Specification</h3><label for="buildSpec">What should the project do?</label><textarea id="buildSpec" class="ai-prompt" placeholder="Example: Build a responsive course marketplace with searchable courses, course detail cards, enrollment UI, admin overview, accessible forms and local demo data."></textarea><label for="buildStack">Preferred stack</label><select id="buildStack"><option value="vanilla">HTML, CSS and JavaScript (no dependencies)</option><option value="node">Vanilla frontend + Node.js API scaffold</option><option value="react">React starter scaffold (configuration only)</option></select><label for="buildFiles">Build size</label><select id="buildFiles"><option value="compact">Compact (5–8 files)</option><option value="standard" selected>Standard (8–14 files)</option><option value="extended">Extended (up to 20 files)</option></select><button id="generateBuild" class="primary">Generate Multi-file Project</button><p class="muted small">Requires the Node.js server and configured AI provider. Never include passwords, private keys or sensitive personal data in your brief.</p></div>
+  <div class="panel"><div class="panel-head"><h3>Build Review</h3><button id="exportBuildPreview">Export Draft JSON</button></div><div id="buildReview" class="ai-output" aria-live="polite">Your generated file manifest and build notes will appear here. Nothing is applied until you review and approve it.</div><button id="applyGeneratedBuild" class="primary" disabled>Approve & Replace Workspace</button></div></div>
+  <div class="panel"><div class="panel-head"><h3>Build Safety Gate</h3><span>HUMAN APPROVAL REQUIRED</span></div><div class="delivery-grid"><div><b>Structured output</b><p>Validate file paths, extensions, count and total size.</p></div><div><b>Snapshot first</b><p>Keep the current workspace as a restore point before replacing files.</p></div><div><b>No auto-execution</b><p>Generated scripts are only stored as text until you choose to preview or run them yourself.</p></div><div><b>Review and test</b><p>Run the Test & Deploy Lab and review all code before deployment.</p></div></div></div>
+</section>
+
+<section id="versions" class="view">
+  <div class="grid2"><div class="panel"><div class="panel-head"><h3>Version History</h3><button id="snapshot" class="primary">Create Snapshot</button></div><div id="versionsList"></div></div><div class="panel"><h3>Diff / Restore</h3><div id="diffBox" class="empty">Select a version to inspect.</div></div></div>
+</section>
+
+<section id="integrations" class="view">
+  <div class="panel"><div class="panel-head"><h3>Integration Center</h3><button id="addIntegration">Add Connector</button></div><div id="integrationList" class="cards"></div></div>
+</section>
+
+<section id="environments" class="view">
+  <div class="panel"><div class="panel-head"><h3>Environment Manager</h3><button id="addEnv">Add Environment</button></div><div id="envList" class="cards"></div></div>
+</section>
+
+<section id="collaboration" class="view">
+  <div class="grid2"><div class="panel"><div class="panel-head"><h3>Workspace Members</h3><button id="addMember">Add Member</button></div><div id="memberList"></div></div><div class="panel"><h3>Roles & Permissions</h3><div class="permission">OWNER <span>All controls</span></div><div class="permission">ADMIN <span>Project + workspace management</span></div><div class="permission">BUILDER <span>Code + workflows</span></div><div class="permission">REVIEWER <span>Approve + inspect</span></div></div></div>
+</section>
+
+<section id="automation" class="view"><div class="panel"><div class="panel-head"><h3>Automation & Queue</h3><button id="addJob">Add Job</button></div><div id="jobList"></div></div></section>
+<section id="observability" class="view"><div class="grid2"><div class="panel"><h3>System Health</h3><div class="health"><b>Core</b><span>ONLINE</span></div><div class="health"><b>Workspace</b><span>READY</span></div><div class="health"><b>Security</b><span>ENFORCED</span></div><div class="health"><b>Execution</b><span>CONTROLLED</span></div></div><div class="panel"><h3>Activity Stream</h3><div id="activity"></div></div></div></section>
+
+<section id="delivery" class="view"><div class="panel"><div class="panel-head"><h3>Delivery Center</h3><button id="approve" class="primary">Approve Current Project</button></div><div class="delivery-grid"><div><b>Static Web</b><p>Netlify/static-hosting package</p></div><div><b>Server Stack</b><p>Node + database deployment profile</p></div><div><b>Container</b><p>Docker delivery profile</p></div><div><b>Review Gate</b><p>Human approval before external side effects</p></div></div><div id="approvalStatus" class="notice">Approval required</div></div></section>
+
+
+<section id="visualbuilder" class="view">
+  <div class="panel ai-hero"><div><span class="badge">V22 • RESPONSIVE DESIGN STUDIO</span><h2>Design, theme, save and export responsive websites.</h2><p class="muted">Use reusable components, switch themes and preview desktop, tablet or mobile layouts. Save drafts locally and import or export portable project layouts without an AI key.</p></div><div class="ai-status-card"><b id="visualStatus">READY</b><span id="visualCount">0 components</span><button id="visualReset">Reset canvas</button></div></div>
+  <div class="visual-layout">
+    <div class="panel"><div class="panel-head"><h3>Component Library</h3><span>CLICK TO ADD</span></div><p class="muted small">Choose a building block to add it to your page.</p>
+      <div class="component-library">
+        <button class="component-tile" data-component="hero"><b>✦ Hero section</b><small>Headline, summary and action</small></button>
+        <button class="component-tile" data-component="features"><b>▦ Feature cards</b><small>Three responsive feature cards</small></button>
+        <button class="component-tile" data-component="about"><b>◈ About section</b><small>Introductory content block</small></button>
+        <button class="component-tile" data-component="cta"><b>➜ Call to action</b><small>Highlighted conversion panel</small></button>
+        <button class="component-tile" data-component="contact"><b>✉ Contact section</b><small>Contact details and form layout</small></button>
+        <button class="component-tile" data-component="footer"><b>▤ Footer</b><small>Simple branded footer</small></button>
+      </div>
+      <div class="row"><button id="exportComponentLibrary">Export layout</button><button id="saveVisualDraft">Save draft</button><button id="importVisualLayout">Import layout</button><input id="visualLayoutFile" type="file" accept="application/json,.json" hidden><button id="saveVisualProject" class="primary">Save to Code Workspace</button></div>
+    </div>
+    <div class="panel"><div class="panel-head"><h3>Page Structure</h3><span id="visualHint">Select a component</span></div><div id="visualComponentList" class="visual-component-list"><div class="empty">Add components from the library to start building your page.</div></div>
+      <div class="visual-editor"><label for="visualPageTitle">Website title</label><input id="visualPageTitle" value="ORBITECH Creative Studio" maxlength="90"><label for="visualBrandColor">Accent colour</label><input id="visualBrandColor" type="color" value="#2583f7"><label for="visualTheme">Website theme</label><select id="visualTheme"><option value="light">Clean Light</option><option value="dark">Midnight Dark</option><option value="warm">Warm Editorial</option></select><label for="visualPageWidth">Content width</label><select id="visualPageWidth"><option value="900">Compact</option><option value="1050" selected>Standard</option><option value="1240">Wide</option></select><label for="visualSelectedText">Selected component headline / text</label><input id="visualSelectedText" maxlength="180" placeholder="Select a component to edit its headline"><div class="row"><button id="applyVisualText" class="primary">Apply text</button><button id="downloadVisualSite">Download HTML</button></div></div>
+    </div>
+  </div>
+  <div class="panel visual-preview-panel"><div class="panel-head"><h3>Live Website Preview</h3><div class="row"><button data-visual-viewport="100%" class="active">Desktop</button><button data-visual-viewport="768px">Tablet</button><button data-visual-viewport="390px">Mobile</button><span>LOCAL SANDBOX</span></div></div><div id="visualPreviewFrameWrap"><iframe id="visualPreview" title="Visual builder website preview" sandbox="allow-forms" referrerpolicy="no-referrer"></iframe></div><p class="muted small">Preview content is rendered in a sandboxed frame. The contact form is a visual starter and does not submit data.</p></div>
+</section>
+
+<section id="security" class="view"><div class="panel"><div class="panel-head"><h3>Security & Governance</h3><span>ENFORCED</span></div><div class="security-grid" id="securityGrid"></div></div></section>
+</main>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>
