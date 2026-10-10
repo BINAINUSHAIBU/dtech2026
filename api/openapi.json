@@ -1,0 +1,87 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "ORBITECH MASTER API",
+    "version": "1.8.0",
+    "description": "Local development API including AI provider proxy."
+  },
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Health check",
+        "responses": {
+          "200": {
+            "description": "Service status"
+          }
+        }
+      }
+    },
+    "/api/v1/ai/status": {
+      "get": {
+        "summary": "AI provider configuration status",
+        "responses": {
+          "200": {
+            "description": "Status without secret values"
+          }
+        }
+      }
+    },
+    "/api/v1/ai/generate": {
+      "post": {
+        "summary": "Generate an AI response via configured provider",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "prompt"
+                ],
+                "properties": {
+                  "task": {
+                    "type": "string",
+                    "enum": [
+                      "plan",
+                      "code",
+                      "debug",
+                      "review",
+                      "explain"
+                    ]
+                  },
+                  "prompt": {
+                    "type": "string",
+                    "maxLength": 12000
+                  },
+                  "context": {
+                    "type": "string",
+                    "maxLength": 24000
+                  },
+                  "temperature": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "AI response"
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "502": {
+            "description": "Provider error"
+          },
+          "503": {
+            "description": "Provider not configured"
+          }
+        }
+      }
+    }
+  }
+}

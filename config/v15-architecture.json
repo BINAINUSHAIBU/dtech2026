@@ -1,0 +1,36 @@
+{
+  "product": "ORBITECH MASTER V15",
+  "name": "Digital Operating System",
+  "execution_mode": "controlled",
+  "frontend": "local-first",
+  "agents": 52,
+  "security_gates": [
+    "identity-rbac",
+    "secret-isolation",
+    "sandbox-execution",
+    "approval",
+    "input-validation",
+    "connector-allowlist",
+    "audit",
+    "backup",
+    "rate-limits",
+    "dependency-review",
+    "human-override",
+    "supply-chain"
+  ],
+  "delivery_profiles": [
+    "static-hosting",
+    "server-database",
+    "container"
+  ],
+  "production_requirements": [
+    "authenticated backend",
+    "persistent database",
+    "secure secret manager",
+    "sandbox workers",
+    "queues",
+    "observability",
+    "backups",
+    "human approval"
+  ]
+}

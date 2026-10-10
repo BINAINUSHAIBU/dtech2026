@@ -1,0 +1,217 @@
+{
+  "version": "15.0",
+  "agents": [
+    {
+      "name": "ORCHESTRATOR",
+      "status": "registered"
+    },
+    {
+      "name": "ARCHITECT",
+      "status": "registered"
+    },
+    {
+      "name": "PRODUCT",
+      "status": "registered"
+    },
+    {
+      "name": "DESIGNER",
+      "status": "registered"
+    },
+    {
+      "name": "WEB ENGINEER",
+      "status": "registered"
+    },
+    {
+      "name": "SOFTWARE ENGINEER",
+      "status": "registered"
+    },
+    {
+      "name": "DATA AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "API AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "MEDIA AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "RESEARCH AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "AUTOMATION AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "BROWSER AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "SECURITY AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "QA SENTINEL",
+      "status": "registered"
+    },
+    {
+      "name": "DOC AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "DEPLOY AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "DATABASE AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "TEST AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "UX AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "CODE REVIEWER",
+      "status": "registered"
+    },
+    {
+      "name": "RELEASE AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "OBSERVABILITY AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "KNOWLEDGE AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "COMPLIANCE AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "PERFORMANCE AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "INTEGRATION AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "BUILD AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "VALIDATION AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "PLATFORM AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "OPS AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "UX RESEARCHER",
+      "status": "registered"
+    },
+    {
+      "name": "DELIVERY AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "PROMPT ENGINEER",
+      "status": "registered"
+    },
+    {
+      "name": "VISION AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "VOICE AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "VIDEO AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "ACCESSIBILITY AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "LOCALIZATION AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "PRODUCT ANALYST",
+      "status": "registered"
+    },
+    {
+      "name": "PROJECT MANAGER",
+      "status": "registered"
+    },
+    {
+      "name": "RELIABILITY AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "COST AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "ARCHIVE AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "ENVIRONMENT AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "VERSION AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "COLLABORATION AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "WORKFLOW AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "DEPENDENCY AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "RESOURCE AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "MIGRATION AGENT",
+      "status": "registered"
+    },
+    {
+      "name": "RELEASE MANAGER",
+      "status": "registered"
+    },
+    {
+      "name": "PLATFORM SECURITY",
+      "status": "registered"
+    },
+    {
+      "name": "SERVICE AGENT",
+      "status": "registered"
+    }
+  ]
+}
